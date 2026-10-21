@@ -1,0 +1,4 @@
+﻿Vorgang;Gewerk;Firma;Bereich;Start;Dauer;Einheit;Status;Fortschritt;Blockiert;Notizen
+Neue Fenster pruefen;Fensterbau;Muster Import Demo GmbH;TEST Import;08.10.2026;2;Arbeitstage;active;35;ja;Materialfreigabe steht aus
+Noch nicht terminiert;Elektro;;; ;3;Arbeitstage;planned;0;nein;Start bewusst leer
+Meilenstein Freigabe;Inbetriebnahme & Abnahme;;;2026-10-08;0;Arbeitstage;planned;0;nein;Null Dauer

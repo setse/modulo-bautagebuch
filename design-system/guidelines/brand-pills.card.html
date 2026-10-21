@@ -1,0 +1,26 @@
+<!-- @dsCard group="Brand" viewport="700x140" name="Pills & Tags" subtitle="Status indicators — tone variants" -->
+<!DOCTYPE html>
+<html lang="en">
+<head><meta charset="utf-8"><link rel="stylesheet" href="../styles.css">
+<style>body{margin:0;padding:20px 24px;background:var(--bg);display:flex;flex-direction:column;gap:16px;font-family:'Geist',system-ui,sans-serif;}</style>
+</head>
+<body class="theme-stratum">
+  <div style="display:flex;gap:8px;align-items:center;flex-wrap:wrap;">
+    <span class="m-pill">Standard</span>
+    <span class="m-pill m-pill-accent">Akzent</span>
+    <span class="m-pill m-pill-pos">↑ 12,4 %</span>
+    <span class="m-pill m-pill-neg">↓ Überschreitung</span>
+    <span class="m-pill m-pill-warn">3 offen</span>
+  </div>
+  <div style="display:flex;gap:8px;align-items:center;flex-wrap:wrap;">
+    <span style="display:inline-flex;align-items:center;gap:4px;padding:3px 9px;border-radius:999px;font-family:'Geist Mono',monospace;font-size:11px;background:color-mix(in oklch,var(--pos) 18%,transparent);color:var(--pos);">aktiv</span>
+    <span style="display:inline-flex;align-items:center;gap:4px;padding:3px 9px;border-radius:999px;font-family:'Geist Mono',monospace;font-size:11px;background:var(--accent-dim);color:var(--accent);">abschluss</span>
+    <span style="display:inline-flex;align-items:center;gap:4px;padding:3px 9px;border-radius:999px;font-family:'Geist Mono',monospace;font-size:11px;background:var(--surface-2);color:var(--text-mute);border:1px solid var(--border);">akquise</span>
+    <span style="display:inline-flex;align-items:center;gap:4px;padding:3px 9px;border-radius:999px;font-family:'Geist Mono',monospace;font-size:11px;background:color-mix(in oklch,var(--neg) 18%,transparent);color:var(--neg);">risiko</span>
+    <span style="display:inline-flex;align-items:center;gap:4px;padding:3px 9px;border-radius:999px;font-family:'Geist Mono',monospace;font-size:11px;background:color-mix(in oklch,var(--warn) 18%,transparent);color:var(--warn);">überfällig</span>
+  </div>
+  <div style="display:flex;gap:8px;align-items:center;">
+    <div style="font-family:'Geist Mono',monospace;font-size:9px;color:var(--text-mute);">.m-pill · .m-pill-accent · .m-pill-pos · .m-pill-neg · .m-pill-warn · STag component</div>
+  </div>
+</body>
+</html>

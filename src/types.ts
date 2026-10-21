@@ -1,0 +1,50 @@
+export type PhotoLayout = { page: number; x: number; y: number; width: number };
+export type SectionKey = 'project' | 'day' | 'weather' | 'trades' | 'incidents' | 'notes' | 'photos' | 'audio' | 'signature';
+export type Alignment = 'left' | 'center' | 'right';
+export type SectionStyle = { borderStyle:'none'|'solid'|'dashed'|'dotted'|'double'; borderColor:string; borderWidth:number; backgroundColor:string; fontFamily:string; fontSize:number; textColor:string; alignment:Alignment };
+export type Attachment = { id: string; name: string; kind: 'photo' | 'audio'; extension: string; size: number; caption: string; transcript: string; transcription: 'pending' | 'manual' | 'automatic'; pixelWidth?: number; pixelHeight?: number; layout?: PhotoLayout; section?:SectionKey;transcriptionModel?:string;transcriptionRevision?:string;transcribedAt?:string;originalTranscript?:string;assistantModel?:string;assistantRevision?:string;assistantEditedAt?:string };
+export type DocumentDesign = { headerText: string; footerText: string; logo: Attachment | null; logoWidthMm: number; footerImage:Attachment|null; footerImageWidthMm:number; headerAlignment:Alignment; footerAlignment:Alignment; headerImageAlignment:Alignment; footerImageAlignment:Alignment; fontFamily:string; fontSize:number; textColor:string; headerFontFamily:string; footerFontFamily:string; headerFontSize:number; footerFontSize:number; margins:{top:number;bottom:number;left:number;right:number}; table:{variant:'grid'|'rows'|'striped'|'plain'; borderColor:string;headerColor:string;rowColor:string;alternateColor:string;textColor:string}; sections:Partial<Record<SectionKey,Partial<SectionStyle>>> };
+export type HeaderPreset = { id: string; name: string; document: DocumentDesign };
+export type Trade = { id: string; code: string; company: string; workers: string; work: string };
+export type Entry = { id: string; projectId: string; date: string; endDate: string; title: string; startTime: string; endTime: string; weather: string; temperature: string; status: 'draft' | 'complete'; trades: Trade[]; incidents: string; notes: string; attachments: Attachment[]; updatedAt: string; sectionStyles:Partial<Record<SectionKey,Partial<SectionStyle>>> };
+export type Project = { id: string; name: string; number: string; client: string; location: string; author: string; document: DocumentDesign };
+export type DiaryState = { version: 2; projects: Project[]; entries: Entry[]; preferences: { zoom: number;autoTranscribe:boolean }; headerPresets: HeaderPreset[];plans:import('./planner-types').Plan[] };
+export type ExportOptions = { projectId: string; entryIds: string[]; format: 'pdf' | 'docx' };
+export type TranscriptionStatus={available:boolean;model:string;source:string;revision:string;device:string;busy:boolean;attachmentId:string|null;message:string};
+export type TranscriptionProgress={attachmentId:string;jobId:string;stage:string;progress:number|null;message:string};
+export type TranscriptionResult={status:'completed'|'empty'|'canceled';message:string;transcript?:string;duration?:number;elapsed?:number;model?:string;revision?:string;segments?:{start:number;end:number;text:string}[]};
+export interface DiaryAPI {
+  exportPlan(options:import('./planner-types').PlannerExport):Promise<{path:string;pages:number}|null>;
+  previewPlan(options:import('./planner-types').PlannerExport):Promise<{html:string;pages:number}>;
+  assistantStatus():Promise<AssistantStatus>;
+  analyzeTranscript(request:{requestId:string;attachmentId:string;mode:AssistantMode;transcript:string}):Promise<AssistantResult>;
+  cancelAssistant(requestId:string):Promise<boolean>;
+  onAssistantProgress(callback:(progress:AssistantProgress)=>void):()=>void;
+  load(): Promise<{ state: DiaryState; recovered: boolean; dataPath: string }>;
+  save(state: DiaryState): Promise<{ savedAt: string }>;
+  importMedia(kind: Attachment['kind']): Promise<{ attachments: Attachment[]; errors: string[] }>;
+  addMedia(name: string, bytes: Uint8Array, kind: Attachment['kind']): Promise<Attachment>;
+  addLogo(name: string, bytes: Uint8Array): Promise<Attachment>;
+  importLogo(): Promise<Attachment | null>;
+  setZoom(zoom: number): Promise<number>;
+  transcribe(id: string): Promise<TranscriptionResult>;
+  transcriptionStatus():Promise<TranscriptionStatus>;
+  cancelTranscription(id:string):Promise<boolean>;
+  onTranscriptionProgress(callback:(event:TranscriptionProgress)=>void):()=>void;
+  exportReport(options: ExportOptions): Promise<{ path: string; count: number } | null>;
+  backup(): Promise<string | null>;
+  restore(): Promise<{ state: DiaryState; projectId: string } | null>;
+  openDataFolder(): Promise<void>;
+  readyToClose(): void;
+  onBeforeClose(callback: () => void): () => void;
+}
+declare global { interface Window { diary: DiaryAPI } }
+
+export type AssistantMode="cleanup"|"organize";
+export type AssistantStatus={available:boolean;model:string;device:string;busy:boolean;message:string};
+export type AssistantProgress={requestId:string;stage:string;message:string;progress:number|null};
+export type EvidenceText={text:string;evidence:string;unassigned?:boolean};
+export type EvidenceValue={value:string;evidence:string};
+export type AssistantTrade={company:string;workers:string;work:string;evidence:string};
+export type OrganizedTranscript={trades:AssistantTrade[];weather:EvidenceValue;temperature:EvidenceValue;incidents:EvidenceText[];notes:EvidenceText[]};
+export type AssistantResult={status:"completed"|"canceled";message:string;mode?:AssistantMode;data?:{text:string}|OrganizedTranscript;warnings?:string[];model?:string;revision?:string;elapsed?:number};

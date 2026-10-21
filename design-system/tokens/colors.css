@@ -1,0 +1,50 @@
+/* Modulo Stratum — Color Tokens
+   Warm cream surfaces, sage accent, warm text.
+   Theme class: .theme-stratum applied to root container. */
+
+:root {
+  /* Brand accent — sage green */
+  --accent:          oklch(0.50 0.08 145);
+  --accent-dim:      oklch(0.50 0.08 145 / 0.18);
+  --accent-hover:    oklch(0.46 0.09 145);
+
+  /* Semantic status */
+  --pos:   oklch(0.50 0.08 145);   /* positive / on-budget  — same hue as accent */
+  --neg:   oklch(0.55 0.18  30);   /* negative / over-budget — warm red-terracotta */
+  --warn:  oklch(0.65 0.13  70);   /* warning — amber */
+}
+
+.theme-stratum {
+  /* Backgrounds — layered cream */
+  --bg:          #f0ece2;   /* canvas / outermost */
+  --surface:     #f7f4ec;   /* card / panel */
+  --surface-2:   #ebe6d8;   /* recessed / sidebar */
+  --surface-3:   #ddd6c3;   /* deepest inset / track */
+
+  /* Borders */
+  --border:        #c8c0a8;
+  --border-strong: #a8a087;
+
+  /* Text */
+  --text:      #2a2a26;   /* primary — near-black with warm undertone */
+  --text-dim:  #6a665a;   /* secondary / labels */
+  --text-mute: #8e8979;   /* tertiary / placeholder */
+
+  /* Re-expose accent + status inside theme scope */
+  --accent:      oklch(0.50 0.08 145);
+  --accent-dim:  oklch(0.50 0.08 145 / 0.18);
+  --pos:  oklch(0.50 0.08 145);
+  --neg:  oklch(0.55 0.18  30);
+  --warn: oklch(0.65 0.13  70);
+}
+
+/* Team / avatar palette — each team member gets a consistent hue */
+:root {
+  --avatar-orange:  #d97c4a;
+  --avatar-sage:    #7a9e6e;
+  --avatar-indigo:  #6c7bb8;
+  --avatar-tan:     #b89065;
+  --avatar-violet:  #9a7eb5;
+  --avatar-teal:    #5fa3a8;
+  --avatar-grey:    #a8a8a8;
+}

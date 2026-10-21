@@ -1,0 +1,87 @@
+<!-- @dsCard group="Components" viewport="700x320" name="Core Atoms" subtitle="Button, Badge, Avatar, Input, SearchBar" -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<link rel="stylesheet" href="../../styles.css">
+<script src="https://unpkg.com/react@18.3.1/umd/react.development.js" integrity="sha384-hD6/rw4ppMLGNu3tX5cjIb+uRZ7UkRJ6BPkLpg4hAu/6onKUg4lLsHAs9EBPT82L" crossorigin="anonymous"></script>
+<script src="https://unpkg.com/react-dom@18.3.1/umd/react-dom.development.js" integrity="sha384-u6aeetuaXnQ38mYT8rp6sbXaQe3NL9t+IBXmnYxwkUI2Hw4bsp2Wvmx4yRQF1uAm" crossorigin="anonymous"></script>
+<script src="../../_ds_bundle.js"></script>
+<style>
+html,body{margin:0;padding:0;}
+body{background:var(--bg);font-family:var(--font-ui);padding:20px 24px;}
+.section{margin-bottom:20px;}
+.section-label{font-family:var(--font-data);font-size:9px;text-transform:uppercase;letter-spacing:0.08em;color:var(--text-mute);margin-bottom:8px;}
+.row{display:flex;gap:8px;align-items:center;flex-wrap:wrap;}
+</style>
+</head>
+<body class="theme-stratum dens-comfy">
+<script type="text/babel">
+const { Button, Badge, StatusBadge, Avatar, AvatarGroup, Input, SearchBar, Icon } = window.ModuloStratumDesignSystem_879962;
+
+function Demo() {
+  return (
+    <div>
+      <div className="section">
+        <div className="section-label">Button · variant</div>
+        <div className="row">
+          <Button variant="primary" icon="plus">Zeit erfassen</Button>
+          <Button variant="secondary" icon="download">Export</Button>
+          <Button variant="ghost">Abbrechen</Button>
+          <Button variant="danger" size="sm">Löschen</Button>
+          <Button variant="primary" size="sm">sm</Button>
+          <Button variant="secondary" size="lg">lg</Button>
+          <Button variant="primary" disabled>Gesperrt</Button>
+        </div>
+      </div>
+
+      <div className="section">
+        <div className="section-label">Badge · tone</div>
+        <div className="row">
+          <Badge>Standard</Badge>
+          <Badge tone="accent">Akzent</Badge>
+          <Badge tone="pos" dot>↑ 12,4 %</Badge>
+          <Badge tone="neg" dot>Überschreitung</Badge>
+          <Badge tone="warn">3 offen</Badge>
+          <Badge tone="outline">Entwurf</Badge>
+          <StatusBadge status="aktiv"/>
+          <StatusBadge status="abschluss"/>
+          <StatusBadge status="akquise"/>
+          <StatusBadge status="risiko"/>
+        </div>
+      </div>
+
+      <div className="section">
+        <div className="section-label">Avatar · AvatarGroup</div>
+        <div className="row">
+          <Avatar name="Maria Hofer" color="#d97c4a" size={40}/>
+          <Avatar name="Andreas Renner" color="#7a9e6e" size={40}/>
+          <Avatar name="Lukas Vogel" color="#6c7bb8" size={32}/>
+          <Avatar name="Sophia Nowak" color="#b89065" size={24}/>
+          <AvatarGroup members={[
+            {name:'Maria Hofer',color:'#d97c4a'},
+            {name:'Andreas Renner',color:'#7a9e6e'},
+            {name:'Lukas Vogel',color:'#6c7bb8'},
+            {name:'Sophia Nowak',color:'#b89065'},
+            {name:'Jonas Klar',color:'#9a7eb5'},
+            {name:'Elif Çelik',color:'#5fa3a8'},
+          ]} size={28} max={4}/>
+        </div>
+      </div>
+
+      <div className="section">
+        <div className="section-label">Input · SearchBar</div>
+        <div className="row">
+          <div style={{width:200}}><Input placeholder="Projektname…" icon="search"/></div>
+          <div style={{width:200}}><Input placeholder="Honorar €" icon="euro" size="sm"/></div>
+          <SearchBar placeholder="Projekte, Rechnungen…" width={240}/>
+        </div>
+      </div>
+    </div>
+  );
+}
+ReactDOM.createRoot(document.getElementById('root')).render(<Demo/>);
+</script>
+<div id="root"></div>
+</body>
+</html>

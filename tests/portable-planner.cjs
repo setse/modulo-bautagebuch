@@ -1,0 +1,19 @@
+const {chromium,expect}=require('@playwright/test');
+const {spawn}=require('node:child_process');
+const fs=require('node:fs/promises'),path=require('node:path'),assert=require('node:assert/strict'),net=require('node:net');
+const root=path.resolve(__dirname,'..'),exe=path.join(root,'release','Modulo-Bautagebuch-'+require('../package.json').version+'-Windows.exe'),data=path.join(root,'.qa','portable-planner-'+Date.now());
+const delay=ms=>new Promise(resolve=>setTimeout(resolve,ms));let child,browser,page;
+(async()=>{
+  await fs.mkdir(data,{recursive:true});await fs.cp(path.join(root,'demo','data'),data,{recursive:true});
+  const port=await new Promise(resolve=>{const server=net.createServer();server.listen(0,'127.0.0.1',()=>{const port=server.address().port;server.close(()=>resolve(port));});});
+  child=spawn(exe,['--remote-debugging-port='+port],{windowsHide:true,stdio:'ignore',env:{...process.env,MODULO_TEST_DATA:data,PATH:path.join(process.env.SystemRoot,'System32')}});const exited=new Promise(resolve=>child.once('exit',resolve));
+  const started=Date.now();let ready=false;while(Date.now()-started<180000){if(child.exitCode!==null)throw Error('Portable launcher exited: '+child.exitCode);try{ready=(await fetch('http://127.0.0.1:'+port+'/json/version')).ok;if(ready)break;}catch{}await delay(500);}assert.ok(ready,'Portable app did not launch');
+  browser=await chromium.connectOverCDP('http://127.0.0.1:'+port);page=browser.contexts()[0].pages()[0];page.setDefaultTimeout(30000);await page.route(/^https?:/,route=>route.abort());await expect(page.getByText('v0.8.1',{exact:true})).toBeVisible();
+  assert.equal((await page.evaluate(()=>window.diary.transcriptionStatus())).available,true);assert.equal((await page.evaluate(()=>window.diary.assistantStatus())).available,true);
+  await page.getByRole('navigation',{name:'Module'}).getByRole('button',{name:'Bauzeitenplaner',exact:true}).click();await expect(page.locator('.gantt-row')).toHaveCount(309);
+  const s=(await page.evaluate(()=>window.diary.load())).state,plan=s.plans[0];
+  for(const layout of ['overall','detail','list']){const report=await page.evaluate(options=>window.diary.previewPlan(options),{projectId:plan.projectId,taskIds:plan.tasks.filter(t=>t.title.startsWith('TEST')).map(t=>t.id),from:'2026-10-01',to:'2026-12-31',paper:layout==='overall'?'A0':'A3',layout,scale:'month',format:'pdf',baselineId:''});assert.equal(report.layout,layout);assert.ok(report.pages>=1);assert.ok(report.html.includes('GESAMTTERMINPLAN'));assert.ok(report.html.includes('Druckdatum:'));if(layout==='overall')assert.ok(report.html.includes('size:1189mm 841mm'));if(layout==='list')assert.ok(!report.html.includes('class="timeline"'));}
+  await page.getByRole('button',{name:'Exportieren',exact:true}).click();await page.getByLabel('Planexport Layout').selectOption('list');await page.getByRole('button',{name:'Druckvorschau',exact:true}).click();await expect(page.frameLocator('iframe').getByRole('heading',{name:'BAUZEITENPLAN - VORGANGSLISTE'}).first()).toBeVisible();
+  await page.evaluate(()=>window.diary.readyToClose());await Promise.race([exited,delay(30000).then(()=>{throw Error('Portable launcher did not close');})]);assert.equal(child.exitCode,0);
+  const result={status:'passed',exe,bytes:(await fs.stat(exe)).size,elapsedSeconds:(Date.now()-started)/1000,layouts:['overall','detail','list'],data};await fs.writeFile(path.join(root,'.qa','portable-planner-result.json'),JSON.stringify(result,null,2));console.log(JSON.stringify(result,null,2));
+})().catch(e=>{console.error(e);process.exitCode=1;}).finally(async()=>{if(browser)await browser.close().catch(()=>{});if(child&&child.exitCode===null){const killer=spawn('taskkill.exe',['/PID',String(child.pid),'/T','/F'],{windowsHide:true,stdio:'ignore'});await new Promise(resolve=>{killer.once('exit',resolve);killer.once('error',()=>{child.kill();resolve();});});}});

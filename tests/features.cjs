@@ -1,0 +1,106 @@
+const {_electron:electron,expect}=require('@playwright/test');
+const fs=require('node:fs/promises');
+const path=require('node:path');
+const assert=require('node:assert/strict');
+const {PNG}=require('pngjs');
+const root=path.resolve(__dirname,'..'),qa=path.join(root,'.qa'),data=path.join(qa,'features-'+Date.now());
+let app;
+async function launch(){app=await electron.launch({args:[root],env:{...process.env,MODULO_TEST_DATA:data}});const w=await app.firstWindow();w.setDefaultTimeout(15000);await expect(w.getByRole('heading',{name:'Bautagebuch',exact:true})).toBeVisible();return w;}
+async function save(w){await w.waitForTimeout(1000);await expect(w.getByRole('status')).toHaveText('Alle Änderungen gespeichert');}
+(async()=>{
+ let w=await launch();
+ await expect(w.getByLabel('Ansichtszoom')).toHaveValue('125');
+ await w.getByLabel('Ansichtszoom').selectOption('150');await save(w);
+ assert.equal(await app.evaluate(({BrowserWindow})=>BrowserWindow.getAllWindows()[0].webContents.getZoomFactor()),1.5);
+ await w.keyboard.press('Control+0');await expect(w.getByLabel('Ansichtszoom')).toHaveValue('100');
+ await w.getByLabel('Ansichtszoom').selectOption('125');await save(w);
+ await w.getByRole('button',{name:'Ersten Eintrag erstellen'}).click();
+ await w.getByLabel('Bezeichnung · optional').fill('Gestaltung und Fotos');
+ const fixture=await fs.readFile(path.join(__dirname,'fixtures','construction.png'));
+ await w.getByTestId('photo-input').setInputFiles([{name:'Foto A.png',mimeType:'image/png',buffer:fixture},{name:'Foto B.png',mimeType:'image/png',buffer:fixture}]);
+ await expect(w.getByLabel('Bildunterschrift Foto B.png')).toBeVisible();
+ await w.getByLabel('Bildunterschrift Foto A.png').fill('Foto A: Eingang');await w.getByLabel('Bildunterschrift Foto B.png').fill('Foto B: Baustelle');await save(w);
+ let state=(await w.evaluate(()=>window.diary.load())).state;
+ assert.ok(state.entries[0].attachments.every(p=>p.size<=500*1024 && p.extension==='jpg' && p.pixelWidth));
+ await w.getByRole('button',{name:'Dokumentvorschau'}).click();
+ const figure=w.getByLabel('Foto anordnen: Foto A.png');await figure.click();
+ await w.getByLabel('Fotobreite in mm').fill('70');
+ let rect=await figure.boundingBox();assert.ok(rect);
+ await w.mouse.move(rect.x+15,rect.y+15);await w.mouse.down();await w.mouse.move(rect.x+70,rect.y+70,{steps:6});await w.mouse.up();await save(w);
+ state=(await w.evaluate(()=>window.diary.load())).state;
+ let photo=state.entries[0].attachments.find(p=>p.name==='Foto A.png');assert.ok(photo.layout.x>5 && photo.layout.y>5);assert.equal(photo.layout.width,70);
+ // Resize through the visible handle, retaining the original aspect ratio.
+ const handle=w.getByLabel('Foto skalieren: Foto A.png');rect=await handle.boundingBox();assert.ok(rect);
+ await w.mouse.move(rect.x+7,rect.y+7);await w.mouse.down();await w.mouse.move(rect.x+45,rect.y+7,{steps:6});await w.mouse.up();await save(w);
+ state=(await w.evaluate(()=>window.diary.load())).state;photo=state.entries[0].attachments.find(p=>p.name==='Foto A.png');assert.ok(photo.layout.width>70);
+ await w.getByRole('button',{name:'Foto nach hinten',exact:true}).click();await save(w);
+ state=(await w.evaluate(()=>window.diary.load())).state;assert.equal(state.entries[0].attachments[0].name,'Foto B.png');
+ // Page selectors are on every photo, even before selecting that photo.
+ const chooser=w.getByLabel('Fotoseite für Foto B.png');await expect(chooser).toBeVisible();
+ await chooser.selectOption({value:'1'});await expect(chooser).toHaveValue('1');await save(w);
+ state=(await w.evaluate(()=>window.diary.load())).state;assert.equal(state.entries[0].attachments[0].layout.page,1);
+ // A vacated first photo page must remain available as a destination.
+ await chooser.selectOption({value:'0'});await expect(chooser).toHaveValue('0');await save(w);
+ await w.locator('.photo-layout-editor').hover();await w.getByRole('button',{name:'Alle auf eine Seite',exact:true}).click();await save(w);
+ state=(await w.evaluate(()=>window.diary.load())).state;assert.ok(state.entries[0].attachments.every(p=>p.layout.page===0));
+ await expect(w.locator('.photo-board')).toHaveCount(1);
+ await expect(w.getByLabel('Fotoseite für Foto A.png')).toBeVisible();
+ await w.getByRole('button',{name:'Kopf- / Fußzeile',exact:true}).click();
+ const preview=w.getByRole('region',{name:'Live-Vorschau Kopf- und Fußzeile'});
+ await w.getByLabel('Kopfzeile',{exact:true}).fill('Beginn / Ende');
+ await w.getByLabel('Kopfzeile',{exact:true}).evaluate(el=>el.setSelectionRange(9,13));
+ await w.getByRole('button',{name:'Projektname in Kopfzeile einfügen',exact:true}).click();
+ await expect(w.getByLabel('Kopfzeile',{exact:true})).toHaveValue('Beginn / {projekt}');
+ await expect(preview).toContainText(state.projects[0].name);
+ await w.getByRole('button',{name:'Fußzeile',exact:true}).click();await w.getByLabel('Fußzeile',{exact:true}).fill('Seite ');
+ await w.getByRole('button',{name:'Seite in Fußzeile einfügen',exact:true}).click();
+ await expect(w.getByLabel('Fußzeile',{exact:true})).toHaveValue('Seite {seite}');
+ await expect(preview.locator('.design-preview-footer')).toHaveText('Seite 1');
+ await w.getByRole('button',{name:'Kopfzeile',exact:true}).click();await w.getByLabel('Kopfzeile',{exact:true}).fill('Büro Modulo\n{projekt} · {nummer}');
+ await w.getByRole('button',{name:'Fußzeile',exact:true}).click();await w.getByLabel('Fußzeile',{exact:true}).fill('Vertraulich · Seite {seite} von {seiten}');
+ const logo=new PNG({width:160,height:60});for(let i=0;i<logo.data.length;i+=4){logo.data[i]=45;logo.data[i+1]=128;logo.data[i+2]=107;logo.data[i+3]=i%(160*4)<20*4?0:255;}
+ await w.getByRole('button',{name:'Kopfzeile',exact:true}).click();await w.getByTestId('logo-input').setInputFiles({name:'Modulo-Logo.png',mimeType:'image/png',buffer:PNG.sync.write(logo)});
+ await expect(w.getByAltText('Firmenlogo')).toBeVisible();
+ await expect(preview.getByAltText('Logo in Live-Vorschau')).toBeVisible();
+ await w.getByText('Ausrichtung & Schrift',{exact:true}).filter({visible:true}).click();await w.getByLabel('Logobreite').fill('35');await expect(preview.getByAltText('Logo in Live-Vorschau')).toHaveCSS('width',/\d/);
+ assert.ok(await preview.locator('.design-preview-footer').evaluate(el=>el.getBoundingClientRect().bottom<=document.querySelector('.modal-body').getBoundingClientRect().bottom),'The live footer must be visible while editing');
+ await w.waitForTimeout(300);
+ const designShot=await app.evaluate(async({BrowserWindow})=>(await BrowserWindow.getAllWindows()[0].capturePage()).toPNG().toString('base64'));
+ await fs.writeFile(path.join(qa,'features-design.png'),Buffer.from(designShot,'base64'));
+ await w.getByText('Gespeicherte Vorlagen',{exact:true}).click();await w.getByLabel('Vorlagenname').fill('Modulo Gestaltung');await w.getByRole('button',{name:'Vorlage speichern',exact:true}).click();
+ await expect(w.getByLabel('Kopf- und Fußzeilenvorlage')).not.toHaveValue('');
+ await w.getByRole('button',{name:'Einstellungen speichern',exact:true}).click();await save(w);
+ await expect(w.locator('.paper-custom-header')).toContainText('Büro Modulo');await expect(w.locator('.paper-custom-footer')).toContainText('Vertraulich');
+ await app.evaluate(({BrowserWindow})=>BrowserWindow.getAllWindows()[0].setSize(2560,1440));
+ await expect.poll(()=>w.evaluate(()=>document.documentElement.scrollWidth<=window.innerWidth+1)).toBe(true);
+ await w.waitForTimeout(300);
+ const screenshot=await app.evaluate(async({BrowserWindow})=>(await BrowserWindow.getAllWindows()[0].capturePage()).toPNG().toString('base64'));
+ await fs.writeFile(path.join(qa,'features-1440p.png'),Buffer.from(screenshot,'base64'));
+ const projectId=state.projects[0].id;
+ state=(await w.evaluate(()=>window.diary.load())).state;
+ const ids=state.entries.map(e=>e.id);
+ for(const format of ['pdf','docx']){
+ const target=path.join(qa,'features-report.'+format);await app.evaluate(({dialog},filePath)=>{dialog.showSaveDialog=async()=>({canceled:false,filePath});},target);
+ await w.evaluate(options=>window.diary.exportReport(options),{projectId,entryIds:ids,format});assert.ok((await fs.stat(target)).size>1000);
+ }
+ await app.close();w=await launch();
+ await expect(w.getByLabel('Ansichtszoom')).toHaveValue('125');
+ state=(await w.evaluate(()=>window.diary.load())).state;assert.equal(state.headerPresets.length,1);assert.ok(state.projects[0].document.logo);assert.ok(state.entries[0].attachments.every(p=>p.layout));
+ await w.getByRole('button',{name:'Dokumentvorschau'}).click();await expect(w.locator('.paper-custom-header')).toContainText('Büro Modulo');
+ const backup=path.join(qa,'features-backup.zip');await app.evaluate(({dialog},filePath)=>{dialog.showSaveDialog=async()=>({canceled:false,filePath});},backup);
+ await w.evaluate(()=>window.diary.backup());
+ await app.evaluate(({dialog},filePath)=>{dialog.showOpenDialog=async()=>({canceled:false,filePaths:[filePath]});},backup);
+ const imported=await w.evaluate(()=>window.diary.restore());assert.equal(imported.state.headerPresets.length,2);const importedProject=imported.state.projects.find(p=>p.id===imported.projectId);assert.ok(importedProject.document.logo.id!==state.projects[0].document.logo.id);
+ assert.ok(imported.state.entries.find(e=>e.projectId===imported.projectId).attachments.every(p=>p.layout));
+ await w.reload();await expect(w.getByRole('heading',{name:'Bautagebuch',exact:true})).toBeVisible();
+ await w.getByRole('button',{name:'Projekt auswählen'}).click();
+ await expect(w.getByRole('listbox',{name:'Projekte'}).getByRole('option')).toHaveCount(2);
+ await w.waitForTimeout(300);
+ const menuShot=await app.evaluate(async({BrowserWindow})=>(await BrowserWindow.getAllWindows()[0].capturePage()).toPNG().toString('base64'));
+ await fs.writeFile(path.join(qa,'features-project-menu.png'),Buffer.from(menuShot,'base64'));
+ await w.getByLabel('Projekte suchen').fill('importiert');await expect(w.getByRole('listbox',{name:'Projekte'}).getByRole('option')).toHaveCount(1);
+ await w.getByLabel('Projekte suchen').press('ArrowDown');await w.keyboard.press('Enter');
+ await expect(w.getByRole('button',{name:'Projekt auswählen'})).toContainText('importiert');
+ await w.getByRole('button',{name:'Projekt auswählen'}).click();await w.keyboard.press('Escape');await expect(w.getByRole('listbox',{name:'Projekte'})).toHaveCount(0);
+ console.log(JSON.stringify({status:'passed',checks:['persistent zoom','compression','photo drag','proportional resize','photo reorder','on-photo page chooser','one-page photo grid','live header/footer preview','cursor-aware field insertion','company logo','header/footer preset','PDF and Word export','restart persistence','backup with logo and presets','searchable styled project chooser and keyboard navigation'],data},null,2));
+})().catch(error=>{console.error(error);process.exitCode=1;}).finally(async()=>{if(app)await app.close();});

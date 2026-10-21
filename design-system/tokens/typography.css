@@ -1,0 +1,42 @@
+/* Modulo Stratum — Typography Tokens
+   Primary: Geist (sans-serif) — clean, legible, optimised for UI
+   Data:    Geist Mono — tabular numerics, codes, monospace data
+   Both loaded from Google Fonts (originals are embedded woff2 in the app bundle). */
+
+@import url('https://fonts.googleapis.com/css2?family=Geist:wght@300;400;500;600;700&family=Geist+Mono:wght@400;500;600&display=swap');
+
+:root {
+  --font-sans: 'Geist', system-ui, -apple-system, sans-serif;
+  --font-mono: 'Geist Mono', ui-monospace, monospace;
+
+  /* Semantic aliases */
+  --font-ui:   var(--font-sans);   /* all chrome, labels, headings */
+  --font-data: var(--font-mono);   /* numbers, codes, IDs, KPIs */
+
+  /* Scale */
+  --fs-xs:   9px;
+  --fs-sm:   10px;
+  --fs-body: 12px;   /* overridden by density helpers */
+  --fs-h:    14px;
+  --fs-lg:   16px;
+  --fs-xl:   22px;
+  --fs-2xl:  28px;
+  --fs-3xl:  32px;
+
+  /* Weights */
+  --fw-regular: 400; /* @kind other */
+  --fw-medium:  500; /* @kind other */
+  --fw-semi:    600; /* @kind other */
+  --fw-bold:    700; /* @kind other */
+
+  /* Tracking */
+  --ls-tight:  -0.03em; /* @kind other */
+  --ls-normal:  0;      /* @kind other */
+  --ls-wide:    0.04em; /* @kind other */
+  --ls-wider:   0.08em; /* @kind other */
+
+  /* Leading */
+  --lh-tight: 1.2; /* @kind other */
+  --lh-body:  1.4; /* @kind other */
+  --lh-loose: 1.6; /* @kind other */
+}

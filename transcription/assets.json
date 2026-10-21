@@ -1,0 +1,73 @@
+{
+  "source": "primeline/parakeet-primeline",
+  "conversion": "Buttermilk03/parakeet-primeline-onnx",
+  "revision": "2e2f9169c7030984cf0e9e35c0a68eadfac376e4",
+  "assets": [
+    {
+      "path": "models/parakeet/config.json",
+      "url": "https://huggingface.co/Buttermilk03/parakeet-primeline-onnx/resolve/2e2f9169c7030984cf0e9e35c0a68eadfac376e4/config.json",
+      "size": 127,
+      "sha256": "6d81e4296c2fc5cb697c6d26306dfba4c7e20ed9e144d0c8a73af39fa8be75df"
+    },
+    {
+      "path": "models/parakeet/decoder_joint-model-int8.onnx",
+      "url": "https://huggingface.co/Buttermilk03/parakeet-primeline-onnx/resolve/2e2f9169c7030984cf0e9e35c0a68eadfac376e4/decoder_joint-model-int8.onnx",
+      "size": 53592358,
+      "sha256": "68eb24edad1425db96d219274281adc47d8d3c62f0109fdc3f3e51711ad3fd59"
+    },
+    {
+      "path": "models/parakeet/encoder-model-int8.onnx",
+      "url": "https://huggingface.co/Buttermilk03/parakeet-primeline-onnx/resolve/2e2f9169c7030984cf0e9e35c0a68eadfac376e4/encoder-model-int8.onnx",
+      "size": 879746906,
+      "sha256": "fd941775411a8c58be461b9c426d2167d2b2cf7f4db7da0ecf323d1757c4a87e"
+    },
+    {
+      "path": "models/parakeet/vocab.txt",
+      "url": "https://huggingface.co/Buttermilk03/parakeet-primeline-onnx/resolve/2e2f9169c7030984cf0e9e35c0a68eadfac376e4/vocab.txt",
+      "size": 93939,
+      "sha256": "d58544679ea4bc6ac563d1f545eb7d474bd6cfa467f0a6e2c1dc1c7d37e3c35d"
+    },
+    {
+      "path": "models/vad/config.json",
+      "url": "https://huggingface.co/istupakov/silero-vad-onnx/resolve/b3e3ee3cce4c11ceb63b1a0b229d916069c1ddf6/config.json",
+      "size": 30,
+      "sha256": "1094039d370c82889582ba739a3d1caac5754c8b3a17a66a534200c9f72086e2"
+    },
+    {
+      "path": "models/vad/silero_vad.onnx",
+      "url": "https://huggingface.co/istupakov/silero-vad-onnx/resolve/b3e3ee3cce4c11ceb63b1a0b229d916069c1ddf6/silero_vad.onnx",
+      "size": 2327524,
+      "sha256": "1a153a22f4509e292a94e67d6f9b85e8deb25b4988682b7e174c65279d8788e3"
+    },
+    {
+      "path": "downloads/ffmpeg-n8.1.3-14-g330caae0c1-win64-lgpl-shared-8.1.zip",
+      "url": "https://github.com/BtbN/FFmpeg-Builds/releases/download/autobuild-2026-10-07-13-07/ffmpeg-n8.1.3-14-g330caae0c1-win64-lgpl-shared-8.1.zip",
+      "size": 80993041,
+      "sha256": "30fdaaeb116730fdd6432c2663af0e9ecdf1d6cc387ac085cc1faf8494942510"
+    },
+    {
+      "path": "licenses/Parakeet-CC-BY-4.0.html",
+      "url": "https://raw.githubusercontent.com/creativecommons/creativecommons.org/7f5253347532fc0cb6cf51d78a7085d081fb4216/docroot/legalcode/by_4.0.html",
+      "size": 42849,
+      "sha256": "75944e5d91cb28d60b326f071069afd19ab50fcdd5e62dd3f024f850b83ee9b6"
+    },
+    {
+      "path": "licenses/Silero-LICENSE.txt",
+      "url": "https://raw.githubusercontent.com/snakers4/silero-vad/1e261b036686cd0017d500ee96acd1c4ba572a9d/LICENSE",
+      "size": 1075,
+      "sha256": "2e63e9a38b6e8fc0c7bc37ce174caca1862870856c6daf5697cfb785e925520b"
+    },
+    {
+      "path": "ffmpeg/ffmpeg-source-330caae0c1.tar.gz",
+      "url": "https://codeload.github.com/FFmpeg/FFmpeg/tar.gz/330caae0c1",
+      "size": 16903130,
+      "sha256": "702e96a69db9145ab05402bcd5d52470a374e94be3ab0454f4c4a1e6f98ae7e4"
+    },
+    {
+      "path": "ffmpeg/build-sources.tar.gz",
+      "url": "https://codeload.github.com/BtbN/FFmpeg-Builds/tar.gz/refs/tags/autobuild-2026-10-07-13-07",
+      "size": 108477,
+      "sha256": "e46e2323fddeb8a77395a9da6da28cec85df76c9d2952a97860b7df43aead103"
+    }
+  ]
+}

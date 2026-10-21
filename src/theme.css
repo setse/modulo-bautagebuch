@@ -1,0 +1,7 @@
+@import url('./stratum/colors.css');
+@import url('./stratum/spacing.css');
+@import url('./stratum/shadows.css');
+@font-face{font-family:Geist;src:url('./assets/fonts/geist-latin.woff2') format('woff2');font-weight:100 900;font-display:swap}
+@font-face{font-family:'Geist Mono';src:url('./assets/fonts/geist-mono-latin.woff2') format('woff2');font-weight:100 900;font-display:swap}
+:root{--ink:#2a2a26;--muted:#6a665a;--bg:#f0ece2;--line:#c8c0a8;--teal:oklch(0.50 0.08 145);--navy:#ebe6d8;--font-ui:Geist,system-ui,sans-serif;--font-data:'Geist Mono',ui-monospace,monospace}
+.theme-stratum{--ink:var(--text);--muted:var(--text-dim);--line:var(--border);--teal:var(--accent);--navy:var(--surface-2)}

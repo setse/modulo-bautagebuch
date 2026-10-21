@@ -1,0 +1,620 @@
+﻿"Vorgang";"Gewerk";"Firma";"Bereich";"Start";"Dauer";"Einheit";"Ende";"Status";"Fortschritt";"Blockiert";"Notizen"
+"Baustelle einrichten · Flügel Nord · EG · BA 01";"Baustelleneinrichtung";"Bauwerk Logistik Demo GmbH";"Flügel Nord · EG · BA 01";"2026-08-27";"2";"Arbeitstage";"2026-08-28";"complete";"100";"nein";"Fiktiver Vorgang zum Testen. Mengen, Personal und Dauern sind Demo-Annahmen, keine Kalkulation.
+Bauabschnitt 1 · Ansprechpartner: Demo-Bauleitung."
+"Arbeitsgerüst stellen · Flügel Nord · EG · BA 01";"Gerüstbau";"Höhenwerk Demo GmbH";"Flügel Nord · EG · BA 01";"2026-08-31";"3";"Arbeitstage";"2026-09-02";"complete";"100";"nein";"Fiktiver Vorgang zum Testen. Mengen, Personal und Dauern sind Demo-Annahmen, keine Kalkulation.
+Bauabschnitt 1 · Ansprechpartner: Demo-Bauleitung."
+"Bestand selektiv rückbauen · Flügel Nord · EG · BA 01";"Rückbau";"Rückbau Nord Demo GmbH";"Flügel Nord · EG · BA 01";"2026-08-31";"4";"Arbeitstage";"2026-09-03";"complete";"100";"nein";"Fiktiver Vorgang zum Testen. Mengen, Personal und Dauern sind Demo-Annahmen, keine Kalkulation.
+Bauabschnitt 1 · Ansprechpartner: Demo-Bauleitung."
+"Öffnungen und Rohbau herstellen · Flügel Nord · EG · BA 01";"Rohbau";"Massivbau Demo GmbH";"Flügel Nord · EG · BA 01";"2026-09-04";"5";"Arbeitstage";"2026-09-10";"complete";"100";"nein";"Fiktiver Vorgang zum Testen. Mengen, Personal und Dauern sind Demo-Annahmen, keine Kalkulation.
+Bauabschnitt 1 · Ansprechpartner: Demo-Bauleitung."
+"Sockel und Anschlüsse abdichten · Flügel Nord · EG · BA 01";"Abdichtung";"Dichtwerk Demo GmbH";"Flügel Nord · EG · BA 01";"2026-09-11";"2";"Arbeitstage";"2026-09-14";"complete";"100";"nein";"Fiktiver Vorgang zum Testen. Mengen, Personal und Dauern sind Demo-Annahmen, keine Kalkulation.
+Bauabschnitt 1 · Ansprechpartner: Demo-Bauleitung."
+"Dachfläche instand setzen · Flügel Nord · EG · BA 01";"Dacharbeiten";"Dach & Form Demo GmbH";"Flügel Nord · EG · BA 01";"2026-09-15";"3";"Arbeitstage";"2026-09-17";"complete";"100";"nein";"Fiktiver Vorgang zum Testen. Mengen, Personal und Dauern sind Demo-Annahmen, keine Kalkulation.
+Bauabschnitt 1 · Ansprechpartner: Demo-Bauleitung."
+"Fassadenabschnitt sanieren · Flügel Nord · EG · BA 01";"Fassade";"Fassadenwerk Demo GmbH";"Flügel Nord · EG · BA 01";"2026-09-18";"4";"Arbeitstage";"2026-09-23";"complete";"100";"nein";"Fiktiver Vorgang zum Testen. Mengen, Personal und Dauern sind Demo-Annahmen, keine Kalkulation.
+Bauabschnitt 1 · Ansprechpartner: Demo-Bauleitung."
+"Fenster und Anschlüsse montieren · Flügel Nord · EG · BA 01";"Fensterbau";"Müller Fenster Demo GmbH";"Flügel Nord · EG · BA 01";"2026-09-24";"5";"Arbeitstage";"2026-09-30";"complete";"100";"nein";"Fiktiver Vorgang zum Testen. Mengen, Personal und Dauern sind Demo-Annahmen, keine Kalkulation.
+Bauabschnitt 1 · Ansprechpartner: Demo-Bauleitung."
+"Innentüren und Zargen montieren · Flügel Nord · EG · BA 01";"Türen";"Türwerk Demo GmbH";"Flügel Nord · EG · BA 01";"2026-09-24";"2";"Arbeitstage";"2026-09-25";"complete";"100";"nein";"Fiktiver Vorgang zum Testen. Mengen, Personal und Dauern sind Demo-Annahmen, keine Kalkulation.
+Bauabschnitt 1 · Ansprechpartner: Demo-Bauleitung."
+"Rohinstallation Elektro ausführen · Flügel Nord · EG · BA 01";"Elektro";"Elektro Lichtblick Demo GmbH";"Flügel Nord · EG · BA 01";"2026-09-11";"3";"Arbeitstage";"2026-09-15";"complete";"100";"nein";"Fiktiver Vorgang zum Testen. Mengen, Personal und Dauern sind Demo-Annahmen, keine Kalkulation.
+Bauabschnitt 1 · Ansprechpartner: Demo-Bauleitung."
+"Heizungsverteilung montieren · Flügel Nord · EG · BA 01";"Heizung";"Wärmeweg Demo GmbH";"Flügel Nord · EG · BA 01";"2026-09-11";"4";"Arbeitstage";"2026-09-16";"complete";"100";"nein";"Fiktiver Vorgang zum Testen. Mengen, Personal und Dauern sind Demo-Annahmen, keine Kalkulation.
+Bauabschnitt 1 · Ansprechpartner: Demo-Bauleitung."
+"Lüftungsleitungen montieren · Flügel Nord · EG · BA 01";"Lüftung";"Luftwerk Demo GmbH";"Flügel Nord · EG · BA 01";"2026-09-11";"5";"Arbeitstage";"2026-09-17";"complete";"100";"nein";"Fiktiver Vorgang zum Testen. Mengen, Personal und Dauern sind Demo-Annahmen, keine Kalkulation.
+Bauabschnitt 1 · Ansprechpartner: Demo-Bauleitung."
+"Sanitärleitungen installieren · Flügel Nord · EG · BA 01";"Sanitär";"Wasserwerk Demo GmbH";"Flügel Nord · EG · BA 01";"2026-09-11";"2";"Arbeitstage";"2026-09-14";"complete";"100";"nein";"Fiktiver Vorgang zum Testen. Mengen, Personal und Dauern sind Demo-Annahmen, keine Kalkulation.
+Bauabschnitt 1 · Ansprechpartner: Demo-Bauleitung."
+"Durchführungen abschotten · Flügel Nord · EG · BA 01";"Brandschutz";"Brandschutz Sicher Demo GmbH";"Flügel Nord · EG · BA 01";"2026-09-18";"3";"Arbeitstage";"2026-09-22";"complete";"100";"nein";"Fiktiver Vorgang zum Testen. Mengen, Personal und Dauern sind Demo-Annahmen, keine Kalkulation.
+Bauabschnitt 1 · Ansprechpartner: Demo-Bauleitung."
+"Wände und Decken schließen · Flügel Nord · EG · BA 01";"Trockenbau";"Raumwerk Demo GmbH";"Flügel Nord · EG · BA 01";"2026-09-18";"4";"Arbeitstage";"2026-09-23";"complete";"100";"nein";"Fiktiver Vorgang zum Testen. Mengen, Personal und Dauern sind Demo-Annahmen, keine Kalkulation.
+Bauabschnitt 1 · Ansprechpartner: Demo-Bauleitung."
+"Wandflächen verputzen · Flügel Nord · EG · BA 01";"Putzarbeiten";"Oberfläche Demo GmbH";"Flügel Nord · EG · BA 01";"2026-09-24";"5";"Arbeitstage";"2026-09-30";"complete";"100";"nein";"Fiktiver Vorgang zum Testen. Mengen, Personal und Dauern sind Demo-Annahmen, keine Kalkulation.
+Bauabschnitt 1 · Ansprechpartner: Demo-Bauleitung."
+"Estrich einbringen · Flügel Nord · EG · BA 01";"Estrich";"Estrich Mitte Demo GmbH";"Flügel Nord · EG · BA 01";"2026-10-01";"2";"Arbeitstage";"2026-10-02";"complete";"100";"nein";"Fiktiver Vorgang zum Testen. Mengen, Personal und Dauern sind Demo-Annahmen, keine Kalkulation.
+Bauabschnitt 1 · Ansprechpartner: Demo-Bauleitung."
+"Bodenbeläge verlegen · Flügel Nord · EG · BA 01";"Bodenbeläge";"Bodenwerk Demo GmbH";"Flügel Nord · EG · BA 01";"2026-10-12";"3";"Arbeitstage";"2026-10-14";"planned";"0";"nein";"Fiktiver Vorgang zum Testen. Mengen, Personal und Dauern sind Demo-Annahmen, keine Kalkulation.
+Bauabschnitt 1 · Ansprechpartner: Demo-Bauleitung."
+"Nassräume fliesen · Flügel Nord · EG · BA 01";"Fliesen";"Keramik Demo GmbH";"Flügel Nord · EG · BA 01";"2026-10-08";"4";"Arbeitstage";"2026-10-13";"active";"26";"nein";"Fiktiver Vorgang zum Testen. Mengen, Personal und Dauern sind Demo-Annahmen, keine Kalkulation.
+Bauabschnitt 1 · Ansprechpartner: Demo-Bauleitung."
+"Oberflächen beschichten · Flügel Nord · EG · BA 01";"Malerarbeiten";"Farbwerk Demo GmbH";"Flügel Nord · EG · BA 01";"2026-10-15";"5";"Arbeitstage";"2026-10-22";"planned";"0";"nein";"Fiktiver Vorgang zum Testen. Mengen, Personal und Dauern sind Demo-Annahmen, keine Kalkulation.
+Bauabschnitt 1 · Ansprechpartner: Demo-Bauleitung."
+"Geländer und Stahlteile montieren · Flügel Nord · EG · BA 01";"Metallbau";"Metall & Form Demo GmbH";"Flügel Nord · EG · BA 01";"2026-09-11";"2";"Arbeitstage";"2026-09-14";"complete";"100";"nein";"Fiktiver Vorgang zum Testen. Mengen, Personal und Dauern sind Demo-Annahmen, keine Kalkulation.
+Bauabschnitt 1 · Ansprechpartner: Demo-Bauleitung."
+"Aufzugtechnik montieren · Flügel Nord · EG · BA 01";"Aufzüge";"Liftwerk Demo GmbH";"Flügel Nord · EG · BA 01";"2026-09-16";"3";"Arbeitstage";"2026-09-18";"complete";"100";"nein";"Fiktiver Vorgang zum Testen. Mengen, Personal und Dauern sind Demo-Annahmen, keine Kalkulation.
+Bauabschnitt 1 · Ansprechpartner: Demo-Bauleitung."
+"Wege und Außenflächen herstellen · Flügel Nord · EG · BA 01";"Außenanlagen";"Freiraum Demo GmbH";"Flügel Nord · EG · BA 01";"2026-09-24";"4";"Arbeitstage";"2026-09-29";"complete";"100";"nein";"Fiktiver Vorgang zum Testen. Mengen, Personal und Dauern sind Demo-Annahmen, keine Kalkulation.
+Bauabschnitt 1 · Ansprechpartner: Demo-Bauleitung."
+"Bauabschnitt endreinigen · Flügel Nord · EG · BA 01";"Baureinigung";"Klarwerk Demo GmbH";"Flügel Nord · EG · BA 01";"2026-10-23";"5";"Arbeitstage";"2026-10-29";"planned";"0";"nein";"Fiktiver Vorgang zum Testen. Mengen, Personal und Dauern sind Demo-Annahmen, keine Kalkulation.
+Bauabschnitt 1 · Ansprechpartner: Demo-Bauleitung."
+"Bauabschnitt abnehmen · Flügel Nord · EG · BA 01";"Inbetriebnahme & Abnahme";"Prüfwerk Demo GmbH";"Flügel Nord · EG · BA 01";"2026-10-30";"0";"Arbeitstage";"2026-10-30";"planned";"0";"ja";"Fiktiver Vorgang zum Testen. Mengen, Personal und Dauern sind Demo-Annahmen, keine Kalkulation.
+Bauabschnitt 1 · Ansprechpartner: Demo-Bauleitung.
+DEMO-Hindernis: Materialfreigabe steht aus. Zuständig: Test-Bauleitung. Nächste Abstimmung: 2026-10-10."
+"Baustelle einrichten · Flügel Nord · 1. OG · BA 02";"Baustelleneinrichtung";"Bauwerk Logistik Demo GmbH";"Flügel Nord · 1. OG · BA 02";"2026-08-31";"3";"Arbeitstage";"2026-09-02";"complete";"100";"nein";"Fiktiver Vorgang zum Testen. Mengen, Personal und Dauern sind Demo-Annahmen, keine Kalkulation.
+Bauabschnitt 2 · Ansprechpartner: Demo-Bauleitung."
+"Arbeitsgerüst stellen · Flügel Nord · 1. OG · BA 02";"Gerüstbau";"Höhenwerk Demo GmbH";"Flügel Nord · 1. OG · BA 02";"2026-09-03";"4";"Arbeitstage";"2026-09-08";"complete";"100";"nein";"Fiktiver Vorgang zum Testen. Mengen, Personal und Dauern sind Demo-Annahmen, keine Kalkulation.
+Bauabschnitt 2 · Ansprechpartner: Demo-Bauleitung."
+"Bestand selektiv rückbauen · Flügel Nord · 1. OG · BA 02";"Rückbau";"Rückbau Nord Demo GmbH";"Flügel Nord · 1. OG · BA 02";"2026-09-03";"5";"Arbeitstage";"2026-09-09";"complete";"100";"nein";"Fiktiver Vorgang zum Testen. Mengen, Personal und Dauern sind Demo-Annahmen, keine Kalkulation.
+Bauabschnitt 2 · Ansprechpartner: Demo-Bauleitung."
+"Öffnungen und Rohbau herstellen · Flügel Nord · 1. OG · BA 02";"Rohbau";"Massivbau Demo GmbH";"Flügel Nord · 1. OG · BA 02";"2026-09-10";"2";"Arbeitstage";"2026-09-11";"complete";"100";"nein";"Fiktiver Vorgang zum Testen. Mengen, Personal und Dauern sind Demo-Annahmen, keine Kalkulation.
+Bauabschnitt 2 · Ansprechpartner: Demo-Bauleitung."
+"Sockel und Anschlüsse abdichten · Flügel Nord · 1. OG · BA 02";"Abdichtung";"Dichtwerk Demo GmbH";"Flügel Nord · 1. OG · BA 02";"2026-09-14";"3";"Arbeitstage";"2026-09-16";"complete";"100";"nein";"Fiktiver Vorgang zum Testen. Mengen, Personal und Dauern sind Demo-Annahmen, keine Kalkulation.
+Bauabschnitt 2 · Ansprechpartner: Demo-Bauleitung."
+"Dachfläche instand setzen · Flügel Nord · 1. OG · BA 02";"Dacharbeiten";"Dach & Form Demo GmbH";"Flügel Nord · 1. OG · BA 02";"2026-09-17";"4";"Arbeitstage";"2026-09-22";"complete";"100";"nein";"Fiktiver Vorgang zum Testen. Mengen, Personal und Dauern sind Demo-Annahmen, keine Kalkulation.
+Bauabschnitt 2 · Ansprechpartner: Demo-Bauleitung."
+"Fassadenabschnitt sanieren · Flügel Nord · 1. OG · BA 02";"Fassade";"Fassadenwerk Demo GmbH";"Flügel Nord · 1. OG · BA 02";"2026-09-23";"5";"Arbeitstage";"2026-09-29";"complete";"100";"nein";"Fiktiver Vorgang zum Testen. Mengen, Personal und Dauern sind Demo-Annahmen, keine Kalkulation.
+Bauabschnitt 2 · Ansprechpartner: Demo-Bauleitung."
+"Fenster und Anschlüsse montieren · Flügel Nord · 1. OG · BA 02";"Fensterbau";"Müller Fenster Demo GmbH";"Flügel Nord · 1. OG · BA 02";"2026-09-30";"2";"Arbeitstage";"2026-10-01";"complete";"100";"nein";"Fiktiver Vorgang zum Testen. Mengen, Personal und Dauern sind Demo-Annahmen, keine Kalkulation.
+Bauabschnitt 2 · Ansprechpartner: Demo-Bauleitung."
+"Innentüren und Zargen montieren · Flügel Nord · 1. OG · BA 02";"Türen";"Türwerk Demo GmbH";"Flügel Nord · 1. OG · BA 02";"2026-09-28";"3";"Arbeitstage";"2026-09-30";"complete";"100";"nein";"Fiktiver Vorgang zum Testen. Mengen, Personal und Dauern sind Demo-Annahmen, keine Kalkulation.
+Bauabschnitt 2 · Ansprechpartner: Demo-Bauleitung."
+"Rohinstallation Elektro ausführen · Flügel Nord · 1. OG · BA 02";"Elektro";"Elektro Lichtblick Demo GmbH";"Flügel Nord · 1. OG · BA 02";"2026-09-14";"4";"Arbeitstage";"2026-09-17";"complete";"100";"nein";"Fiktiver Vorgang zum Testen. Mengen, Personal und Dauern sind Demo-Annahmen, keine Kalkulation.
+Bauabschnitt 2 · Ansprechpartner: Demo-Bauleitung."
+"Heizungsverteilung montieren · Flügel Nord · 1. OG · BA 02";"Heizung";"Wärmeweg Demo GmbH";"Flügel Nord · 1. OG · BA 02";"2026-09-14";"5";"Arbeitstage";"2026-09-18";"complete";"100";"nein";"Fiktiver Vorgang zum Testen. Mengen, Personal und Dauern sind Demo-Annahmen, keine Kalkulation.
+Bauabschnitt 2 · Ansprechpartner: Demo-Bauleitung."
+"Lüftungsleitungen montieren · Flügel Nord · 1. OG · BA 02";"Lüftung";"Luftwerk Demo GmbH";"Flügel Nord · 1. OG · BA 02";"2026-09-14";"2";"Arbeitstage";"2026-09-15";"complete";"100";"nein";"Fiktiver Vorgang zum Testen. Mengen, Personal und Dauern sind Demo-Annahmen, keine Kalkulation.
+Bauabschnitt 2 · Ansprechpartner: Demo-Bauleitung."
+"Sanitärleitungen installieren · Flügel Nord · 1. OG · BA 02";"Sanitär";"Wasserwerk Demo GmbH";"Flügel Nord · 1. OG · BA 02";"2026-09-14";"3";"Arbeitstage";"2026-09-16";"complete";"100";"nein";"Fiktiver Vorgang zum Testen. Mengen, Personal und Dauern sind Demo-Annahmen, keine Kalkulation.
+Bauabschnitt 2 · Ansprechpartner: Demo-Bauleitung."
+"Durchführungen abschotten · Flügel Nord · 1. OG · BA 02";"Brandschutz";"Brandschutz Sicher Demo GmbH";"Flügel Nord · 1. OG · BA 02";"2026-09-18";"4";"Arbeitstage";"2026-09-23";"complete";"100";"nein";"Fiktiver Vorgang zum Testen. Mengen, Personal und Dauern sind Demo-Annahmen, keine Kalkulation.
+Bauabschnitt 2 · Ansprechpartner: Demo-Bauleitung."
+"Wände und Decken schließen · Flügel Nord · 1. OG · BA 02";"Trockenbau";"Raumwerk Demo GmbH";"Flügel Nord · 1. OG · BA 02";"2026-09-21";"5";"Arbeitstage";"2026-09-25";"complete";"100";"nein";"Fiktiver Vorgang zum Testen. Mengen, Personal und Dauern sind Demo-Annahmen, keine Kalkulation.
+Bauabschnitt 2 · Ansprechpartner: Demo-Bauleitung."
+"Wandflächen verputzen · Flügel Nord · 1. OG · BA 02";"Putzarbeiten";"Oberfläche Demo GmbH";"Flügel Nord · 1. OG · BA 02";"2026-09-28";"2";"Arbeitstage";"2026-09-29";"complete";"100";"nein";"Fiktiver Vorgang zum Testen. Mengen, Personal und Dauern sind Demo-Annahmen, keine Kalkulation.
+Bauabschnitt 2 · Ansprechpartner: Demo-Bauleitung."
+"Estrich einbringen · Flügel Nord · 1. OG · BA 02";"Estrich";"Estrich Mitte Demo GmbH";"Flügel Nord · 1. OG · BA 02";"2026-09-30";"3";"Arbeitstage";"2026-10-02";"complete";"100";"nein";"Fiktiver Vorgang zum Testen. Mengen, Personal und Dauern sind Demo-Annahmen, keine Kalkulation.
+Bauabschnitt 2 · Ansprechpartner: Demo-Bauleitung."
+"Bodenbeläge verlegen · Flügel Nord · 1. OG · BA 02";"Bodenbeläge";"Bodenwerk Demo GmbH";"Flügel Nord · 1. OG · BA 02";"2026-10-12";"4";"Arbeitstage";"2026-10-15";"planned";"0";"nein";"Fiktiver Vorgang zum Testen. Mengen, Personal und Dauern sind Demo-Annahmen, keine Kalkulation.
+Bauabschnitt 2 · Ansprechpartner: Demo-Bauleitung."
+"Nassräume fliesen · Flügel Nord · 1. OG · BA 02";"Fliesen";"Keramik Demo GmbH";"Flügel Nord · 1. OG · BA 02";"2026-10-08";"5";"Arbeitstage";"2026-10-14";"active";"85";"nein";"Fiktiver Vorgang zum Testen. Mengen, Personal und Dauern sind Demo-Annahmen, keine Kalkulation.
+Bauabschnitt 2 · Ansprechpartner: Demo-Bauleitung."
+"Oberflächen beschichten · Flügel Nord · 1. OG · BA 02";"Malerarbeiten";"Farbwerk Demo GmbH";"Flügel Nord · 1. OG · BA 02";"2026-10-16";"2";"Arbeitstage";"2026-10-20";"planned";"0";"nein";"Fiktiver Vorgang zum Testen. Mengen, Personal und Dauern sind Demo-Annahmen, keine Kalkulation.
+Bauabschnitt 2 · Ansprechpartner: Demo-Bauleitung."
+"Geländer und Stahlteile montieren · Flügel Nord · 1. OG · BA 02";"Metallbau";"Metall & Form Demo GmbH";"Flügel Nord · 1. OG · BA 02";"2026-09-14";"3";"Arbeitstage";"2026-09-16";"complete";"100";"nein";"Fiktiver Vorgang zum Testen. Mengen, Personal und Dauern sind Demo-Annahmen, keine Kalkulation.
+Bauabschnitt 2 · Ansprechpartner: Demo-Bauleitung."
+"Aufzugtechnik montieren · Flügel Nord · 1. OG · BA 02";"Aufzüge";"Liftwerk Demo GmbH";"Flügel Nord · 1. OG · BA 02";"2026-09-18";"4";"Arbeitstage";"2026-09-23";"complete";"100";"nein";"Fiktiver Vorgang zum Testen. Mengen, Personal und Dauern sind Demo-Annahmen, keine Kalkulation.
+Bauabschnitt 2 · Ansprechpartner: Demo-Bauleitung."
+"Wege und Außenflächen herstellen · Flügel Nord · 1. OG · BA 02";"Außenanlagen";"Freiraum Demo GmbH";"Flügel Nord · 1. OG · BA 02";"2026-09-30";"5";"Arbeitstage";"2026-10-06";"complete";"100";"nein";"Fiktiver Vorgang zum Testen. Mengen, Personal und Dauern sind Demo-Annahmen, keine Kalkulation.
+Bauabschnitt 2 · Ansprechpartner: Demo-Bauleitung."
+"Bauabschnitt endreinigen · Flügel Nord · 1. OG · BA 02";"Baureinigung";"Klarwerk Demo GmbH";"Flügel Nord · 1. OG · BA 02";"2026-10-21";"2";"Arbeitstage";"2026-10-22";"planned";"0";"nein";"Fiktiver Vorgang zum Testen. Mengen, Personal und Dauern sind Demo-Annahmen, keine Kalkulation.
+Bauabschnitt 2 · Ansprechpartner: Demo-Bauleitung."
+"Bauabschnitt abnehmen · Flügel Nord · 1. OG · BA 02";"Inbetriebnahme & Abnahme";"Prüfwerk Demo GmbH";"Flügel Nord · 1. OG · BA 02";"2026-10-23";"0";"Arbeitstage";"2026-10-23";"planned";"0";"nein";"Fiktiver Vorgang zum Testen. Mengen, Personal und Dauern sind Demo-Annahmen, keine Kalkulation.
+Bauabschnitt 2 · Ansprechpartner: Demo-Bauleitung."
+"Baustelle einrichten · Flügel Nord · 2. OG · BA 03";"Baustelleneinrichtung";"Bauwerk Logistik Partner Demo GmbH";"Flügel Nord · 2. OG · BA 03";"2026-08-31";"4";"Arbeitstage";"2026-09-03";"complete";"100";"nein";"Fiktiver Vorgang zum Testen. Mengen, Personal und Dauern sind Demo-Annahmen, keine Kalkulation.
+Bauabschnitt 3 · Ansprechpartner: Demo-Bauleitung."
+"Arbeitsgerüst stellen · Flügel Nord · 2. OG · BA 03";"Gerüstbau";"Höhenwerk Demo GmbH";"Flügel Nord · 2. OG · BA 03";"2026-09-04";"5";"Arbeitstage";"2026-09-10";"complete";"100";"nein";"Fiktiver Vorgang zum Testen. Mengen, Personal und Dauern sind Demo-Annahmen, keine Kalkulation.
+Bauabschnitt 3 · Ansprechpartner: Demo-Bauleitung."
+"Bestand selektiv rückbauen · Flügel Nord · 2. OG · BA 03";"Rückbau";"Rückbau Nord Demo GmbH";"Flügel Nord · 2. OG · BA 03";"2026-09-04";"2";"Arbeitstage";"2026-09-07";"complete";"100";"nein";"Fiktiver Vorgang zum Testen. Mengen, Personal und Dauern sind Demo-Annahmen, keine Kalkulation.
+Bauabschnitt 3 · Ansprechpartner: Demo-Bauleitung."
+"Öffnungen und Rohbau herstellen · Flügel Nord · 2. OG · BA 03";"Rohbau";"Massivbau Demo GmbH";"Flügel Nord · 2. OG · BA 03";"2026-09-08";"3";"Arbeitstage";"2026-09-10";"complete";"100";"nein";"Fiktiver Vorgang zum Testen. Mengen, Personal und Dauern sind Demo-Annahmen, keine Kalkulation.
+Bauabschnitt 3 · Ansprechpartner: Demo-Bauleitung."
+"Sockel und Anschlüsse abdichten · Flügel Nord · 2. OG · BA 03";"Abdichtung";"Dichtwerk Demo GmbH";"Flügel Nord · 2. OG · BA 03";"2026-09-11";"4";"Arbeitstage";"2026-09-16";"complete";"100";"nein";"Fiktiver Vorgang zum Testen. Mengen, Personal und Dauern sind Demo-Annahmen, keine Kalkulation.
+Bauabschnitt 3 · Ansprechpartner: Demo-Bauleitung."
+"Dachfläche instand setzen · Flügel Nord · 2. OG · BA 03";"Dacharbeiten";"Dach & Form Partner Demo GmbH";"Flügel Nord · 2. OG · BA 03";"2026-09-17";"5";"Arbeitstage";"2026-09-23";"complete";"100";"nein";"Fiktiver Vorgang zum Testen. Mengen, Personal und Dauern sind Demo-Annahmen, keine Kalkulation.
+Bauabschnitt 3 · Ansprechpartner: Demo-Bauleitung."
+"Fassadenabschnitt sanieren · Flügel Nord · 2. OG · BA 03";"Fassade";"Fassadenwerk Demo GmbH";"Flügel Nord · 2. OG · BA 03";"2026-09-24";"2";"Arbeitstage";"2026-09-25";"complete";"100";"nein";"Fiktiver Vorgang zum Testen. Mengen, Personal und Dauern sind Demo-Annahmen, keine Kalkulation.
+Bauabschnitt 3 · Ansprechpartner: Demo-Bauleitung."
+"Fenster und Anschlüsse montieren · Flügel Nord · 2. OG · BA 03";"Fensterbau";"Müller Fenster Demo GmbH";"Flügel Nord · 2. OG · BA 03";"2026-09-28";"3";"Arbeitstage";"2026-09-30";"complete";"100";"nein";"Fiktiver Vorgang zum Testen. Mengen, Personal und Dauern sind Demo-Annahmen, keine Kalkulation.
+Bauabschnitt 3 · Ansprechpartner: Demo-Bauleitung."
+"Innentüren und Zargen montieren · Flügel Nord · 2. OG · BA 03";"Türen";"Türwerk Demo GmbH";"Flügel Nord · 2. OG · BA 03";"2026-09-22";"4";"Arbeitstage";"2026-09-25";"complete";"100";"nein";"Fiktiver Vorgang zum Testen. Mengen, Personal und Dauern sind Demo-Annahmen, keine Kalkulation.
+Bauabschnitt 3 · Ansprechpartner: Demo-Bauleitung."
+"Rohinstallation Elektro ausführen · Flügel Nord · 2. OG · BA 03";"Elektro";"Elektro Lichtblick Demo GmbH";"Flügel Nord · 2. OG · BA 03";"2026-09-11";"5";"Arbeitstage";"2026-09-17";"complete";"100";"nein";"Fiktiver Vorgang zum Testen. Mengen, Personal und Dauern sind Demo-Annahmen, keine Kalkulation.
+Bauabschnitt 3 · Ansprechpartner: Demo-Bauleitung."
+"Heizungsverteilung montieren · Flügel Nord · 2. OG · BA 03";"Heizung";"Wärmeweg Partner Demo GmbH";"Flügel Nord · 2. OG · BA 03";"2026-09-11";"2";"Arbeitstage";"2026-09-14";"complete";"100";"nein";"Fiktiver Vorgang zum Testen. Mengen, Personal und Dauern sind Demo-Annahmen, keine Kalkulation.
+Bauabschnitt 3 · Ansprechpartner: Demo-Bauleitung."
+"Lüftungsleitungen montieren · Flügel Nord · 2. OG · BA 03";"Lüftung";"Luftwerk Demo GmbH";"Flügel Nord · 2. OG · BA 03";"2026-09-11";"3";"Arbeitstage";"2026-09-15";"complete";"100";"nein";"Fiktiver Vorgang zum Testen. Mengen, Personal und Dauern sind Demo-Annahmen, keine Kalkulation.
+Bauabschnitt 3 · Ansprechpartner: Demo-Bauleitung."
+"Sanitärleitungen installieren · Flügel Nord · 2. OG · BA 03";"Sanitär";"Wasserwerk Demo GmbH";"Flügel Nord · 2. OG · BA 03";"2026-09-11";"4";"Arbeitstage";"2026-09-16";"complete";"100";"nein";"Fiktiver Vorgang zum Testen. Mengen, Personal und Dauern sind Demo-Annahmen, keine Kalkulation.
+Bauabschnitt 3 · Ansprechpartner: Demo-Bauleitung."
+"Durchführungen abschotten · Flügel Nord · 2. OG · BA 03";"Brandschutz";"Brandschutz Sicher Demo GmbH";"Flügel Nord · 2. OG · BA 03";"2026-09-18";"5";"Arbeitstage";"2026-09-24";"complete";"100";"nein";"Fiktiver Vorgang zum Testen. Mengen, Personal und Dauern sind Demo-Annahmen, keine Kalkulation.
+Bauabschnitt 3 · Ansprechpartner: Demo-Bauleitung."
+"Wände und Decken schließen · Flügel Nord · 2. OG · BA 03";"Trockenbau";"Raumwerk Demo GmbH";"Flügel Nord · 2. OG · BA 03";"2026-09-18";"2";"Arbeitstage";"2026-09-21";"complete";"100";"nein";"Fiktiver Vorgang zum Testen. Mengen, Personal und Dauern sind Demo-Annahmen, keine Kalkulation.
+Bauabschnitt 3 · Ansprechpartner: Demo-Bauleitung."
+"Wandflächen verputzen · Flügel Nord · 2. OG · BA 03";"Putzarbeiten";"Oberfläche Partner Demo GmbH";"Flügel Nord · 2. OG · BA 03";"2026-09-22";"3";"Arbeitstage";"2026-09-24";"complete";"100";"nein";"Fiktiver Vorgang zum Testen. Mengen, Personal und Dauern sind Demo-Annahmen, keine Kalkulation.
+Bauabschnitt 3 · Ansprechpartner: Demo-Bauleitung."
+"Estrich einbringen · Flügel Nord · 2. OG · BA 03";"Estrich";"Estrich Mitte Demo GmbH";"Flügel Nord · 2. OG · BA 03";"2026-09-25";"4";"Arbeitstage";"2026-09-30";"complete";"100";"nein";"Fiktiver Vorgang zum Testen. Mengen, Personal und Dauern sind Demo-Annahmen, keine Kalkulation.
+Bauabschnitt 3 · Ansprechpartner: Demo-Bauleitung."
+"Bodenbeläge verlegen · Flügel Nord · 2. OG · BA 03";"Bodenbeläge";"Bodenwerk Demo GmbH";"Flügel Nord · 2. OG · BA 03";"2026-10-08";"5";"Arbeitstage";"2026-10-14";"active";"66";"nein";"Fiktiver Vorgang zum Testen. Mengen, Personal und Dauern sind Demo-Annahmen, keine Kalkulation.
+Bauabschnitt 3 · Ansprechpartner: Demo-Bauleitung."
+"Nassräume fliesen · Flügel Nord · 2. OG · BA 03";"Fliesen";"Keramik Demo GmbH";"Flügel Nord · 2. OG · BA 03";"2026-10-06";"2";"Arbeitstage";"2026-10-07";"complete";"100";"nein";"Fiktiver Vorgang zum Testen. Mengen, Personal und Dauern sind Demo-Annahmen, keine Kalkulation.
+Bauabschnitt 3 · Ansprechpartner: Demo-Bauleitung."
+"Oberflächen beschichten · Flügel Nord · 2. OG · BA 03";"Malerarbeiten";"Farbwerk Demo GmbH";"Flügel Nord · 2. OG · BA 03";"2026-10-15";"3";"Arbeitstage";"2026-10-20";"planned";"0";"nein";"Fiktiver Vorgang zum Testen. Mengen, Personal und Dauern sind Demo-Annahmen, keine Kalkulation.
+Bauabschnitt 3 · Ansprechpartner: Demo-Bauleitung."
+"Geländer und Stahlteile montieren · Flügel Nord · 2. OG · BA 03";"Metallbau";"Metall & Form Partner Demo GmbH";"Flügel Nord · 2. OG · BA 03";"2026-09-11";"4";"Arbeitstage";"2026-09-16";"complete";"100";"nein";"Fiktiver Vorgang zum Testen. Mengen, Personal und Dauern sind Demo-Annahmen, keine Kalkulation.
+Bauabschnitt 3 · Ansprechpartner: Demo-Bauleitung."
+"Aufzugtechnik montieren · Flügel Nord · 2. OG · BA 03";"Aufzüge";"Liftwerk Demo GmbH";"Flügel Nord · 2. OG · BA 03";"2026-09-18";"5";"Arbeitstage";"2026-09-24";"complete";"100";"nein";"Fiktiver Vorgang zum Testen. Mengen, Personal und Dauern sind Demo-Annahmen, keine Kalkulation.
+Bauabschnitt 3 · Ansprechpartner: Demo-Bauleitung."
+"Wege und Außenflächen herstellen · Flügel Nord · 2. OG · BA 03";"Außenanlagen";"Freiraum Demo GmbH";"Flügel Nord · 2. OG · BA 03";"2026-09-28";"2";"Arbeitstage";"2026-09-29";"complete";"100";"nein";"Fiktiver Vorgang zum Testen. Mengen, Personal und Dauern sind Demo-Annahmen, keine Kalkulation.
+Bauabschnitt 3 · Ansprechpartner: Demo-Bauleitung."
+"Bauabschnitt endreinigen · Flügel Nord · 2. OG · BA 03";"Baureinigung";"Klarwerk Demo GmbH";"Flügel Nord · 2. OG · BA 03";"2026-10-21";"3";"Arbeitstage";"2026-10-23";"planned";"0";"nein";"Fiktiver Vorgang zum Testen. Mengen, Personal und Dauern sind Demo-Annahmen, keine Kalkulation.
+Bauabschnitt 3 · Ansprechpartner: Demo-Bauleitung."
+"Bauabschnitt abnehmen · Flügel Nord · 2. OG · BA 03";"Inbetriebnahme & Abnahme";"Prüfwerk Demo GmbH";"Flügel Nord · 2. OG · BA 03";"2026-10-26";"0";"Arbeitstage";"2026-10-26";"planned";"0";"nein";"Fiktiver Vorgang zum Testen. Mengen, Personal und Dauern sind Demo-Annahmen, keine Kalkulation.
+Bauabschnitt 3 · Ansprechpartner: Demo-Bauleitung."
+"Baustelle einrichten · Flügel Nord · 3. OG · BA 04";"Baustelleneinrichtung";"Bauwerk Logistik Demo GmbH";"Flügel Nord · 3. OG · BA 04";"2026-09-07";"5";"Arbeitstage";"2026-09-11";"complete";"100";"nein";"Fiktiver Vorgang zum Testen. Mengen, Personal und Dauern sind Demo-Annahmen, keine Kalkulation.
+Bauabschnitt 4 · Ansprechpartner: Demo-Bauleitung."
+"Arbeitsgerüst stellen · Flügel Nord · 3. OG · BA 04";"Gerüstbau";"Höhenwerk Demo GmbH";"Flügel Nord · 3. OG · BA 04";"2026-09-14";"2";"Arbeitstage";"2026-09-15";"complete";"100";"nein";"Fiktiver Vorgang zum Testen. Mengen, Personal und Dauern sind Demo-Annahmen, keine Kalkulation.
+Bauabschnitt 4 · Ansprechpartner: Demo-Bauleitung."
+"Bestand selektiv rückbauen · Flügel Nord · 3. OG · BA 04";"Rückbau";"Rückbau Nord Demo GmbH";"Flügel Nord · 3. OG · BA 04";"2026-09-14";"3";"Arbeitstage";"2026-09-16";"complete";"100";"nein";"Fiktiver Vorgang zum Testen. Mengen, Personal und Dauern sind Demo-Annahmen, keine Kalkulation.
+Bauabschnitt 4 · Ansprechpartner: Demo-Bauleitung."
+"Öffnungen und Rohbau herstellen · Flügel Nord · 3. OG · BA 04";"Rohbau";"Massivbau Demo GmbH";"Flügel Nord · 3. OG · BA 04";"2026-09-17";"4";"Arbeitstage";"2026-09-22";"complete";"100";"nein";"Fiktiver Vorgang zum Testen. Mengen, Personal und Dauern sind Demo-Annahmen, keine Kalkulation.
+Bauabschnitt 4 · Ansprechpartner: Demo-Bauleitung."
+"Sockel und Anschlüsse abdichten · Flügel Nord · 3. OG · BA 04";"Abdichtung";"Dichtwerk Demo GmbH";"Flügel Nord · 3. OG · BA 04";"2026-09-23";"5";"Arbeitstage";"2026-09-29";"complete";"100";"nein";"Fiktiver Vorgang zum Testen. Mengen, Personal und Dauern sind Demo-Annahmen, keine Kalkulation.
+Bauabschnitt 4 · Ansprechpartner: Demo-Bauleitung."
+"Dachfläche instand setzen · Flügel Nord · 3. OG · BA 04";"Dacharbeiten";"Dach & Form Demo GmbH";"Flügel Nord · 3. OG · BA 04";"2026-09-30";"2";"Arbeitstage";"2026-10-01";"complete";"100";"nein";"Fiktiver Vorgang zum Testen. Mengen, Personal und Dauern sind Demo-Annahmen, keine Kalkulation.
+Bauabschnitt 4 · Ansprechpartner: Demo-Bauleitung."
+"Fassadenabschnitt sanieren · Flügel Nord · 3. OG · BA 04";"Fassade";"Fassadenwerk Demo GmbH";"Flügel Nord · 3. OG · BA 04";"2026-10-02";"3";"Arbeitstage";"2026-10-06";"complete";"100";"nein";"Fiktiver Vorgang zum Testen. Mengen, Personal und Dauern sind Demo-Annahmen, keine Kalkulation.
+Bauabschnitt 4 · Ansprechpartner: Demo-Bauleitung."
+"Fenster und Anschlüsse montieren · Flügel Nord · 3. OG · BA 04";"Fensterbau";"Müller Fenster Demo GmbH";"Flügel Nord · 3. OG · BA 04";"2026-10-07";"4";"Arbeitstage";"2026-10-12";"active";"77";"nein";"Fiktiver Vorgang zum Testen. Mengen, Personal und Dauern sind Demo-Annahmen, keine Kalkulation.
+Bauabschnitt 4 · Ansprechpartner: Demo-Bauleitung."
+"Innentüren und Zargen montieren · Flügel Nord · 3. OG · BA 04";"Türen";"Türwerk Demo GmbH";"Flügel Nord · 3. OG · BA 04";"2026-10-05";"5";"Arbeitstage";"2026-10-09";"active";"33";"nein";"Fiktiver Vorgang zum Testen. Mengen, Personal und Dauern sind Demo-Annahmen, keine Kalkulation.
+Bauabschnitt 4 · Ansprechpartner: Demo-Bauleitung."
+"Rohinstallation Elektro ausführen · Flügel Nord · 3. OG · BA 04";"Elektro";"Elektro Lichtblick Demo GmbH";"Flügel Nord · 3. OG · BA 04";"2026-09-23";"2";"Arbeitstage";"2026-09-24";"complete";"100";"nein";"Fiktiver Vorgang zum Testen. Mengen, Personal und Dauern sind Demo-Annahmen, keine Kalkulation.
+Bauabschnitt 4 · Ansprechpartner: Demo-Bauleitung."
+"Heizungsverteilung montieren · Flügel Nord · 3. OG · BA 04";"Heizung";"Wärmeweg Demo GmbH";"Flügel Nord · 3. OG · BA 04";"2026-09-23";"3";"Arbeitstage";"2026-09-25";"complete";"100";"nein";"Fiktiver Vorgang zum Testen. Mengen, Personal und Dauern sind Demo-Annahmen, keine Kalkulation.
+Bauabschnitt 4 · Ansprechpartner: Demo-Bauleitung."
+"Lüftungsleitungen montieren · Flügel Nord · 3. OG · BA 04";"Lüftung";"Luftwerk Demo GmbH";"Flügel Nord · 3. OG · BA 04";"2026-09-23";"4";"Arbeitstage";"2026-09-28";"complete";"100";"nein";"Fiktiver Vorgang zum Testen. Mengen, Personal und Dauern sind Demo-Annahmen, keine Kalkulation.
+Bauabschnitt 4 · Ansprechpartner: Demo-Bauleitung."
+"Sanitärleitungen installieren · Flügel Nord · 3. OG · BA 04";"Sanitär";"Wasserwerk Demo GmbH";"Flügel Nord · 3. OG · BA 04";"2026-09-23";"5";"Arbeitstage";"2026-09-29";"complete";"100";"nein";"Fiktiver Vorgang zum Testen. Mengen, Personal und Dauern sind Demo-Annahmen, keine Kalkulation.
+Bauabschnitt 4 · Ansprechpartner: Demo-Bauleitung."
+"Durchführungen abschotten · Flügel Nord · 3. OG · BA 04";"Brandschutz";"Brandschutz Sicher Demo GmbH";"Flügel Nord · 3. OG · BA 04";"2026-09-29";"2";"Arbeitstage";"2026-09-30";"complete";"100";"nein";"Fiktiver Vorgang zum Testen. Mengen, Personal und Dauern sind Demo-Annahmen, keine Kalkulation.
+Bauabschnitt 4 · Ansprechpartner: Demo-Bauleitung."
+"Wände und Decken schließen · Flügel Nord · 3. OG · BA 04";"Trockenbau";"Raumwerk Demo GmbH";"Flügel Nord · 3. OG · BA 04";"2026-09-30";"3";"Arbeitstage";"2026-10-02";"complete";"100";"nein";"Fiktiver Vorgang zum Testen. Mengen, Personal und Dauern sind Demo-Annahmen, keine Kalkulation.
+Bauabschnitt 4 · Ansprechpartner: Demo-Bauleitung."
+"Wandflächen verputzen · Flügel Nord · 3. OG · BA 04";"Putzarbeiten";"Oberfläche Demo GmbH";"Flügel Nord · 3. OG · BA 04";"2026-10-05";"4";"Arbeitstage";"2026-10-08";"active";"30";"nein";"Fiktiver Vorgang zum Testen. Mengen, Personal und Dauern sind Demo-Annahmen, keine Kalkulation.
+Bauabschnitt 4 · Ansprechpartner: Demo-Bauleitung."
+"Estrich einbringen · Flügel Nord · 3. OG · BA 04";"Estrich";"Estrich Mitte Demo GmbH";"Flügel Nord · 3. OG · BA 04";"2026-10-09";"5";"Arbeitstage";"2026-10-15";"planned";"0";"nein";"Fiktiver Vorgang zum Testen. Mengen, Personal und Dauern sind Demo-Annahmen, keine Kalkulation.
+Bauabschnitt 4 · Ansprechpartner: Demo-Bauleitung."
+"Bodenbeläge verlegen · Flügel Nord · 3. OG · BA 04";"Bodenbeläge";"Bodenwerk Demo GmbH";"Flügel Nord · 3. OG · BA 04";"2026-10-23";"2";"Arbeitstage";"2026-10-26";"planned";"0";"ja";"Fiktiver Vorgang zum Testen. Mengen, Personal und Dauern sind Demo-Annahmen, keine Kalkulation.
+Bauabschnitt 4 · Ansprechpartner: Demo-Bauleitung.
+DEMO-Hindernis: Materialfreigabe steht aus. Zuständig: Test-Bauleitung. Nächste Abstimmung: 2026-10-10."
+"Nassräume fliesen · Flügel Nord · 3. OG · BA 04";"Fliesen";"Keramik Demo GmbH";"Flügel Nord · 3. OG · BA 04";"2026-10-21";"3";"Arbeitstage";"2026-10-23";"planned";"0";"nein";"Fiktiver Vorgang zum Testen. Mengen, Personal und Dauern sind Demo-Annahmen, keine Kalkulation.
+Bauabschnitt 4 · Ansprechpartner: Demo-Bauleitung."
+"Oberflächen beschichten · Flügel Nord · 3. OG · BA 04";"Malerarbeiten";"Farbwerk Demo GmbH";"Flügel Nord · 3. OG · BA 04";"2026-10-27";"4";"Arbeitstage";"2026-10-30";"planned";"0";"nein";"Fiktiver Vorgang zum Testen. Mengen, Personal und Dauern sind Demo-Annahmen, keine Kalkulation.
+Bauabschnitt 4 · Ansprechpartner: Demo-Bauleitung."
+"Geländer und Stahlteile montieren · Flügel Nord · 3. OG · BA 04";"Metallbau";"Metall & Form Demo GmbH";"Flügel Nord · 3. OG · BA 04";"2026-09-23";"5";"Arbeitstage";"2026-09-29";"complete";"100";"nein";"Fiktiver Vorgang zum Testen. Mengen, Personal und Dauern sind Demo-Annahmen, keine Kalkulation.
+Bauabschnitt 4 · Ansprechpartner: Demo-Bauleitung."
+"Aufzugtechnik montieren · Flügel Nord · 3. OG · BA 04";"Aufzüge";"Liftwerk Demo GmbH";"Flügel Nord · 3. OG · BA 04";"2026-09-25";"2";"Arbeitstage";"2026-09-28";"complete";"100";"nein";"Fiktiver Vorgang zum Testen. Mengen, Personal und Dauern sind Demo-Annahmen, keine Kalkulation.
+Bauabschnitt 4 · Ansprechpartner: Demo-Bauleitung."
+"Wege und Außenflächen herstellen · Flügel Nord · 3. OG · BA 04";"Außenanlagen";"Freiraum Demo GmbH";"Flügel Nord · 3. OG · BA 04";"2026-10-07";"3";"Arbeitstage";"2026-10-09";"active";"27";"nein";"Fiktiver Vorgang zum Testen. Mengen, Personal und Dauern sind Demo-Annahmen, keine Kalkulation.
+Bauabschnitt 4 · Ansprechpartner: Demo-Bauleitung."
+"Bauabschnitt endreinigen · Flügel Nord · 3. OG · BA 04";"Baureinigung";"Klarwerk Demo GmbH";"Flügel Nord · 3. OG · BA 04";"2026-11-02";"4";"Arbeitstage";"2026-11-05";"planned";"0";"nein";"Fiktiver Vorgang zum Testen. Mengen, Personal und Dauern sind Demo-Annahmen, keine Kalkulation.
+Bauabschnitt 4 · Ansprechpartner: Demo-Bauleitung."
+"Bauabschnitt abnehmen · Flügel Nord · 3. OG · BA 04";"Inbetriebnahme & Abnahme";"Prüfwerk Demo GmbH";"Flügel Nord · 3. OG · BA 04";"2026-11-06";"0";"Arbeitstage";"2026-11-06";"planned";"0";"nein";"Fiktiver Vorgang zum Testen. Mengen, Personal und Dauern sind Demo-Annahmen, keine Kalkulation.
+Bauabschnitt 4 · Ansprechpartner: Demo-Bauleitung."
+"Baustelle einrichten · Flügel West · EG · BA 05";"Baustelleneinrichtung";"Bauwerk Logistik Demo GmbH";"Flügel West · EG · BA 05";"2026-09-04";"2";"Arbeitstage";"2026-09-07";"complete";"100";"nein";"Fiktiver Vorgang zum Testen. Mengen, Personal und Dauern sind Demo-Annahmen, keine Kalkulation.
+Bauabschnitt 5 · Ansprechpartner: Demo-Bauleitung."
+"Arbeitsgerüst stellen · Flügel West · EG · BA 05";"Gerüstbau";"Höhenwerk Demo GmbH";"Flügel West · EG · BA 05";"2026-09-08";"3";"Arbeitstage";"2026-09-10";"complete";"100";"nein";"Fiktiver Vorgang zum Testen. Mengen, Personal und Dauern sind Demo-Annahmen, keine Kalkulation.
+Bauabschnitt 5 · Ansprechpartner: Demo-Bauleitung."
+"Bestand selektiv rückbauen · Flügel West · EG · BA 05";"Rückbau";"Rückbau Nord Demo GmbH";"Flügel West · EG · BA 05";"2026-09-08";"4";"Arbeitstage";"2026-09-11";"complete";"100";"nein";"Fiktiver Vorgang zum Testen. Mengen, Personal und Dauern sind Demo-Annahmen, keine Kalkulation.
+Bauabschnitt 5 · Ansprechpartner: Demo-Bauleitung."
+"Öffnungen und Rohbau herstellen · Flügel West · EG · BA 05";"Rohbau";"Massivbau Demo GmbH";"Flügel West · EG · BA 05";"2026-09-14";"5";"Arbeitstage";"2026-09-18";"complete";"100";"nein";"Fiktiver Vorgang zum Testen. Mengen, Personal und Dauern sind Demo-Annahmen, keine Kalkulation.
+Bauabschnitt 5 · Ansprechpartner: Demo-Bauleitung."
+"Sockel und Anschlüsse abdichten · Flügel West · EG · BA 05";"Abdichtung";"Dichtwerk Demo GmbH";"Flügel West · EG · BA 05";"2026-09-21";"2";"Arbeitstage";"2026-09-22";"complete";"100";"nein";"Fiktiver Vorgang zum Testen. Mengen, Personal und Dauern sind Demo-Annahmen, keine Kalkulation.
+Bauabschnitt 5 · Ansprechpartner: Demo-Bauleitung."
+"Dachfläche instand setzen · Flügel West · EG · BA 05";"Dacharbeiten";"Dach & Form Demo GmbH";"Flügel West · EG · BA 05";"2026-09-23";"3";"Arbeitstage";"2026-09-25";"complete";"100";"nein";"Fiktiver Vorgang zum Testen. Mengen, Personal und Dauern sind Demo-Annahmen, keine Kalkulation.
+Bauabschnitt 5 · Ansprechpartner: Demo-Bauleitung."
+"Fassadenabschnitt sanieren · Flügel West · EG · BA 05";"Fassade";"Fassadenwerk Demo GmbH";"Flügel West · EG · BA 05";"2026-09-28";"4";"Arbeitstage";"2026-10-01";"complete";"100";"nein";"Fiktiver Vorgang zum Testen. Mengen, Personal und Dauern sind Demo-Annahmen, keine Kalkulation.
+Bauabschnitt 5 · Ansprechpartner: Demo-Bauleitung."
+"Fenster und Anschlüsse montieren · Flügel West · EG · BA 05";"Fensterbau";"Müller Fenster Demo GmbH";"Flügel West · EG · BA 05";"2026-10-02";"5";"Arbeitstage";"2026-10-08";"active";"75";"nein";"Fiktiver Vorgang zum Testen. Mengen, Personal und Dauern sind Demo-Annahmen, keine Kalkulation.
+Bauabschnitt 5 · Ansprechpartner: Demo-Bauleitung."
+"Innentüren und Zargen montieren · Flügel West · EG · BA 05";"Türen";"Türwerk Demo GmbH";"Flügel West · EG · BA 05";"2026-10-02";"2";"Arbeitstage";"2026-10-05";"complete";"100";"nein";"Fiktiver Vorgang zum Testen. Mengen, Personal und Dauern sind Demo-Annahmen, keine Kalkulation.
+Bauabschnitt 5 · Ansprechpartner: Demo-Bauleitung."
+"Rohinstallation Elektro ausführen · Flügel West · EG · BA 05";"Elektro";"Elektro Lichtblick Demo GmbH";"Flügel West · EG · BA 05";"2026-09-21";"3";"Arbeitstage";"2026-09-23";"complete";"100";"nein";"Fiktiver Vorgang zum Testen. Mengen, Personal und Dauern sind Demo-Annahmen, keine Kalkulation.
+Bauabschnitt 5 · Ansprechpartner: Demo-Bauleitung."
+"Heizungsverteilung montieren · Flügel West · EG · BA 05";"Heizung";"Wärmeweg Demo GmbH";"Flügel West · EG · BA 05";"2026-09-21";"4";"Arbeitstage";"2026-09-24";"complete";"100";"nein";"Fiktiver Vorgang zum Testen. Mengen, Personal und Dauern sind Demo-Annahmen, keine Kalkulation.
+Bauabschnitt 5 · Ansprechpartner: Demo-Bauleitung."
+"Lüftungsleitungen montieren · Flügel West · EG · BA 05";"Lüftung";"Luftwerk Demo GmbH";"Flügel West · EG · BA 05";"2026-09-21";"5";"Arbeitstage";"2026-09-25";"complete";"100";"nein";"Fiktiver Vorgang zum Testen. Mengen, Personal und Dauern sind Demo-Annahmen, keine Kalkulation.
+Bauabschnitt 5 · Ansprechpartner: Demo-Bauleitung."
+"Sanitärleitungen installieren · Flügel West · EG · BA 05";"Sanitär";"Wasserwerk Demo GmbH";"Flügel West · EG · BA 05";"2026-09-21";"2";"Arbeitstage";"2026-09-22";"complete";"100";"nein";"Fiktiver Vorgang zum Testen. Mengen, Personal und Dauern sind Demo-Annahmen, keine Kalkulation.
+Bauabschnitt 5 · Ansprechpartner: Demo-Bauleitung."
+"Durchführungen abschotten · Flügel West · EG · BA 05";"Brandschutz";"Brandschutz Sicher Demo GmbH";"Flügel West · EG · BA 05";"2026-09-28";"3";"Arbeitstage";"2026-09-30";"complete";"100";"nein";"Fiktiver Vorgang zum Testen. Mengen, Personal und Dauern sind Demo-Annahmen, keine Kalkulation.
+Bauabschnitt 5 · Ansprechpartner: Demo-Bauleitung."
+"Wände und Decken schließen · Flügel West · EG · BA 05";"Trockenbau";"Raumwerk Demo GmbH";"Flügel West · EG · BA 05";"2026-09-28";"4";"Arbeitstage";"2026-10-01";"complete";"100";"nein";"Fiktiver Vorgang zum Testen. Mengen, Personal und Dauern sind Demo-Annahmen, keine Kalkulation.
+Bauabschnitt 5 · Ansprechpartner: Demo-Bauleitung."
+"Wandflächen verputzen · Flügel West · EG · BA 05";"Putzarbeiten";"Oberfläche Demo GmbH";"Flügel West · EG · BA 05";"2026-10-02";"5";"Arbeitstage";"2026-10-08";"active";"28";"nein";"Fiktiver Vorgang zum Testen. Mengen, Personal und Dauern sind Demo-Annahmen, keine Kalkulation.
+Bauabschnitt 5 · Ansprechpartner: Demo-Bauleitung."
+"Estrich einbringen · Flügel West · EG · BA 05";"Estrich";"Estrich Mitte Demo GmbH";"Flügel West · EG · BA 05";"2026-10-09";"2";"Arbeitstage";"2026-10-12";"planned";"0";"nein";"Fiktiver Vorgang zum Testen. Mengen, Personal und Dauern sind Demo-Annahmen, keine Kalkulation.
+Bauabschnitt 5 · Ansprechpartner: Demo-Bauleitung."
+"Bodenbeläge verlegen · Flügel West · EG · BA 05";"Bodenbeläge";"Bodenwerk Demo GmbH";"Flügel West · EG · BA 05";"2026-10-20";"3";"Arbeitstage";"2026-10-22";"planned";"0";"nein";"Fiktiver Vorgang zum Testen. Mengen, Personal und Dauern sind Demo-Annahmen, keine Kalkulation.
+Bauabschnitt 5 · Ansprechpartner: Demo-Bauleitung."
+"Nassräume fliesen · Flügel West · EG · BA 05";"Fliesen";"Keramik Demo GmbH";"Flügel West · EG · BA 05";"2026-10-20";"4";"Arbeitstage";"2026-10-23";"planned";"0";"nein";"Fiktiver Vorgang zum Testen. Mengen, Personal und Dauern sind Demo-Annahmen, keine Kalkulation.
+Bauabschnitt 5 · Ansprechpartner: Demo-Bauleitung."
+"Oberflächen beschichten · Flügel West · EG · BA 05";"Malerarbeiten";"Farbwerk Demo GmbH";"Flügel West · EG · BA 05";"2026-10-23";"5";"Arbeitstage";"2026-10-29";"planned";"0";"nein";"Fiktiver Vorgang zum Testen. Mengen, Personal und Dauern sind Demo-Annahmen, keine Kalkulation.
+Bauabschnitt 5 · Ansprechpartner: Demo-Bauleitung."
+"Geländer und Stahlteile montieren · Flügel West · EG · BA 05";"Metallbau";"Metall & Form Demo GmbH";"Flügel West · EG · BA 05";"2026-09-21";"2";"Arbeitstage";"2026-09-22";"complete";"100";"nein";"Fiktiver Vorgang zum Testen. Mengen, Personal und Dauern sind Demo-Annahmen, keine Kalkulation.
+Bauabschnitt 5 · Ansprechpartner: Demo-Bauleitung."
+"Aufzugtechnik montieren · Flügel West · EG · BA 05";"Aufzüge";"Liftwerk Demo GmbH";"Flügel West · EG · BA 05";"2026-09-24";"3";"Arbeitstage";"2026-09-28";"complete";"100";"nein";"Fiktiver Vorgang zum Testen. Mengen, Personal und Dauern sind Demo-Annahmen, keine Kalkulation.
+Bauabschnitt 5 · Ansprechpartner: Demo-Bauleitung."
+"Wege und Außenflächen herstellen · Flügel West · EG · BA 05";"Außenanlagen";"Freiraum Demo GmbH";"Flügel West · EG · BA 05";"2026-10-02";"4";"Arbeitstage";"2026-10-07";"complete";"100";"nein";"Fiktiver Vorgang zum Testen. Mengen, Personal und Dauern sind Demo-Annahmen, keine Kalkulation.
+Bauabschnitt 5 · Ansprechpartner: Demo-Bauleitung."
+"Bauabschnitt endreinigen · Flügel West · EG · BA 05";"Baureinigung";"Klarwerk Demo GmbH";"Flügel West · EG · BA 05";"2026-10-30";"5";"Arbeitstage";"2026-11-05";"planned";"0";"nein";"Fiktiver Vorgang zum Testen. Mengen, Personal und Dauern sind Demo-Annahmen, keine Kalkulation.
+Bauabschnitt 5 · Ansprechpartner: Demo-Bauleitung."
+"Bauabschnitt abnehmen · Flügel West · EG · BA 05";"Inbetriebnahme & Abnahme";"Prüfwerk Demo GmbH";"Flügel West · EG · BA 05";"2026-11-06";"0";"Arbeitstage";"2026-11-06";"planned";"0";"nein";"Fiktiver Vorgang zum Testen. Mengen, Personal und Dauern sind Demo-Annahmen, keine Kalkulation.
+Bauabschnitt 5 · Ansprechpartner: Demo-Bauleitung."
+"Baustelle einrichten · Flügel West · 1. OG · BA 06";"Baustelleneinrichtung";"Bauwerk Logistik Demo GmbH";"Flügel West · 1. OG · BA 06";"2026-09-07";"3";"Arbeitstage";"2026-09-09";"complete";"100";"nein";"Fiktiver Vorgang zum Testen. Mengen, Personal und Dauern sind Demo-Annahmen, keine Kalkulation.
+Bauabschnitt 6 · Ansprechpartner: Demo-Bauleitung."
+"Arbeitsgerüst stellen · Flügel West · 1. OG · BA 06";"Gerüstbau";"Höhenwerk Demo GmbH";"Flügel West · 1. OG · BA 06";"2026-09-10";"4";"Arbeitstage";"2026-09-15";"complete";"100";"nein";"Fiktiver Vorgang zum Testen. Mengen, Personal und Dauern sind Demo-Annahmen, keine Kalkulation.
+Bauabschnitt 6 · Ansprechpartner: Demo-Bauleitung."
+"Bestand selektiv rückbauen · Flügel West · 1. OG · BA 06";"Rückbau";"Rückbau Nord Demo GmbH";"Flügel West · 1. OG · BA 06";"2026-09-10";"5";"Arbeitstage";"2026-09-16";"complete";"100";"nein";"Fiktiver Vorgang zum Testen. Mengen, Personal und Dauern sind Demo-Annahmen, keine Kalkulation.
+Bauabschnitt 6 · Ansprechpartner: Demo-Bauleitung."
+"Öffnungen und Rohbau herstellen · Flügel West · 1. OG · BA 06";"Rohbau";"Massivbau Demo GmbH";"Flügel West · 1. OG · BA 06";"2026-09-17";"2";"Arbeitstage";"2026-09-18";"complete";"100";"nein";"Fiktiver Vorgang zum Testen. Mengen, Personal und Dauern sind Demo-Annahmen, keine Kalkulation.
+Bauabschnitt 6 · Ansprechpartner: Demo-Bauleitung."
+"Sockel und Anschlüsse abdichten · Flügel West · 1. OG · BA 06";"Abdichtung";"Dichtwerk Demo GmbH";"Flügel West · 1. OG · BA 06";"2026-09-21";"3";"Arbeitstage";"2026-09-23";"complete";"100";"nein";"Fiktiver Vorgang zum Testen. Mengen, Personal und Dauern sind Demo-Annahmen, keine Kalkulation.
+Bauabschnitt 6 · Ansprechpartner: Demo-Bauleitung."
+"Dachfläche instand setzen · Flügel West · 1. OG · BA 06";"Dacharbeiten";"Dach & Form Demo GmbH";"Flügel West · 1. OG · BA 06";"2026-09-24";"4";"Arbeitstage";"2026-09-29";"complete";"100";"nein";"Fiktiver Vorgang zum Testen. Mengen, Personal und Dauern sind Demo-Annahmen, keine Kalkulation.
+Bauabschnitt 6 · Ansprechpartner: Demo-Bauleitung."
+"Fassadenabschnitt sanieren · Flügel West · 1. OG · BA 06";"Fassade";"Fassadenwerk Demo GmbH";"Flügel West · 1. OG · BA 06";"2026-09-30";"5";"Arbeitstage";"2026-10-06";"complete";"100";"nein";"Fiktiver Vorgang zum Testen. Mengen, Personal und Dauern sind Demo-Annahmen, keine Kalkulation.
+Bauabschnitt 6 · Ansprechpartner: Demo-Bauleitung."
+"Fenster und Anschlüsse montieren · Flügel West · 1. OG · BA 06";"Fensterbau";"Müller Fenster Demo GmbH";"Flügel West · 1. OG · BA 06";"2026-10-07";"2";"Arbeitstage";"2026-10-08";"active";"73";"nein";"Fiktiver Vorgang zum Testen. Mengen, Personal und Dauern sind Demo-Annahmen, keine Kalkulation.
+Bauabschnitt 6 · Ansprechpartner: Demo-Bauleitung."
+"Innentüren und Zargen montieren · Flügel West · 1. OG · BA 06";"Türen";"Türwerk Demo GmbH";"Flügel West · 1. OG · BA 06";"2026-10-05";"3";"Arbeitstage";"2026-10-07";"complete";"100";"nein";"Fiktiver Vorgang zum Testen. Mengen, Personal und Dauern sind Demo-Annahmen, keine Kalkulation.
+Bauabschnitt 6 · Ansprechpartner: Demo-Bauleitung."
+"Rohinstallation Elektro ausführen · Flügel West · 1. OG · BA 06";"Elektro";"Elektro Lichtblick Demo GmbH";"Flügel West · 1. OG · BA 06";"2026-09-21";"4";"Arbeitstage";"2026-09-24";"complete";"100";"nein";"Fiktiver Vorgang zum Testen. Mengen, Personal und Dauern sind Demo-Annahmen, keine Kalkulation.
+Bauabschnitt 6 · Ansprechpartner: Demo-Bauleitung."
+"Heizungsverteilung montieren · Flügel West · 1. OG · BA 06";"Heizung";"Wärmeweg Demo GmbH";"Flügel West · 1. OG · BA 06";"2026-09-21";"5";"Arbeitstage";"2026-09-25";"complete";"100";"nein";"Fiktiver Vorgang zum Testen. Mengen, Personal und Dauern sind Demo-Annahmen, keine Kalkulation.
+Bauabschnitt 6 · Ansprechpartner: Demo-Bauleitung."
+"Lüftungsleitungen montieren · Flügel West · 1. OG · BA 06";"Lüftung";"Luftwerk Demo GmbH";"Flügel West · 1. OG · BA 06";"2026-09-21";"2";"Arbeitstage";"2026-09-22";"complete";"100";"nein";"Fiktiver Vorgang zum Testen. Mengen, Personal und Dauern sind Demo-Annahmen, keine Kalkulation.
+Bauabschnitt 6 · Ansprechpartner: Demo-Bauleitung."
+"Sanitärleitungen installieren · Flügel West · 1. OG · BA 06";"Sanitär";"Wasserwerk Demo GmbH";"Flügel West · 1. OG · BA 06";"2026-09-21";"3";"Arbeitstage";"2026-09-23";"complete";"100";"nein";"Fiktiver Vorgang zum Testen. Mengen, Personal und Dauern sind Demo-Annahmen, keine Kalkulation.
+Bauabschnitt 6 · Ansprechpartner: Demo-Bauleitung."
+"Durchführungen abschotten · Flügel West · 1. OG · BA 06";"Brandschutz";"Brandschutz Sicher Demo GmbH";"Flügel West · 1. OG · BA 06";"2026-09-25";"4";"Arbeitstage";"2026-09-30";"complete";"100";"nein";"Fiktiver Vorgang zum Testen. Mengen, Personal und Dauern sind Demo-Annahmen, keine Kalkulation.
+Bauabschnitt 6 · Ansprechpartner: Demo-Bauleitung."
+"Wände und Decken schließen · Flügel West · 1. OG · BA 06";"Trockenbau";"Raumwerk Demo GmbH";"Flügel West · 1. OG · BA 06";"2026-09-28";"5";"Arbeitstage";"2026-10-02";"complete";"100";"nein";"Fiktiver Vorgang zum Testen. Mengen, Personal und Dauern sind Demo-Annahmen, keine Kalkulation.
+Bauabschnitt 6 · Ansprechpartner: Demo-Bauleitung."
+"Wandflächen verputzen · Flügel West · 1. OG · BA 06";"Putzarbeiten";"Oberfläche Demo GmbH";"Flügel West · 1. OG · BA 06";"2026-10-05";"2";"Arbeitstage";"2026-10-06";"complete";"100";"nein";"Fiktiver Vorgang zum Testen. Mengen, Personal und Dauern sind Demo-Annahmen, keine Kalkulation.
+Bauabschnitt 6 · Ansprechpartner: Demo-Bauleitung."
+"Estrich einbringen · Flügel West · 1. OG · BA 06";"Estrich";"Estrich Mitte Demo GmbH";"Flügel West · 1. OG · BA 06";"2026-10-07";"3";"Arbeitstage";"2026-10-09";"active";"43";"nein";"Fiktiver Vorgang zum Testen. Mengen, Personal und Dauern sind Demo-Annahmen, keine Kalkulation.
+Bauabschnitt 6 · Ansprechpartner: Demo-Bauleitung."
+"Bodenbeläge verlegen · Flügel West · 1. OG · BA 06";"Bodenbeläge";"Bodenwerk Demo GmbH";"Flügel West · 1. OG · BA 06";"2026-10-20";"4";"Arbeitstage";"2026-10-23";"planned";"0";"nein";"Fiktiver Vorgang zum Testen. Mengen, Personal und Dauern sind Demo-Annahmen, keine Kalkulation.
+Bauabschnitt 6 · Ansprechpartner: Demo-Bauleitung."
+"Nassräume fliesen · Flügel West · 1. OG · BA 06";"Fliesen";"Keramik Demo GmbH";"Flügel West · 1. OG · BA 06";"2026-10-15";"5";"Arbeitstage";"2026-10-22";"planned";"0";"ja";"Fiktiver Vorgang zum Testen. Mengen, Personal und Dauern sind Demo-Annahmen, keine Kalkulation.
+Bauabschnitt 6 · Ansprechpartner: Demo-Bauleitung.
+DEMO-Hindernis: Materialfreigabe steht aus. Zuständig: Test-Bauleitung. Nächste Abstimmung: 2026-10-10."
+"Oberflächen beschichten · Flügel West · 1. OG · BA 06";"Malerarbeiten";"Farbwerk Demo GmbH";"Flügel West · 1. OG · BA 06";"2026-10-26";"2";"Arbeitstage";"2026-10-27";"planned";"0";"nein";"Fiktiver Vorgang zum Testen. Mengen, Personal und Dauern sind Demo-Annahmen, keine Kalkulation.
+Bauabschnitt 6 · Ansprechpartner: Demo-Bauleitung."
+"Geländer und Stahlteile montieren · Flügel West · 1. OG · BA 06";"Metallbau";"Metall & Form Demo GmbH";"Flügel West · 1. OG · BA 06";"2026-09-21";"3";"Arbeitstage";"2026-09-23";"complete";"100";"nein";"Fiktiver Vorgang zum Testen. Mengen, Personal und Dauern sind Demo-Annahmen, keine Kalkulation.
+Bauabschnitt 6 · Ansprechpartner: Demo-Bauleitung."
+"Aufzugtechnik montieren · Flügel West · 1. OG · BA 06";"Aufzüge";"Liftwerk Demo GmbH";"Flügel West · 1. OG · BA 06";"2026-09-25";"4";"Arbeitstage";"2026-09-30";"complete";"100";"nein";"Fiktiver Vorgang zum Testen. Mengen, Personal und Dauern sind Demo-Annahmen, keine Kalkulation.
+Bauabschnitt 6 · Ansprechpartner: Demo-Bauleitung."
+"Wege und Außenflächen herstellen · Flügel West · 1. OG · BA 06";"Außenanlagen";"Freiraum Demo GmbH";"Flügel West · 1. OG · BA 06";"2026-10-07";"5";"Arbeitstage";"2026-10-13";"active";"84";"nein";"Fiktiver Vorgang zum Testen. Mengen, Personal und Dauern sind Demo-Annahmen, keine Kalkulation.
+Bauabschnitt 6 · Ansprechpartner: Demo-Bauleitung."
+"Bauabschnitt endreinigen · Flügel West · 1. OG · BA 06";"Baureinigung";"Klarwerk Demo GmbH";"Flügel West · 1. OG · BA 06";"2026-10-28";"2";"Arbeitstage";"2026-10-29";"planned";"0";"nein";"Fiktiver Vorgang zum Testen. Mengen, Personal und Dauern sind Demo-Annahmen, keine Kalkulation.
+Bauabschnitt 6 · Ansprechpartner: Demo-Bauleitung."
+"Bauabschnitt abnehmen · Flügel West · 1. OG · BA 06";"Inbetriebnahme & Abnahme";"Prüfwerk Demo GmbH";"Flügel West · 1. OG · BA 06";"2026-10-30";"0";"Arbeitstage";"2026-10-30";"planned";"0";"nein";"Fiktiver Vorgang zum Testen. Mengen, Personal und Dauern sind Demo-Annahmen, keine Kalkulation.
+Bauabschnitt 6 · Ansprechpartner: Demo-Bauleitung."
+"Baustelle einrichten · Flügel West · 2. OG · BA 07";"Baustelleneinrichtung";"Bauwerk Logistik Partner Demo GmbH";"Flügel West · 2. OG · BA 07";"2026-09-08";"4";"Arbeitstage";"2026-09-11";"complete";"100";"nein";"Fiktiver Vorgang zum Testen. Mengen, Personal und Dauern sind Demo-Annahmen, keine Kalkulation.
+Bauabschnitt 7 · Ansprechpartner: Demo-Bauleitung."
+"Arbeitsgerüst stellen · Flügel West · 2. OG · BA 07";"Gerüstbau";"Höhenwerk Demo GmbH";"Flügel West · 2. OG · BA 07";"2026-09-14";"5";"Arbeitstage";"2026-09-18";"complete";"100";"nein";"Fiktiver Vorgang zum Testen. Mengen, Personal und Dauern sind Demo-Annahmen, keine Kalkulation.
+Bauabschnitt 7 · Ansprechpartner: Demo-Bauleitung."
+"Bestand selektiv rückbauen · Flügel West · 2. OG · BA 07";"Rückbau";"Rückbau Nord Demo GmbH";"Flügel West · 2. OG · BA 07";"2026-09-14";"2";"Arbeitstage";"2026-09-15";"complete";"100";"nein";"Fiktiver Vorgang zum Testen. Mengen, Personal und Dauern sind Demo-Annahmen, keine Kalkulation.
+Bauabschnitt 7 · Ansprechpartner: Demo-Bauleitung."
+"Öffnungen und Rohbau herstellen · Flügel West · 2. OG · BA 07";"Rohbau";"Massivbau Demo GmbH";"Flügel West · 2. OG · BA 07";"2026-09-16";"3";"Arbeitstage";"2026-09-18";"complete";"100";"nein";"Fiktiver Vorgang zum Testen. Mengen, Personal und Dauern sind Demo-Annahmen, keine Kalkulation.
+Bauabschnitt 7 · Ansprechpartner: Demo-Bauleitung."
+"Sockel und Anschlüsse abdichten · Flügel West · 2. OG · BA 07";"Abdichtung";"Dichtwerk Demo GmbH";"Flügel West · 2. OG · BA 07";"2026-09-21";"4";"Arbeitstage";"2026-09-24";"complete";"100";"nein";"Fiktiver Vorgang zum Testen. Mengen, Personal und Dauern sind Demo-Annahmen, keine Kalkulation.
+Bauabschnitt 7 · Ansprechpartner: Demo-Bauleitung."
+"Dachfläche instand setzen · Flügel West · 2. OG · BA 07";"Dacharbeiten";"Dach & Form Partner Demo GmbH";"Flügel West · 2. OG · BA 07";"2026-09-25";"5";"Arbeitstage";"2026-10-01";"complete";"100";"nein";"Fiktiver Vorgang zum Testen. Mengen, Personal und Dauern sind Demo-Annahmen, keine Kalkulation.
+Bauabschnitt 7 · Ansprechpartner: Demo-Bauleitung."
+"Fassadenabschnitt sanieren · Flügel West · 2. OG · BA 07";"Fassade";"Fassadenwerk Demo GmbH";"Flügel West · 2. OG · BA 07";"2026-10-02";"2";"Arbeitstage";"2026-10-05";"complete";"100";"nein";"Fiktiver Vorgang zum Testen. Mengen, Personal und Dauern sind Demo-Annahmen, keine Kalkulation.
+Bauabschnitt 7 · Ansprechpartner: Demo-Bauleitung."
+"Fenster und Anschlüsse montieren · Flügel West · 2. OG · BA 07";"Fensterbau";"Müller Fenster Demo GmbH";"Flügel West · 2. OG · BA 07";"2026-10-06";"3";"Arbeitstage";"2026-10-08";"active";"71";"nein";"Fiktiver Vorgang zum Testen. Mengen, Personal und Dauern sind Demo-Annahmen, keine Kalkulation.
+Bauabschnitt 7 · Ansprechpartner: Demo-Bauleitung."
+"Innentüren und Zargen montieren · Flügel West · 2. OG · BA 07";"Türen";"Türwerk Demo GmbH";"Flügel West · 2. OG · BA 07";"2026-09-30";"4";"Arbeitstage";"2026-10-05";"complete";"100";"nein";"Fiktiver Vorgang zum Testen. Mengen, Personal und Dauern sind Demo-Annahmen, keine Kalkulation.
+Bauabschnitt 7 · Ansprechpartner: Demo-Bauleitung."
+"Rohinstallation Elektro ausführen · Flügel West · 2. OG · BA 07";"Elektro";"Elektro Lichtblick Demo GmbH";"Flügel West · 2. OG · BA 07";"2026-09-21";"5";"Arbeitstage";"2026-09-25";"complete";"100";"nein";"Fiktiver Vorgang zum Testen. Mengen, Personal und Dauern sind Demo-Annahmen, keine Kalkulation.
+Bauabschnitt 7 · Ansprechpartner: Demo-Bauleitung."
+"Heizungsverteilung montieren · Flügel West · 2. OG · BA 07";"Heizung";"Wärmeweg Partner Demo GmbH";"Flügel West · 2. OG · BA 07";"2026-09-21";"2";"Arbeitstage";"2026-09-22";"complete";"100";"nein";"Fiktiver Vorgang zum Testen. Mengen, Personal und Dauern sind Demo-Annahmen, keine Kalkulation.
+Bauabschnitt 7 · Ansprechpartner: Demo-Bauleitung."
+"Lüftungsleitungen montieren · Flügel West · 2. OG · BA 07";"Lüftung";"Luftwerk Demo GmbH";"Flügel West · 2. OG · BA 07";"2026-09-21";"3";"Arbeitstage";"2026-09-23";"complete";"100";"nein";"Fiktiver Vorgang zum Testen. Mengen, Personal und Dauern sind Demo-Annahmen, keine Kalkulation.
+Bauabschnitt 7 · Ansprechpartner: Demo-Bauleitung."
+"Sanitärleitungen installieren · Flügel West · 2. OG · BA 07";"Sanitär";"Wasserwerk Demo GmbH";"Flügel West · 2. OG · BA 07";"2026-09-21";"4";"Arbeitstage";"2026-09-24";"complete";"100";"nein";"Fiktiver Vorgang zum Testen. Mengen, Personal und Dauern sind Demo-Annahmen, keine Kalkulation.
+Bauabschnitt 7 · Ansprechpartner: Demo-Bauleitung."
+"Durchführungen abschotten · Flügel West · 2. OG · BA 07";"Brandschutz";"Brandschutz Sicher Demo GmbH";"Flügel West · 2. OG · BA 07";"2026-09-28";"5";"Arbeitstage";"2026-10-02";"complete";"100";"nein";"Fiktiver Vorgang zum Testen. Mengen, Personal und Dauern sind Demo-Annahmen, keine Kalkulation.
+Bauabschnitt 7 · Ansprechpartner: Demo-Bauleitung."
+"Wände und Decken schließen · Flügel West · 2. OG · BA 07";"Trockenbau";"Raumwerk Demo GmbH";"Flügel West · 2. OG · BA 07";"2026-09-28";"2";"Arbeitstage";"2026-09-29";"complete";"100";"nein";"Fiktiver Vorgang zum Testen. Mengen, Personal und Dauern sind Demo-Annahmen, keine Kalkulation.
+Bauabschnitt 7 · Ansprechpartner: Demo-Bauleitung."
+"Wandflächen verputzen · Flügel West · 2. OG · BA 07";"Putzarbeiten";"Oberfläche Partner Demo GmbH";"Flügel West · 2. OG · BA 07";"2026-09-30";"3";"Arbeitstage";"2026-10-02";"complete";"100";"nein";"Fiktiver Vorgang zum Testen. Mengen, Personal und Dauern sind Demo-Annahmen, keine Kalkulation.
+Bauabschnitt 7 · Ansprechpartner: Demo-Bauleitung."
+"Estrich einbringen · Flügel West · 2. OG · BA 07";"Estrich";"Estrich Mitte Demo GmbH";"Flügel West · 2. OG · BA 07";"2026-10-05";"4";"Arbeitstage";"2026-10-08";"active";"41";"nein";"Fiktiver Vorgang zum Testen. Mengen, Personal und Dauern sind Demo-Annahmen, keine Kalkulation.
+Bauabschnitt 7 · Ansprechpartner: Demo-Bauleitung."
+"Bodenbeläge verlegen · Flügel West · 2. OG · BA 07";"Bodenbeläge";"Bodenwerk Demo GmbH";"Flügel West · 2. OG · BA 07";"2026-10-16";"5";"Arbeitstage";"2026-10-23";"planned";"0";"nein";"Fiktiver Vorgang zum Testen. Mengen, Personal und Dauern sind Demo-Annahmen, keine Kalkulation.
+Bauabschnitt 7 · Ansprechpartner: Demo-Bauleitung."
+"Nassräume fliesen · Flügel West · 2. OG · BA 07";"Fliesen";"Keramik Demo GmbH";"Flügel West · 2. OG · BA 07";"2026-10-14";"2";"Arbeitstage";"2026-10-15";"planned";"0";"nein";"Fiktiver Vorgang zum Testen. Mengen, Personal und Dauern sind Demo-Annahmen, keine Kalkulation.
+Bauabschnitt 7 · Ansprechpartner: Demo-Bauleitung."
+"Oberflächen beschichten · Flügel West · 2. OG · BA 07";"Malerarbeiten";"Farbwerk Demo GmbH";"Flügel West · 2. OG · BA 07";"2026-10-26";"3";"Arbeitstage";"2026-10-28";"planned";"0";"nein";"Fiktiver Vorgang zum Testen. Mengen, Personal und Dauern sind Demo-Annahmen, keine Kalkulation.
+Bauabschnitt 7 · Ansprechpartner: Demo-Bauleitung."
+"Geländer und Stahlteile montieren · Flügel West · 2. OG · BA 07";"Metallbau";"Metall & Form Partner Demo GmbH";"Flügel West · 2. OG · BA 07";"2026-09-21";"4";"Arbeitstage";"2026-09-24";"complete";"100";"nein";"Fiktiver Vorgang zum Testen. Mengen, Personal und Dauern sind Demo-Annahmen, keine Kalkulation.
+Bauabschnitt 7 · Ansprechpartner: Demo-Bauleitung."
+"Aufzugtechnik montieren · Flügel West · 2. OG · BA 07";"Aufzüge";"Liftwerk Demo GmbH";"Flügel West · 2. OG · BA 07";"2026-09-28";"5";"Arbeitstage";"2026-10-02";"complete";"100";"nein";"Fiktiver Vorgang zum Testen. Mengen, Personal und Dauern sind Demo-Annahmen, keine Kalkulation.
+Bauabschnitt 7 · Ansprechpartner: Demo-Bauleitung."
+"Wege und Außenflächen herstellen · Flügel West · 2. OG · BA 07";"Außenanlagen";"Freiraum Demo GmbH";"Flügel West · 2. OG · BA 07";"2026-10-06";"2";"Arbeitstage";"2026-10-07";"complete";"100";"nein";"Fiktiver Vorgang zum Testen. Mengen, Personal und Dauern sind Demo-Annahmen, keine Kalkulation.
+Bauabschnitt 7 · Ansprechpartner: Demo-Bauleitung."
+"Bauabschnitt endreinigen · Flügel West · 2. OG · BA 07";"Baureinigung";"Klarwerk Demo GmbH";"Flügel West · 2. OG · BA 07";"2026-10-29";"3";"Arbeitstage";"2026-11-02";"planned";"0";"nein";"Fiktiver Vorgang zum Testen. Mengen, Personal und Dauern sind Demo-Annahmen, keine Kalkulation.
+Bauabschnitt 7 · Ansprechpartner: Demo-Bauleitung."
+"Bauabschnitt abnehmen · Flügel West · 2. OG · BA 07";"Inbetriebnahme & Abnahme";"Prüfwerk Demo GmbH";"Flügel West · 2. OG · BA 07";"2026-11-03";"0";"Arbeitstage";"2026-11-03";"planned";"0";"nein";"Fiktiver Vorgang zum Testen. Mengen, Personal und Dauern sind Demo-Annahmen, keine Kalkulation.
+Bauabschnitt 7 · Ansprechpartner: Demo-Bauleitung."
+"Baustelle einrichten · Flügel West · 3. OG · BA 08";"Baustelleneinrichtung";"Bauwerk Logistik Demo GmbH";"Flügel West · 3. OG · BA 08";"2026-09-16";"5";"Arbeitstage";"2026-09-22";"complete";"100";"nein";"Fiktiver Vorgang zum Testen. Mengen, Personal und Dauern sind Demo-Annahmen, keine Kalkulation.
+Bauabschnitt 8 · Ansprechpartner: Demo-Bauleitung."
+"Arbeitsgerüst stellen · Flügel West · 3. OG · BA 08";"Gerüstbau";"Höhenwerk Demo GmbH";"Flügel West · 3. OG · BA 08";"2026-09-23";"2";"Arbeitstage";"2026-09-24";"complete";"100";"nein";"Fiktiver Vorgang zum Testen. Mengen, Personal und Dauern sind Demo-Annahmen, keine Kalkulation.
+Bauabschnitt 8 · Ansprechpartner: Demo-Bauleitung."
+"Bestand selektiv rückbauen · Flügel West · 3. OG · BA 08";"Rückbau";"Rückbau Nord Demo GmbH";"Flügel West · 3. OG · BA 08";"2026-09-23";"3";"Arbeitstage";"2026-09-25";"complete";"100";"nein";"Fiktiver Vorgang zum Testen. Mengen, Personal und Dauern sind Demo-Annahmen, keine Kalkulation.
+Bauabschnitt 8 · Ansprechpartner: Demo-Bauleitung."
+"Öffnungen und Rohbau herstellen · Flügel West · 3. OG · BA 08";"Rohbau";"Massivbau Demo GmbH";"Flügel West · 3. OG · BA 08";"2026-09-28";"4";"Arbeitstage";"2026-10-01";"complete";"100";"nein";"Fiktiver Vorgang zum Testen. Mengen, Personal und Dauern sind Demo-Annahmen, keine Kalkulation.
+Bauabschnitt 8 · Ansprechpartner: Demo-Bauleitung."
+"Sockel und Anschlüsse abdichten · Flügel West · 3. OG · BA 08";"Abdichtung";"Dichtwerk Demo GmbH";"Flügel West · 3. OG · BA 08";"2026-10-02";"5";"Arbeitstage";"2026-10-08";"active";"79";"nein";"Fiktiver Vorgang zum Testen. Mengen, Personal und Dauern sind Demo-Annahmen, keine Kalkulation.
+Bauabschnitt 8 · Ansprechpartner: Demo-Bauleitung."
+"Dachfläche instand setzen · Flügel West · 3. OG · BA 08";"Dacharbeiten";"Dach & Form Demo GmbH";"Flügel West · 3. OG · BA 08";"2026-10-09";"2";"Arbeitstage";"2026-10-12";"planned";"0";"nein";"Fiktiver Vorgang zum Testen. Mengen, Personal und Dauern sind Demo-Annahmen, keine Kalkulation.
+Bauabschnitt 8 · Ansprechpartner: Demo-Bauleitung."
+"Fassadenabschnitt sanieren · Flügel West · 3. OG · BA 08";"Fassade";"Fassadenwerk Demo GmbH";"Flügel West · 3. OG · BA 08";"2026-10-13";"3";"Arbeitstage";"2026-10-15";"planned";"0";"nein";"Fiktiver Vorgang zum Testen. Mengen, Personal und Dauern sind Demo-Annahmen, keine Kalkulation.
+Bauabschnitt 8 · Ansprechpartner: Demo-Bauleitung."
+"Fenster und Anschlüsse montieren · Flügel West · 3. OG · BA 08";"Fensterbau";"Müller Fenster Demo GmbH";"Flügel West · 3. OG · BA 08";"2026-10-16";"4";"Arbeitstage";"2026-10-22";"planned";"0";"nein";"Fiktiver Vorgang zum Testen. Mengen, Personal und Dauern sind Demo-Annahmen, keine Kalkulation.
+Bauabschnitt 8 · Ansprechpartner: Demo-Bauleitung."
+"Innentüren und Zargen montieren · Flügel West · 3. OG · BA 08";"Türen";"Türwerk Demo GmbH";"Flügel West · 3. OG · BA 08";"2026-10-14";"5";"Arbeitstage";"2026-10-21";"planned";"0";"nein";"Fiktiver Vorgang zum Testen. Mengen, Personal und Dauern sind Demo-Annahmen, keine Kalkulation.
+Bauabschnitt 8 · Ansprechpartner: Demo-Bauleitung."
+"Rohinstallation Elektro ausführen · Flügel West · 3. OG · BA 08";"Elektro";"Elektro Lichtblick Demo GmbH";"Flügel West · 3. OG · BA 08";"2026-10-02";"2";"Arbeitstage";"2026-10-05";"complete";"100";"nein";"Fiktiver Vorgang zum Testen. Mengen, Personal und Dauern sind Demo-Annahmen, keine Kalkulation.
+Bauabschnitt 8 · Ansprechpartner: Demo-Bauleitung."
+"Heizungsverteilung montieren · Flügel West · 3. OG · BA 08";"Heizung";"Wärmeweg Demo GmbH";"Flügel West · 3. OG · BA 08";"2026-10-02";"3";"Arbeitstage";"2026-10-06";"complete";"100";"nein";"Fiktiver Vorgang zum Testen. Mengen, Personal und Dauern sind Demo-Annahmen, keine Kalkulation.
+Bauabschnitt 8 · Ansprechpartner: Demo-Bauleitung."
+"Lüftungsleitungen montieren · Flügel West · 3. OG · BA 08";"Lüftung";"Luftwerk Demo GmbH";"Flügel West · 3. OG · BA 08";"2026-10-02";"4";"Arbeitstage";"2026-10-07";"complete";"100";"nein";"Fiktiver Vorgang zum Testen. Mengen, Personal und Dauern sind Demo-Annahmen, keine Kalkulation.
+Bauabschnitt 8 · Ansprechpartner: Demo-Bauleitung."
+"Sanitärleitungen installieren · Flügel West · 3. OG · BA 08";"Sanitär";"Wasserwerk Demo GmbH";"Flügel West · 3. OG · BA 08";"2026-10-02";"5";"Arbeitstage";"2026-10-08";"active";"32";"nein";"Fiktiver Vorgang zum Testen. Mengen, Personal und Dauern sind Demo-Annahmen, keine Kalkulation.
+Bauabschnitt 8 · Ansprechpartner: Demo-Bauleitung."
+"Durchführungen abschotten · Flügel West · 3. OG · BA 08";"Brandschutz";"Brandschutz Sicher Demo GmbH";"Flügel West · 3. OG · BA 08";"2026-10-08";"2";"Arbeitstage";"2026-10-09";"active";"49";"nein";"Fiktiver Vorgang zum Testen. Mengen, Personal und Dauern sind Demo-Annahmen, keine Kalkulation.
+Bauabschnitt 8 · Ansprechpartner: Demo-Bauleitung."
+"Wände und Decken schließen · Flügel West · 3. OG · BA 08";"Trockenbau";"Raumwerk Demo GmbH";"Flügel West · 3. OG · BA 08";"2026-10-09";"3";"Arbeitstage";"2026-10-13";"planned";"0";"nein";"Fiktiver Vorgang zum Testen. Mengen, Personal und Dauern sind Demo-Annahmen, keine Kalkulation.
+Bauabschnitt 8 · Ansprechpartner: Demo-Bauleitung."
+"Wandflächen verputzen · Flügel West · 3. OG · BA 08";"Putzarbeiten";"Oberfläche Demo GmbH";"Flügel West · 3. OG · BA 08";"2026-10-14";"4";"Arbeitstage";"2026-10-20";"planned";"0";"nein";"Fiktiver Vorgang zum Testen. Mengen, Personal und Dauern sind Demo-Annahmen, keine Kalkulation.
+Bauabschnitt 8 · Ansprechpartner: Demo-Bauleitung."
+"Estrich einbringen · Flügel West · 3. OG · BA 08";"Estrich";"Estrich Mitte Demo GmbH";"Flügel West · 3. OG · BA 08";"2026-10-21";"5";"Arbeitstage";"2026-10-27";"planned";"0";"nein";"Fiktiver Vorgang zum Testen. Mengen, Personal und Dauern sind Demo-Annahmen, keine Kalkulation.
+Bauabschnitt 8 · Ansprechpartner: Demo-Bauleitung."
+"Bodenbeläge verlegen · Flügel West · 3. OG · BA 08";"Bodenbeläge";"Bodenwerk Demo GmbH";"Flügel West · 3. OG · BA 08";"2026-11-04";"2";"Arbeitstage";"2026-11-05";"planned";"0";"nein";"Fiktiver Vorgang zum Testen. Mengen, Personal und Dauern sind Demo-Annahmen, keine Kalkulation.
+Bauabschnitt 8 · Ansprechpartner: Demo-Bauleitung."
+"Nassräume fliesen · Flügel West · 3. OG · BA 08";"Fliesen";"Keramik Demo GmbH";"Flügel West · 3. OG · BA 08";"2026-11-02";"3";"Arbeitstage";"2026-11-04";"planned";"0";"nein";"Fiktiver Vorgang zum Testen. Mengen, Personal und Dauern sind Demo-Annahmen, keine Kalkulation.
+Bauabschnitt 8 · Ansprechpartner: Demo-Bauleitung."
+"Oberflächen beschichten · Flügel West · 3. OG · BA 08";"Malerarbeiten";"Farbwerk Demo GmbH";"Flügel West · 3. OG · BA 08";"2026-11-06";"4";"Arbeitstage";"2026-11-11";"planned";"0";"ja";"Fiktiver Vorgang zum Testen. Mengen, Personal und Dauern sind Demo-Annahmen, keine Kalkulation.
+Bauabschnitt 8 · Ansprechpartner: Demo-Bauleitung.
+DEMO-Hindernis: Materialfreigabe steht aus. Zuständig: Test-Bauleitung. Nächste Abstimmung: 2026-10-10."
+"Geländer und Stahlteile montieren · Flügel West · 3. OG · BA 08";"Metallbau";"Metall & Form Demo GmbH";"Flügel West · 3. OG · BA 08";"2026-10-02";"5";"Arbeitstage";"2026-10-08";"active";"46";"nein";"Fiktiver Vorgang zum Testen. Mengen, Personal und Dauern sind Demo-Annahmen, keine Kalkulation.
+Bauabschnitt 8 · Ansprechpartner: Demo-Bauleitung."
+"Aufzugtechnik montieren · Flügel West · 3. OG · BA 08";"Aufzüge";"Liftwerk Demo GmbH";"Flügel West · 3. OG · BA 08";"2026-10-06";"2";"Arbeitstage";"2026-10-07";"complete";"100";"nein";"Fiktiver Vorgang zum Testen. Mengen, Personal und Dauern sind Demo-Annahmen, keine Kalkulation.
+Bauabschnitt 8 · Ansprechpartner: Demo-Bauleitung."
+"Wege und Außenflächen herstellen · Flügel West · 3. OG · BA 08";"Außenanlagen";"Freiraum Demo GmbH";"Flügel West · 3. OG · BA 08";"2026-10-16";"3";"Arbeitstage";"2026-10-21";"planned";"0";"nein";"Fiktiver Vorgang zum Testen. Mengen, Personal und Dauern sind Demo-Annahmen, keine Kalkulation.
+Bauabschnitt 8 · Ansprechpartner: Demo-Bauleitung."
+"Bauabschnitt endreinigen · Flügel West · 3. OG · BA 08";"Baureinigung";"Klarwerk Demo GmbH";"Flügel West · 3. OG · BA 08";"2026-11-13";"4";"Arbeitstage";"2026-11-18";"planned";"0";"nein";"Fiktiver Vorgang zum Testen. Mengen, Personal und Dauern sind Demo-Annahmen, keine Kalkulation.
+Bauabschnitt 8 · Ansprechpartner: Demo-Bauleitung."
+"Bauabschnitt abnehmen · Flügel West · 3. OG · BA 08";"Inbetriebnahme & Abnahme";"Prüfwerk Demo GmbH";"Flügel West · 3. OG · BA 08";"2026-11-19";"0";"Arbeitstage";"2026-11-19";"planned";"0";"nein";"Fiktiver Vorgang zum Testen. Mengen, Personal und Dauern sind Demo-Annahmen, keine Kalkulation.
+Bauabschnitt 8 · Ansprechpartner: Demo-Bauleitung."
+"Baustelle einrichten · Flügel Süd · EG · BA 09";"Baustelleneinrichtung";"Bauwerk Logistik Demo GmbH";"Flügel Süd · EG · BA 09";"2026-09-14";"2";"Arbeitstage";"2026-09-15";"complete";"100";"nein";"Fiktiver Vorgang zum Testen. Mengen, Personal und Dauern sind Demo-Annahmen, keine Kalkulation.
+Bauabschnitt 9 · Ansprechpartner: Demo-Bauleitung."
+"Arbeitsgerüst stellen · Flügel Süd · EG · BA 09";"Gerüstbau";"Höhenwerk Demo GmbH";"Flügel Süd · EG · BA 09";"2026-09-16";"3";"Arbeitstage";"2026-09-18";"complete";"100";"nein";"Fiktiver Vorgang zum Testen. Mengen, Personal und Dauern sind Demo-Annahmen, keine Kalkulation.
+Bauabschnitt 9 · Ansprechpartner: Demo-Bauleitung."
+"Bestand selektiv rückbauen · Flügel Süd · EG · BA 09";"Rückbau";"Rückbau Nord Demo GmbH";"Flügel Süd · EG · BA 09";"2026-09-16";"4";"Arbeitstage";"2026-09-21";"complete";"100";"nein";"Fiktiver Vorgang zum Testen. Mengen, Personal und Dauern sind Demo-Annahmen, keine Kalkulation.
+Bauabschnitt 9 · Ansprechpartner: Demo-Bauleitung."
+"Öffnungen und Rohbau herstellen · Flügel Süd · EG · BA 09";"Rohbau";"Massivbau Demo GmbH";"Flügel Süd · EG · BA 09";"2026-09-22";"5";"Arbeitstage";"2026-09-28";"complete";"100";"nein";"Fiktiver Vorgang zum Testen. Mengen, Personal und Dauern sind Demo-Annahmen, keine Kalkulation.
+Bauabschnitt 9 · Ansprechpartner: Demo-Bauleitung."
+"Sockel und Anschlüsse abdichten · Flügel Süd · EG · BA 09";"Abdichtung";"Dichtwerk Demo GmbH";"Flügel Süd · EG · BA 09";"2026-09-29";"2";"Arbeitstage";"2026-09-30";"complete";"100";"nein";"Fiktiver Vorgang zum Testen. Mengen, Personal und Dauern sind Demo-Annahmen, keine Kalkulation.
+Bauabschnitt 9 · Ansprechpartner: Demo-Bauleitung."
+"Dachfläche instand setzen · Flügel Süd · EG · BA 09";"Dacharbeiten";"Dach & Form Demo GmbH";"Flügel Süd · EG · BA 09";"2026-10-01";"3";"Arbeitstage";"2026-10-05";"complete";"100";"nein";"Fiktiver Vorgang zum Testen. Mengen, Personal und Dauern sind Demo-Annahmen, keine Kalkulation.
+Bauabschnitt 9 · Ansprechpartner: Demo-Bauleitung."
+"Fassadenabschnitt sanieren · Flügel Süd · EG · BA 09";"Fassade";"Fassadenwerk Demo GmbH";"Flügel Süd · EG · BA 09";"2026-10-06";"4";"Arbeitstage";"2026-10-09";"active";"50";"nein";"Fiktiver Vorgang zum Testen. Mengen, Personal und Dauern sind Demo-Annahmen, keine Kalkulation.
+Bauabschnitt 9 · Ansprechpartner: Demo-Bauleitung."
+"Fenster und Anschlüsse montieren · Flügel Süd · EG · BA 09";"Fensterbau";"Müller Fenster Demo GmbH";"Flügel Süd · EG · BA 09";"2026-10-12";"5";"Arbeitstage";"2026-10-16";"planned";"0";"nein";"Fiktiver Vorgang zum Testen. Mengen, Personal und Dauern sind Demo-Annahmen, keine Kalkulation.
+Bauabschnitt 9 · Ansprechpartner: Demo-Bauleitung."
+"Innentüren und Zargen montieren · Flügel Süd · EG · BA 09";"Türen";"Türwerk Demo GmbH";"Flügel Süd · EG · BA 09";"2026-10-12";"2";"Arbeitstage";"2026-10-13";"planned";"0";"nein";"Fiktiver Vorgang zum Testen. Mengen, Personal und Dauern sind Demo-Annahmen, keine Kalkulation.
+Bauabschnitt 9 · Ansprechpartner: Demo-Bauleitung."
+"Rohinstallation Elektro ausführen · Flügel Süd · EG · BA 09";"Elektro";"Elektro Lichtblick Demo GmbH";"Flügel Süd · EG · BA 09";"2026-09-29";"3";"Arbeitstage";"2026-10-01";"complete";"100";"nein";"Fiktiver Vorgang zum Testen. Mengen, Personal und Dauern sind Demo-Annahmen, keine Kalkulation.
+Bauabschnitt 9 · Ansprechpartner: Demo-Bauleitung."
+"Heizungsverteilung montieren · Flügel Süd · EG · BA 09";"Heizung";"Wärmeweg Demo GmbH";"Flügel Süd · EG · BA 09";"2026-09-29";"4";"Arbeitstage";"2026-10-02";"complete";"100";"nein";"Fiktiver Vorgang zum Testen. Mengen, Personal und Dauern sind Demo-Annahmen, keine Kalkulation.
+Bauabschnitt 9 · Ansprechpartner: Demo-Bauleitung."
+"Lüftungsleitungen montieren · Flügel Süd · EG · BA 09";"Lüftung";"Luftwerk Demo GmbH";"Flügel Süd · EG · BA 09";"2026-09-29";"5";"Arbeitstage";"2026-10-05";"complete";"100";"nein";"Fiktiver Vorgang zum Testen. Mengen, Personal und Dauern sind Demo-Annahmen, keine Kalkulation.
+Bauabschnitt 9 · Ansprechpartner: Demo-Bauleitung."
+"Sanitärleitungen installieren · Flügel Süd · EG · BA 09";"Sanitär";"Wasserwerk Demo GmbH";"Flügel Süd · EG · BA 09";"2026-09-29";"2";"Arbeitstage";"2026-09-30";"complete";"100";"nein";"Fiktiver Vorgang zum Testen. Mengen, Personal und Dauern sind Demo-Annahmen, keine Kalkulation.
+Bauabschnitt 9 · Ansprechpartner: Demo-Bauleitung."
+"Durchführungen abschotten · Flügel Süd · EG · BA 09";"Brandschutz";"Brandschutz Sicher Demo GmbH";"Flügel Süd · EG · BA 09";"2026-10-06";"3";"Arbeitstage";"2026-10-08";"active";"47";"nein";"Fiktiver Vorgang zum Testen. Mengen, Personal und Dauern sind Demo-Annahmen, keine Kalkulation.
+Bauabschnitt 9 · Ansprechpartner: Demo-Bauleitung."
+"Wände und Decken schließen · Flügel Süd · EG · BA 09";"Trockenbau";"Raumwerk Demo GmbH";"Flügel Süd · EG · BA 09";"2026-10-06";"4";"Arbeitstage";"2026-10-09";"active";"64";"nein";"Fiktiver Vorgang zum Testen. Mengen, Personal und Dauern sind Demo-Annahmen, keine Kalkulation.
+Bauabschnitt 9 · Ansprechpartner: Demo-Bauleitung."
+"Wandflächen verputzen · Flügel Süd · EG · BA 09";"Putzarbeiten";"Oberfläche Demo GmbH";"Flügel Süd · EG · BA 09";"2026-10-12";"5";"Arbeitstage";"2026-10-16";"planned";"0";"nein";"Fiktiver Vorgang zum Testen. Mengen, Personal und Dauern sind Demo-Annahmen, keine Kalkulation.
+Bauabschnitt 9 · Ansprechpartner: Demo-Bauleitung."
+"Estrich einbringen · Flügel Süd · EG · BA 09";"Estrich";"Estrich Mitte Demo GmbH";"Flügel Süd · EG · BA 09";"2026-10-20";"2";"Arbeitstage";"2026-10-21";"planned";"0";"nein";"Fiktiver Vorgang zum Testen. Mengen, Personal und Dauern sind Demo-Annahmen, keine Kalkulation.
+Bauabschnitt 9 · Ansprechpartner: Demo-Bauleitung."
+"Bodenbeläge verlegen · Flügel Süd · EG · BA 09";"Bodenbeläge";"Bodenwerk Demo GmbH";"Flügel Süd · EG · BA 09";"2026-10-29";"3";"Arbeitstage";"2026-11-02";"planned";"0";"nein";"Fiktiver Vorgang zum Testen. Mengen, Personal und Dauern sind Demo-Annahmen, keine Kalkulation.
+Bauabschnitt 9 · Ansprechpartner: Demo-Bauleitung."
+"Nassräume fliesen · Flügel Süd · EG · BA 09";"Fliesen";"Keramik Demo GmbH";"Flügel Süd · EG · BA 09";"2026-10-27";"4";"Arbeitstage";"2026-10-30";"planned";"0";"nein";"Fiktiver Vorgang zum Testen. Mengen, Personal und Dauern sind Demo-Annahmen, keine Kalkulation.
+Bauabschnitt 9 · Ansprechpartner: Demo-Bauleitung."
+"Oberflächen beschichten · Flügel Süd · EG · BA 09";"Malerarbeiten";"Farbwerk Demo GmbH";"Flügel Süd · EG · BA 09";"2026-11-03";"5";"Arbeitstage";"2026-11-09";"planned";"0";"nein";"Fiktiver Vorgang zum Testen. Mengen, Personal und Dauern sind Demo-Annahmen, keine Kalkulation.
+Bauabschnitt 9 · Ansprechpartner: Demo-Bauleitung."
+"Geländer und Stahlteile montieren · Flügel Süd · EG · BA 09";"Metallbau";"Metall & Form Demo GmbH";"Flügel Süd · EG · BA 09";"2026-09-29";"2";"Arbeitstage";"2026-09-30";"complete";"100";"nein";"Fiktiver Vorgang zum Testen. Mengen, Personal und Dauern sind Demo-Annahmen, keine Kalkulation.
+Bauabschnitt 9 · Ansprechpartner: Demo-Bauleitung."
+"Aufzugtechnik montieren · Flügel Süd · EG · BA 09";"Aufzüge";"Liftwerk Demo GmbH";"Flügel Süd · EG · BA 09";"2026-10-02";"3";"Arbeitstage";"2026-10-06";"complete";"100";"nein";"Fiktiver Vorgang zum Testen. Mengen, Personal und Dauern sind Demo-Annahmen, keine Kalkulation.
+Bauabschnitt 9 · Ansprechpartner: Demo-Bauleitung."
+"Wege und Außenflächen herstellen · Flügel Süd · EG · BA 09";"Außenanlagen";"Freiraum Demo GmbH";"Flügel Süd · EG · BA 09";"2026-10-12";"4";"Arbeitstage";"2026-10-15";"planned";"0";"nein";"Fiktiver Vorgang zum Testen. Mengen, Personal und Dauern sind Demo-Annahmen, keine Kalkulation.
+Bauabschnitt 9 · Ansprechpartner: Demo-Bauleitung."
+"Bauabschnitt endreinigen · Flügel Süd · EG · BA 09";"Baureinigung";"Klarwerk Demo GmbH";"Flügel Süd · EG · BA 09";"2026-11-10";"5";"Arbeitstage";"2026-11-17";"planned";"0";"nein";"Fiktiver Vorgang zum Testen. Mengen, Personal und Dauern sind Demo-Annahmen, keine Kalkulation.
+Bauabschnitt 9 · Ansprechpartner: Demo-Bauleitung."
+"Bauabschnitt abnehmen · Flügel Süd · EG · BA 09";"Inbetriebnahme & Abnahme";"Prüfwerk Demo GmbH";"Flügel Süd · EG · BA 09";"2026-11-18";"0";"Arbeitstage";"2026-11-18";"planned";"0";"nein";"Fiktiver Vorgang zum Testen. Mengen, Personal und Dauern sind Demo-Annahmen, keine Kalkulation.
+Bauabschnitt 9 · Ansprechpartner: Demo-Bauleitung."
+"Baustelle einrichten · Flügel Süd · 1. OG · BA 10";"Baustelleneinrichtung";"Bauwerk Logistik Demo GmbH";"Flügel Süd · 1. OG · BA 10";"2026-09-14";"3";"Arbeitstage";"2026-09-16";"complete";"100";"nein";"Fiktiver Vorgang zum Testen. Mengen, Personal und Dauern sind Demo-Annahmen, keine Kalkulation.
+Bauabschnitt 10 · Ansprechpartner: Demo-Bauleitung."
+"Arbeitsgerüst stellen · Flügel Süd · 1. OG · BA 10";"Gerüstbau";"Höhenwerk Demo GmbH";"Flügel Süd · 1. OG · BA 10";"2026-09-17";"4";"Arbeitstage";"2026-09-22";"complete";"100";"nein";"Fiktiver Vorgang zum Testen. Mengen, Personal und Dauern sind Demo-Annahmen, keine Kalkulation.
+Bauabschnitt 10 · Ansprechpartner: Demo-Bauleitung."
+"Bestand selektiv rückbauen · Flügel Süd · 1. OG · BA 10";"Rückbau";"Rückbau Nord Demo GmbH";"Flügel Süd · 1. OG · BA 10";"2026-09-17";"5";"Arbeitstage";"2026-09-23";"complete";"100";"nein";"Fiktiver Vorgang zum Testen. Mengen, Personal und Dauern sind Demo-Annahmen, keine Kalkulation.
+Bauabschnitt 10 · Ansprechpartner: Demo-Bauleitung."
+"Öffnungen und Rohbau herstellen · Flügel Süd · 1. OG · BA 10";"Rohbau";"Massivbau Demo GmbH";"Flügel Süd · 1. OG · BA 10";"2026-09-24";"2";"Arbeitstage";"2026-09-25";"complete";"100";"nein";"Fiktiver Vorgang zum Testen. Mengen, Personal und Dauern sind Demo-Annahmen, keine Kalkulation.
+Bauabschnitt 10 · Ansprechpartner: Demo-Bauleitung."
+"Sockel und Anschlüsse abdichten · Flügel Süd · 1. OG · BA 10";"Abdichtung";"Dichtwerk Demo GmbH";"Flügel Süd · 1. OG · BA 10";"2026-09-28";"3";"Arbeitstage";"2026-09-30";"complete";"100";"nein";"Fiktiver Vorgang zum Testen. Mengen, Personal und Dauern sind Demo-Annahmen, keine Kalkulation.
+Bauabschnitt 10 · Ansprechpartner: Demo-Bauleitung."
+"Dachfläche instand setzen · Flügel Süd · 1. OG · BA 10";"Dacharbeiten";"Dach & Form Demo GmbH";"Flügel Süd · 1. OG · BA 10";"2026-10-01";"4";"Arbeitstage";"2026-10-06";"complete";"100";"nein";"Fiktiver Vorgang zum Testen. Mengen, Personal und Dauern sind Demo-Annahmen, keine Kalkulation.
+Bauabschnitt 10 · Ansprechpartner: Demo-Bauleitung."
+"Fassadenabschnitt sanieren · Flügel Süd · 1. OG · BA 10";"Fassade";"Fassadenwerk Demo GmbH";"Flügel Süd · 1. OG · BA 10";"2026-10-07";"5";"Arbeitstage";"2026-10-13";"active";"48";"nein";"Fiktiver Vorgang zum Testen. Mengen, Personal und Dauern sind Demo-Annahmen, keine Kalkulation.
+Bauabschnitt 10 · Ansprechpartner: Demo-Bauleitung."
+"Fenster und Anschlüsse montieren · Flügel Süd · 1. OG · BA 10";"Fensterbau";"Müller Fenster Demo GmbH";"Flügel Süd · 1. OG · BA 10";"2026-10-14";"2";"Arbeitstage";"2026-10-15";"planned";"0";"nein";"Fiktiver Vorgang zum Testen. Mengen, Personal und Dauern sind Demo-Annahmen, keine Kalkulation.
+Bauabschnitt 10 · Ansprechpartner: Demo-Bauleitung."
+"Innentüren und Zargen montieren · Flügel Süd · 1. OG · BA 10";"Türen";"Türwerk Demo GmbH";"Flügel Süd · 1. OG · BA 10";"2026-10-12";"3";"Arbeitstage";"2026-10-14";"planned";"0";"nein";"Fiktiver Vorgang zum Testen. Mengen, Personal und Dauern sind Demo-Annahmen, keine Kalkulation.
+Bauabschnitt 10 · Ansprechpartner: Demo-Bauleitung."
+"Rohinstallation Elektro ausführen · Flügel Süd · 1. OG · BA 10";"Elektro";"Elektro Lichtblick Demo GmbH";"Flügel Süd · 1. OG · BA 10";"2026-09-28";"4";"Arbeitstage";"2026-10-01";"complete";"100";"nein";"Fiktiver Vorgang zum Testen. Mengen, Personal und Dauern sind Demo-Annahmen, keine Kalkulation.
+Bauabschnitt 10 · Ansprechpartner: Demo-Bauleitung."
+"Heizungsverteilung montieren · Flügel Süd · 1. OG · BA 10";"Heizung";"Wärmeweg Demo GmbH";"Flügel Süd · 1. OG · BA 10";"2026-09-28";"5";"Arbeitstage";"2026-10-02";"complete";"100";"nein";"Fiktiver Vorgang zum Testen. Mengen, Personal und Dauern sind Demo-Annahmen, keine Kalkulation.
+Bauabschnitt 10 · Ansprechpartner: Demo-Bauleitung."
+"Lüftungsleitungen montieren · Flügel Süd · 1. OG · BA 10";"Lüftung";"Luftwerk Demo GmbH";"Flügel Süd · 1. OG · BA 10";"2026-09-28";"2";"Arbeitstage";"2026-09-29";"complete";"100";"nein";"Fiktiver Vorgang zum Testen. Mengen, Personal und Dauern sind Demo-Annahmen, keine Kalkulation.
+Bauabschnitt 10 · Ansprechpartner: Demo-Bauleitung."
+"Sanitärleitungen installieren · Flügel Süd · 1. OG · BA 10";"Sanitär";"Wasserwerk Demo GmbH";"Flügel Süd · 1. OG · BA 10";"2026-09-28";"3";"Arbeitstage";"2026-09-30";"complete";"100";"nein";"Fiktiver Vorgang zum Testen. Mengen, Personal und Dauern sind Demo-Annahmen, keine Kalkulation.
+Bauabschnitt 10 · Ansprechpartner: Demo-Bauleitung."
+"Durchführungen abschotten · Flügel Süd · 1. OG · BA 10";"Brandschutz";"Brandschutz Sicher Demo GmbH";"Flügel Süd · 1. OG · BA 10";"2026-10-02";"4";"Arbeitstage";"2026-10-07";"complete";"100";"nein";"Fiktiver Vorgang zum Testen. Mengen, Personal und Dauern sind Demo-Annahmen, keine Kalkulation.
+Bauabschnitt 10 · Ansprechpartner: Demo-Bauleitung."
+"Wände und Decken schließen · Flügel Süd · 1. OG · BA 10";"Trockenbau";"Raumwerk Demo GmbH";"Flügel Süd · 1. OG · BA 10";"2026-10-05";"5";"Arbeitstage";"2026-10-09";"active";"62";"nein";"Fiktiver Vorgang zum Testen. Mengen, Personal und Dauern sind Demo-Annahmen, keine Kalkulation.
+Bauabschnitt 10 · Ansprechpartner: Demo-Bauleitung."
+"Wandflächen verputzen · Flügel Süd · 1. OG · BA 10";"Putzarbeiten";"Oberfläche Demo GmbH";"Flügel Süd · 1. OG · BA 10";"2026-10-12";"2";"Arbeitstage";"2026-10-13";"planned";"0";"nein";"Fiktiver Vorgang zum Testen. Mengen, Personal und Dauern sind Demo-Annahmen, keine Kalkulation.
+Bauabschnitt 10 · Ansprechpartner: Demo-Bauleitung."
+"Estrich einbringen · Flügel Süd · 1. OG · BA 10";"Estrich";"Estrich Mitte Demo GmbH";"Flügel Süd · 1. OG · BA 10";"2026-10-14";"3";"Arbeitstage";"2026-10-16";"planned";"0";"nein";"Fiktiver Vorgang zum Testen. Mengen, Personal und Dauern sind Demo-Annahmen, keine Kalkulation.
+Bauabschnitt 10 · Ansprechpartner: Demo-Bauleitung."
+"Bodenbeläge verlegen · Flügel Süd · 1. OG · BA 10";"Bodenbeläge";"Bodenwerk Demo GmbH";"Flügel Süd · 1. OG · BA 10";"2026-10-26";"4";"Arbeitstage";"2026-10-29";"planned";"0";"nein";"Fiktiver Vorgang zum Testen. Mengen, Personal und Dauern sind Demo-Annahmen, keine Kalkulation.
+Bauabschnitt 10 · Ansprechpartner: Demo-Bauleitung."
+"Nassräume fliesen · Flügel Süd · 1. OG · BA 10";"Fliesen";"Keramik Demo GmbH";"Flügel Süd · 1. OG · BA 10";"2026-10-22";"5";"Arbeitstage";"2026-10-28";"planned";"0";"nein";"Fiktiver Vorgang zum Testen. Mengen, Personal und Dauern sind Demo-Annahmen, keine Kalkulation.
+Bauabschnitt 10 · Ansprechpartner: Demo-Bauleitung."
+"Oberflächen beschichten · Flügel Süd · 1. OG · BA 10";"Malerarbeiten";"Farbwerk Demo GmbH";"Flügel Süd · 1. OG · BA 10";"2026-10-30";"2";"Arbeitstage";"2026-11-02";"planned";"0";"nein";"Fiktiver Vorgang zum Testen. Mengen, Personal und Dauern sind Demo-Annahmen, keine Kalkulation.
+Bauabschnitt 10 · Ansprechpartner: Demo-Bauleitung."
+"Geländer und Stahlteile montieren · Flügel Süd · 1. OG · BA 10";"Metallbau";"Metall & Form Demo GmbH";"Flügel Süd · 1. OG · BA 10";"2026-09-28";"3";"Arbeitstage";"2026-09-30";"complete";"100";"nein";"Fiktiver Vorgang zum Testen. Mengen, Personal und Dauern sind Demo-Annahmen, keine Kalkulation.
+Bauabschnitt 10 · Ansprechpartner: Demo-Bauleitung."
+"Aufzugtechnik montieren · Flügel Süd · 1. OG · BA 10";"Aufzüge";"Liftwerk Demo GmbH";"Flügel Süd · 1. OG · BA 10";"2026-10-02";"4";"Arbeitstage";"2026-10-07";"complete";"100";"nein";"Fiktiver Vorgang zum Testen. Mengen, Personal und Dauern sind Demo-Annahmen, keine Kalkulation.
+Bauabschnitt 10 · Ansprechpartner: Demo-Bauleitung."
+"Wege und Außenflächen herstellen · Flügel Süd · 1. OG · BA 10";"Außenanlagen";"Freiraum Demo GmbH";"Flügel Süd · 1. OG · BA 10";"2026-10-14";"5";"Arbeitstage";"2026-10-21";"planned";"0";"nein";"Fiktiver Vorgang zum Testen. Mengen, Personal und Dauern sind Demo-Annahmen, keine Kalkulation.
+Bauabschnitt 10 · Ansprechpartner: Demo-Bauleitung."
+"Bauabschnitt endreinigen · Flügel Süd · 1. OG · BA 10";"Baureinigung";"Klarwerk Demo GmbH";"Flügel Süd · 1. OG · BA 10";"2026-11-03";"2";"Arbeitstage";"2026-11-04";"planned";"0";"nein";"Fiktiver Vorgang zum Testen. Mengen, Personal und Dauern sind Demo-Annahmen, keine Kalkulation.
+Bauabschnitt 10 · Ansprechpartner: Demo-Bauleitung."
+"Bauabschnitt abnehmen · Flügel Süd · 1. OG · BA 10";"Inbetriebnahme & Abnahme";"Prüfwerk Demo GmbH";"Flügel Süd · 1. OG · BA 10";"2026-11-05";"0";"Arbeitstage";"2026-11-05";"planned";"0";"nein";"Fiktiver Vorgang zum Testen. Mengen, Personal und Dauern sind Demo-Annahmen, keine Kalkulation.
+Bauabschnitt 10 · Ansprechpartner: Demo-Bauleitung."
+"Baustelle einrichten · Flügel Süd · 2. OG · BA 11";"Baustelleneinrichtung";"Bauwerk Logistik Partner Demo GmbH";"Flügel Süd · 2. OG · BA 11";"2026-09-16";"4";"Arbeitstage";"2026-09-21";"complete";"100";"nein";"Fiktiver Vorgang zum Testen. Mengen, Personal und Dauern sind Demo-Annahmen, keine Kalkulation.
+Bauabschnitt 11 · Ansprechpartner: Demo-Bauleitung."
+"Arbeitsgerüst stellen · Flügel Süd · 2. OG · BA 11";"Gerüstbau";"Höhenwerk Demo GmbH";"Flügel Süd · 2. OG · BA 11";"2026-09-22";"5";"Arbeitstage";"2026-09-28";"complete";"100";"nein";"Fiktiver Vorgang zum Testen. Mengen, Personal und Dauern sind Demo-Annahmen, keine Kalkulation.
+Bauabschnitt 11 · Ansprechpartner: Demo-Bauleitung."
+"Bestand selektiv rückbauen · Flügel Süd · 2. OG · BA 11";"Rückbau";"Rückbau Nord Demo GmbH";"Flügel Süd · 2. OG · BA 11";"2026-09-22";"2";"Arbeitstage";"2026-09-23";"complete";"100";"nein";"Fiktiver Vorgang zum Testen. Mengen, Personal und Dauern sind Demo-Annahmen, keine Kalkulation.
+Bauabschnitt 11 · Ansprechpartner: Demo-Bauleitung."
+"Öffnungen und Rohbau herstellen · Flügel Süd · 2. OG · BA 11";"Rohbau";"Massivbau Demo GmbH";"Flügel Süd · 2. OG · BA 11";"2026-09-24";"3";"Arbeitstage";"2026-09-28";"complete";"100";"nein";"Fiktiver Vorgang zum Testen. Mengen, Personal und Dauern sind Demo-Annahmen, keine Kalkulation.
+Bauabschnitt 11 · Ansprechpartner: Demo-Bauleitung."
+"Sockel und Anschlüsse abdichten · Flügel Süd · 2. OG · BA 11";"Abdichtung";"Dichtwerk Demo GmbH";"Flügel Süd · 2. OG · BA 11";"2026-09-29";"4";"Arbeitstage";"2026-10-02";"complete";"100";"nein";"Fiktiver Vorgang zum Testen. Mengen, Personal und Dauern sind Demo-Annahmen, keine Kalkulation.
+Bauabschnitt 11 · Ansprechpartner: Demo-Bauleitung."
+"Dachfläche instand setzen · Flügel Süd · 2. OG · BA 11";"Dacharbeiten";"Dach & Form Partner Demo GmbH";"Flügel Süd · 2. OG · BA 11";"2026-10-05";"5";"Arbeitstage";"2026-10-09";"active";"29";"nein";"Fiktiver Vorgang zum Testen. Mengen, Personal und Dauern sind Demo-Annahmen, keine Kalkulation.
+Bauabschnitt 11 · Ansprechpartner: Demo-Bauleitung."
+"Fassadenabschnitt sanieren · Flügel Süd · 2. OG · BA 11";"Fassade";"Fassadenwerk Demo GmbH";"Flügel Süd · 2. OG · BA 11";"2026-10-12";"2";"Arbeitstage";"2026-10-13";"planned";"0";"nein";"Fiktiver Vorgang zum Testen. Mengen, Personal und Dauern sind Demo-Annahmen, keine Kalkulation.
+Bauabschnitt 11 · Ansprechpartner: Demo-Bauleitung."
+"Fenster und Anschlüsse montieren · Flügel Süd · 2. OG · BA 11";"Fensterbau";"Müller Fenster Demo GmbH";"Flügel Süd · 2. OG · BA 11";"2026-10-14";"3";"Arbeitstage";"2026-10-16";"planned";"0";"nein";"Fiktiver Vorgang zum Testen. Mengen, Personal und Dauern sind Demo-Annahmen, keine Kalkulation.
+Bauabschnitt 11 · Ansprechpartner: Demo-Bauleitung."
+"Innentüren und Zargen montieren · Flügel Süd · 2. OG · BA 11";"Türen";"Türwerk Demo GmbH";"Flügel Süd · 2. OG · BA 11";"2026-10-08";"4";"Arbeitstage";"2026-10-13";"active";"80";"nein";"Fiktiver Vorgang zum Testen. Mengen, Personal und Dauern sind Demo-Annahmen, keine Kalkulation.
+Bauabschnitt 11 · Ansprechpartner: Demo-Bauleitung."
+"Rohinstallation Elektro ausführen · Flügel Süd · 2. OG · BA 11";"Elektro";"Elektro Lichtblick Demo GmbH";"Flügel Süd · 2. OG · BA 11";"2026-09-29";"5";"Arbeitstage";"2026-10-05";"complete";"100";"nein";"Fiktiver Vorgang zum Testen. Mengen, Personal und Dauern sind Demo-Annahmen, keine Kalkulation.
+Bauabschnitt 11 · Ansprechpartner: Demo-Bauleitung."
+"Heizungsverteilung montieren · Flügel Süd · 2. OG · BA 11";"Heizung";"Wärmeweg Partner Demo GmbH";"Flügel Süd · 2. OG · BA 11";"2026-09-29";"2";"Arbeitstage";"2026-09-30";"complete";"100";"nein";"Fiktiver Vorgang zum Testen. Mengen, Personal und Dauern sind Demo-Annahmen, keine Kalkulation.
+Bauabschnitt 11 · Ansprechpartner: Demo-Bauleitung."
+"Lüftungsleitungen montieren · Flügel Süd · 2. OG · BA 11";"Lüftung";"Luftwerk Demo GmbH";"Flügel Süd · 2. OG · BA 11";"2026-09-29";"3";"Arbeitstage";"2026-10-01";"complete";"100";"nein";"Fiktiver Vorgang zum Testen. Mengen, Personal und Dauern sind Demo-Annahmen, keine Kalkulation.
+Bauabschnitt 11 · Ansprechpartner: Demo-Bauleitung."
+"Sanitärleitungen installieren · Flügel Süd · 2. OG · BA 11";"Sanitär";"Wasserwerk Demo GmbH";"Flügel Süd · 2. OG · BA 11";"2026-09-29";"4";"Arbeitstage";"2026-10-02";"complete";"100";"nein";"Fiktiver Vorgang zum Testen. Mengen, Personal und Dauern sind Demo-Annahmen, keine Kalkulation.
+Bauabschnitt 11 · Ansprechpartner: Demo-Bauleitung."
+"Durchführungen abschotten · Flügel Süd · 2. OG · BA 11";"Brandschutz";"Brandschutz Sicher Demo GmbH";"Flügel Süd · 2. OG · BA 11";"2026-10-06";"5";"Arbeitstage";"2026-10-12";"active";"43";"nein";"Fiktiver Vorgang zum Testen. Mengen, Personal und Dauern sind Demo-Annahmen, keine Kalkulation.
+Bauabschnitt 11 · Ansprechpartner: Demo-Bauleitung."
+"Wände und Decken schließen · Flügel Süd · 2. OG · BA 11";"Trockenbau";"Raumwerk Demo GmbH";"Flügel Süd · 2. OG · BA 11";"2026-10-06";"2";"Arbeitstage";"2026-10-07";"complete";"100";"nein";"Fiktiver Vorgang zum Testen. Mengen, Personal und Dauern sind Demo-Annahmen, keine Kalkulation.
+Bauabschnitt 11 · Ansprechpartner: Demo-Bauleitung."
+"Wandflächen verputzen · Flügel Süd · 2. OG · BA 11";"Putzarbeiten";"Oberfläche Partner Demo GmbH";"Flügel Süd · 2. OG · BA 11";"2026-10-08";"3";"Arbeitstage";"2026-10-12";"active";"77";"nein";"Fiktiver Vorgang zum Testen. Mengen, Personal und Dauern sind Demo-Annahmen, keine Kalkulation.
+Bauabschnitt 11 · Ansprechpartner: Demo-Bauleitung."
+"Estrich einbringen · Flügel Süd · 2. OG · BA 11";"Estrich";"Estrich Mitte Demo GmbH";"Flügel Süd · 2. OG · BA 11";"2026-10-13";"4";"Arbeitstage";"2026-10-16";"planned";"0";"nein";"Fiktiver Vorgang zum Testen. Mengen, Personal und Dauern sind Demo-Annahmen, keine Kalkulation.
+Bauabschnitt 11 · Ansprechpartner: Demo-Bauleitung."
+"Bodenbeläge verlegen · Flügel Süd · 2. OG · BA 11";"Bodenbeläge";"Bodenwerk Demo GmbH";"Flügel Süd · 2. OG · BA 11";"2026-10-26";"5";"Arbeitstage";"2026-10-30";"planned";"0";"nein";"Fiktiver Vorgang zum Testen. Mengen, Personal und Dauern sind Demo-Annahmen, keine Kalkulation.
+Bauabschnitt 11 · Ansprechpartner: Demo-Bauleitung."
+"Nassräume fliesen · Flügel Süd · 2. OG · BA 11";"Fliesen";"Keramik Demo GmbH";"Flügel Süd · 2. OG · BA 11";"2026-10-22";"2";"Arbeitstage";"2026-10-23";"planned";"0";"nein";"Fiktiver Vorgang zum Testen. Mengen, Personal und Dauern sind Demo-Annahmen, keine Kalkulation.
+Bauabschnitt 11 · Ansprechpartner: Demo-Bauleitung."
+"Oberflächen beschichten · Flügel Süd · 2. OG · BA 11";"Malerarbeiten";"Farbwerk Demo GmbH";"Flügel Süd · 2. OG · BA 11";"2026-11-02";"3";"Arbeitstage";"2026-11-04";"planned";"0";"nein";"Fiktiver Vorgang zum Testen. Mengen, Personal und Dauern sind Demo-Annahmen, keine Kalkulation.
+Bauabschnitt 11 · Ansprechpartner: Demo-Bauleitung."
+"Geländer und Stahlteile montieren · Flügel Süd · 2. OG · BA 11";"Metallbau";"Metall & Form Partner Demo GmbH";"Flügel Süd · 2. OG · BA 11";"2026-09-29";"4";"Arbeitstage";"2026-10-02";"complete";"100";"nein";"Fiktiver Vorgang zum Testen. Mengen, Personal und Dauern sind Demo-Annahmen, keine Kalkulation.
+Bauabschnitt 11 · Ansprechpartner: Demo-Bauleitung."
+"Aufzugtechnik montieren · Flügel Süd · 2. OG · BA 11";"Aufzüge";"Liftwerk Demo GmbH";"Flügel Süd · 2. OG · BA 11";"2026-10-06";"5";"Arbeitstage";"2026-10-12";"active";"57";"nein";"Fiktiver Vorgang zum Testen. Mengen, Personal und Dauern sind Demo-Annahmen, keine Kalkulation.
+Bauabschnitt 11 · Ansprechpartner: Demo-Bauleitung."
+"Wege und Außenflächen herstellen · Flügel Süd · 2. OG · BA 11";"Außenanlagen";"Freiraum Demo GmbH";"Flügel Süd · 2. OG · BA 11";"2026-10-14";"2";"Arbeitstage";"2026-10-15";"planned";"0";"nein";"Fiktiver Vorgang zum Testen. Mengen, Personal und Dauern sind Demo-Annahmen, keine Kalkulation.
+Bauabschnitt 11 · Ansprechpartner: Demo-Bauleitung."
+"Bauabschnitt endreinigen · Flügel Süd · 2. OG · BA 11";"Baureinigung";"Klarwerk Demo GmbH";"Flügel Süd · 2. OG · BA 11";"2026-11-05";"3";"Arbeitstage";"2026-11-09";"planned";"0";"nein";"Fiktiver Vorgang zum Testen. Mengen, Personal und Dauern sind Demo-Annahmen, keine Kalkulation.
+Bauabschnitt 11 · Ansprechpartner: Demo-Bauleitung."
+"Bauabschnitt abnehmen · Flügel Süd · 2. OG · BA 11";"Inbetriebnahme & Abnahme";"Prüfwerk Demo GmbH";"Flügel Süd · 2. OG · BA 11";"2026-11-10";"0";"Arbeitstage";"2026-11-10";"planned";"0";"nein";"Fiktiver Vorgang zum Testen. Mengen, Personal und Dauern sind Demo-Annahmen, keine Kalkulation.
+Bauabschnitt 11 · Ansprechpartner: Demo-Bauleitung."
+"Baustelle einrichten · Flügel Süd · 3. OG · BA 12";"Baustelleneinrichtung";"Bauwerk Logistik Demo GmbH";"Flügel Süd · 3. OG · BA 12";"2026-09-18";"5";"Arbeitstage";"2026-09-24";"complete";"100";"nein";"Fiktiver Vorgang zum Testen. Mengen, Personal und Dauern sind Demo-Annahmen, keine Kalkulation.
+Bauabschnitt 12 · Ansprechpartner: Demo-Bauleitung."
+"Arbeitsgerüst stellen · Flügel Süd · 3. OG · BA 12";"Gerüstbau";"Höhenwerk Demo GmbH";"Flügel Süd · 3. OG · BA 12";"2026-09-25";"2";"Arbeitstage";"2026-09-28";"complete";"100";"nein";"Fiktiver Vorgang zum Testen. Mengen, Personal und Dauern sind Demo-Annahmen, keine Kalkulation.
+Bauabschnitt 12 · Ansprechpartner: Demo-Bauleitung."
+"Bestand selektiv rückbauen · Flügel Süd · 3. OG · BA 12";"Rückbau";"Rückbau Nord Demo GmbH";"Flügel Süd · 3. OG · BA 12";"2026-09-25";"3";"Arbeitstage";"2026-09-29";"complete";"100";"nein";"Fiktiver Vorgang zum Testen. Mengen, Personal und Dauern sind Demo-Annahmen, keine Kalkulation.
+Bauabschnitt 12 · Ansprechpartner: Demo-Bauleitung."
+"Öffnungen und Rohbau herstellen · Flügel Süd · 3. OG · BA 12";"Rohbau";"Massivbau Demo GmbH";"Flügel Süd · 3. OG · BA 12";"2026-09-30";"4";"Arbeitstage";"2026-10-05";"complete";"100";"nein";"Fiktiver Vorgang zum Testen. Mengen, Personal und Dauern sind Demo-Annahmen, keine Kalkulation.
+Bauabschnitt 12 · Ansprechpartner: Demo-Bauleitung."
+"Sockel und Anschlüsse abdichten · Flügel Süd · 3. OG · BA 12";"Abdichtung";"Dichtwerk Demo GmbH";"Flügel Süd · 3. OG · BA 12";"2026-10-06";"5";"Arbeitstage";"2026-10-12";"active";"71";"ja";"Fiktiver Vorgang zum Testen. Mengen, Personal und Dauern sind Demo-Annahmen, keine Kalkulation.
+Bauabschnitt 12 · Ansprechpartner: Demo-Bauleitung.
+DEMO-Hindernis: Materialfreigabe steht aus. Zuständig: Test-Bauleitung. Nächste Abstimmung: 2026-10-10."
+"Dachfläche instand setzen · Flügel Süd · 3. OG · BA 12";"Dacharbeiten";"Dach & Form Demo GmbH";"Flügel Süd · 3. OG · BA 12";"2026-10-13";"2";"Arbeitstage";"2026-10-14";"planned";"0";"nein";"Fiktiver Vorgang zum Testen. Mengen, Personal und Dauern sind Demo-Annahmen, keine Kalkulation.
+Bauabschnitt 12 · Ansprechpartner: Demo-Bauleitung."
+"Fassadenabschnitt sanieren · Flügel Süd · 3. OG · BA 12";"Fassade";"Fassadenwerk Demo GmbH";"Flügel Süd · 3. OG · BA 12";"2026-10-15";"3";"Arbeitstage";"2026-10-20";"planned";"0";"nein";"Fiktiver Vorgang zum Testen. Mengen, Personal und Dauern sind Demo-Annahmen, keine Kalkulation.
+Bauabschnitt 12 · Ansprechpartner: Demo-Bauleitung."
+"Fenster und Anschlüsse montieren · Flügel Süd · 3. OG · BA 12";"Fensterbau";"Müller Fenster Demo GmbH";"Flügel Süd · 3. OG · BA 12";"2026-10-21";"4";"Arbeitstage";"2026-10-26";"planned";"0";"nein";"Fiktiver Vorgang zum Testen. Mengen, Personal und Dauern sind Demo-Annahmen, keine Kalkulation.
+Bauabschnitt 12 · Ansprechpartner: Demo-Bauleitung."
+"Innentüren und Zargen montieren · Flügel Süd · 3. OG · BA 12";"Türen";"Türwerk Demo GmbH";"Flügel Süd · 3. OG · BA 12";"2026-10-16";"5";"Arbeitstage";"2026-10-23";"planned";"0";"nein";"Fiktiver Vorgang zum Testen. Mengen, Personal und Dauern sind Demo-Annahmen, keine Kalkulation.
+Bauabschnitt 12 · Ansprechpartner: Demo-Bauleitung."
+"Rohinstallation Elektro ausführen · Flügel Süd · 3. OG · BA 12";"Elektro";"Elektro Lichtblick Demo GmbH";"Flügel Süd · 3. OG · BA 12";"2026-10-06";"2";"Arbeitstage";"2026-10-07";"complete";"100";"nein";"Fiktiver Vorgang zum Testen. Mengen, Personal und Dauern sind Demo-Annahmen, keine Kalkulation.
+Bauabschnitt 12 · Ansprechpartner: Demo-Bauleitung."
+"Heizungsverteilung montieren · Flügel Süd · 3. OG · BA 12";"Heizung";"Wärmeweg Demo GmbH";"Flügel Süd · 3. OG · BA 12";"2026-10-06";"3";"Arbeitstage";"2026-10-08";"active";"51";"nein";"Fiktiver Vorgang zum Testen. Mengen, Personal und Dauern sind Demo-Annahmen, keine Kalkulation.
+Bauabschnitt 12 · Ansprechpartner: Demo-Bauleitung."
+"Lüftungsleitungen montieren · Flügel Süd · 3. OG · BA 12";"Lüftung";"Luftwerk Demo GmbH";"Flügel Süd · 3. OG · BA 12";"2026-10-06";"4";"Arbeitstage";"2026-10-09";"active";"68";"nein";"Fiktiver Vorgang zum Testen. Mengen, Personal und Dauern sind Demo-Annahmen, keine Kalkulation.
+Bauabschnitt 12 · Ansprechpartner: Demo-Bauleitung."
+"Sanitärleitungen installieren · Flügel Süd · 3. OG · BA 12";"Sanitär";"Wasserwerk Demo GmbH";"Flügel Süd · 3. OG · BA 12";"2026-10-06";"5";"Arbeitstage";"2026-10-12";"active";"85";"nein";"Fiktiver Vorgang zum Testen. Mengen, Personal und Dauern sind Demo-Annahmen, keine Kalkulation.
+Bauabschnitt 12 · Ansprechpartner: Demo-Bauleitung."
+"Durchführungen abschotten · Flügel Süd · 3. OG · BA 12";"Brandschutz";"Brandschutz Sicher Demo GmbH";"Flügel Süd · 3. OG · BA 12";"2026-10-12";"2";"Arbeitstage";"2026-10-13";"planned";"0";"nein";"Fiktiver Vorgang zum Testen. Mengen, Personal und Dauern sind Demo-Annahmen, keine Kalkulation.
+Bauabschnitt 12 · Ansprechpartner: Demo-Bauleitung."
+"Wände und Decken schließen · Flügel Süd · 3. OG · BA 12";"Trockenbau";"Raumwerk Demo GmbH";"Flügel Süd · 3. OG · BA 12";"2026-10-13";"3";"Arbeitstage";"2026-10-15";"planned";"0";"nein";"Fiktiver Vorgang zum Testen. Mengen, Personal und Dauern sind Demo-Annahmen, keine Kalkulation.
+Bauabschnitt 12 · Ansprechpartner: Demo-Bauleitung."
+"Wandflächen verputzen · Flügel Süd · 3. OG · BA 12";"Putzarbeiten";"Oberfläche Demo GmbH";"Flügel Süd · 3. OG · BA 12";"2026-10-16";"4";"Arbeitstage";"2026-10-22";"planned";"0";"nein";"Fiktiver Vorgang zum Testen. Mengen, Personal und Dauern sind Demo-Annahmen, keine Kalkulation.
+Bauabschnitt 12 · Ansprechpartner: Demo-Bauleitung."
+"Estrich einbringen · Flügel Süd · 3. OG · BA 12";"Estrich";"Estrich Mitte Demo GmbH";"Flügel Süd · 3. OG · BA 12";"2026-10-23";"5";"Arbeitstage";"2026-10-29";"planned";"0";"nein";"Fiktiver Vorgang zum Testen. Mengen, Personal und Dauern sind Demo-Annahmen, keine Kalkulation.
+Bauabschnitt 12 · Ansprechpartner: Demo-Bauleitung."
+"Bodenbeläge verlegen · Flügel Süd · 3. OG · BA 12";"Bodenbeläge";"Bodenwerk Demo GmbH";"Flügel Süd · 3. OG · BA 12";"2026-11-06";"2";"Arbeitstage";"2026-11-09";"planned";"0";"nein";"Fiktiver Vorgang zum Testen. Mengen, Personal und Dauern sind Demo-Annahmen, keine Kalkulation.
+Bauabschnitt 12 · Ansprechpartner: Demo-Bauleitung."
+"Nassräume fliesen · Flügel Süd · 3. OG · BA 12";"Fliesen";"Keramik Demo GmbH";"Flügel Süd · 3. OG · BA 12";"2026-11-04";"3";"Arbeitstage";"2026-11-06";"planned";"0";"nein";"Fiktiver Vorgang zum Testen. Mengen, Personal und Dauern sind Demo-Annahmen, keine Kalkulation.
+Bauabschnitt 12 · Ansprechpartner: Demo-Bauleitung."
+"Oberflächen beschichten · Flügel Süd · 3. OG · BA 12";"Malerarbeiten";"Farbwerk Demo GmbH";"Flügel Süd · 3. OG · BA 12";"2026-11-10";"4";"Arbeitstage";"2026-11-16";"planned";"0";"nein";"Fiktiver Vorgang zum Testen. Mengen, Personal und Dauern sind Demo-Annahmen, keine Kalkulation.
+Bauabschnitt 12 · Ansprechpartner: Demo-Bauleitung."
+"Geländer und Stahlteile montieren · Flügel Süd · 3. OG · BA 12";"Metallbau";"Metall & Form Demo GmbH";"Flügel Süd · 3. OG · BA 12";"2026-10-06";"5";"Arbeitstage";"2026-10-12";"active";"38";"nein";"Fiktiver Vorgang zum Testen. Mengen, Personal und Dauern sind Demo-Annahmen, keine Kalkulation.
+Bauabschnitt 12 · Ansprechpartner: Demo-Bauleitung."
+"Aufzugtechnik montieren · Flügel Süd · 3. OG · BA 12";"Aufzüge";"Liftwerk Demo GmbH";"Flügel Süd · 3. OG · BA 12";"2026-10-08";"2";"Arbeitstage";"2026-10-09";"active";"55";"ja";"Fiktiver Vorgang zum Testen. Mengen, Personal und Dauern sind Demo-Annahmen, keine Kalkulation.
+Bauabschnitt 12 · Ansprechpartner: Demo-Bauleitung.
+DEMO-Hindernis: Materialfreigabe steht aus. Zuständig: Test-Bauleitung. Nächste Abstimmung: 2026-10-10."
+"Wege und Außenflächen herstellen · Flügel Süd · 3. OG · BA 12";"Außenanlagen";"Freiraum Demo GmbH";"Flügel Süd · 3. OG · BA 12";"2026-10-21";"3";"Arbeitstage";"2026-10-23";"planned";"0";"nein";"Fiktiver Vorgang zum Testen. Mengen, Personal und Dauern sind Demo-Annahmen, keine Kalkulation.
+Bauabschnitt 12 · Ansprechpartner: Demo-Bauleitung."
+"Bauabschnitt endreinigen · Flügel Süd · 3. OG · BA 12";"Baureinigung";"Klarwerk Demo GmbH";"Flügel Süd · 3. OG · BA 12";"2026-11-17";"4";"Arbeitstage";"2026-11-20";"planned";"0";"nein";"Fiktiver Vorgang zum Testen. Mengen, Personal und Dauern sind Demo-Annahmen, keine Kalkulation.
+Bauabschnitt 12 · Ansprechpartner: Demo-Bauleitung."
+"Bauabschnitt abnehmen · Flügel Süd · 3. OG · BA 12";"Inbetriebnahme & Abnahme";"Prüfwerk Demo GmbH";"Flügel Süd · 3. OG · BA 12";"2026-11-23";"0";"Arbeitstage";"2026-11-23";"planned";"0";"nein";"Fiktiver Vorgang zum Testen. Mengen, Personal und Dauern sind Demo-Annahmen, keine Kalkulation.
+Bauabschnitt 12 · Ansprechpartner: Demo-Bauleitung."
+"TEST · Übergabe am Freitag";"Elektro";"Elektro Lichtblick Demo GmbH";"TESTFÄLLE · Koordination";"2026-10-09";"1";"Arbeitstage";"2026-10-09";"planned";"0";"nein";"Expliziter Demo-Testfall. Keine reale Terminvereinbarung."
+"TEST · Ende–Anfang: nächster Arbeitstag";"Elektro";"Elektro Lichtblick Demo GmbH";"TESTFÄLLE · Koordination";"2026-10-12";"1";"Arbeitstage";"2026-10-12";"planned";"0";"nein";"Expliziter Demo-Testfall. Keine reale Terminvereinbarung."
+"TEST · Trocknung: 7 Kalendertage";"Elektro";"Elektro Lichtblick Demo GmbH";"TESTFÄLLE · Koordination";"2026-10-20";"2";"Arbeitstage";"2026-10-21";"planned";"0";"nein";"Expliziter Demo-Testfall. Keine reale Terminvereinbarung."
+"TEST · Fixtermin trotz späterem Vorgänger";"Elektro";"Elektro Lichtblick Demo GmbH";"TESTFÄLLE · Koordination";"2026-10-12";"1";"Arbeitstage";"2026-10-12";"planned";"0";"nein";"Expliziter Demo-Testfall. Keine reale Terminvereinbarung."
+"TEST · Entscheidung / Freigabe noch offen";"Elektro";"Elektro Lichtblick Demo GmbH";"TESTFÄLLE · Koordination";"";"3";"Arbeitstage";"";"planned";"0";"ja";"Expliziter Demo-Testfall. Keine reale Terminvereinbarung.
+DEMO-Hindernis: Materialfreigabe steht aus. Zuständig: Test-Bauleitung. Nächste Abstimmung: 2026-10-10."
+"TEST · Nachfolger ohne terminierte Freigabe";"Elektro";"Elektro Lichtblick Demo GmbH";"TESTFÄLLE · Koordination";"";"2";"Arbeitstage";"";"planned";"0";"nein";"Expliziter Demo-Testfall. Keine reale Terminvereinbarung."
+"TEST · Zieltermin wird überschritten";"Elektro";"Elektro Lichtblick Demo GmbH";"TESTFÄLLE · Koordination";"2026-10-05";"8";"Arbeitstage";"2026-10-14";"active";"42";"nein";"Expliziter Demo-Testfall. Keine reale Terminvereinbarung."
+"TEST · Paralleler Einsatz derselben Firma";"Elektro";"Elektro Lichtblick Demo GmbH";"TESTFÄLLE · Koordination";"2026-10-09";"3";"Arbeitstage";"2026-10-13";"planned";"0";"nein";"Expliziter Demo-Testfall. Keine reale Terminvereinbarung."
+"TEST · Abstimmung ""Nord"" & Prüfung <Schnitt A>";"Elektro";"Elektro Lichtblick Demo GmbH";"TESTFÄLLE · Koordination";"2026-10-12";"2";"Arbeitstage";"2026-10-13";"planned";"0";"nein";"Zeilenumbruch
+Anführungszeichen: ""Tür A"" & ""Tür B"".
+HTML bleibt Text: <script>DEMO</script>
+Keine automatische Interpretation von 12,5 m² oder 3 Mitarbeitern."

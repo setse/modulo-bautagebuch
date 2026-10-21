@@ -1,0 +1,616 @@
+<!DOCTYPE html>
+<html lang="de"><head>
+<meta charset="utf-8">
+<title>Modulo Stratum · Architektur-Controlling</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>/* Modulo Stratum — shared theme tokens.
+   Warm cream surfaces, sage accent, layered cards with soft shadows. */
+
+/* cyrillic-ext */
+@font-face {
+  font-family: 'Geist';
+  font-style: normal;
+  font-weight: 300;
+  font-display: swap;
+  src: url("62f7fd88-b1fd-4a6d-9f2d-242eb5f8b26f") format('woff2');
+  unicode-range: U+0460-052F, U+1C80-1C8A, U+20B4, U+2DE0-2DFF, U+A640-A69F, U+FE2E-FE2F;
+}
+/* cyrillic */
+@font-face {
+  font-family: 'Geist';
+  font-style: normal;
+  font-weight: 300;
+  font-display: swap;
+  src: url("6a7ae8aa-e29c-4d1d-8bf7-4519014444a7") format('woff2');
+  unicode-range: U+0301, U+0400-045F, U+0490-0491, U+04B0-04B1, U+2116;
+}
+/* vietnamese */
+@font-face {
+  font-family: 'Geist';
+  font-style: normal;
+  font-weight: 300;
+  font-display: swap;
+  src: url("d30fa912-f9ac-40ff-a460-cf7c9b378285") format('woff2');
+  unicode-range: U+0102-0103, U+0110-0111, U+0128-0129, U+0168-0169, U+01A0-01A1, U+01AF-01B0, U+0300-0301, U+0303-0304, U+0308-0309, U+0323, U+0329, U+1EA0-1EF9, U+20AB;
+}
+/* latin-ext */
+@font-face {
+  font-family: 'Geist';
+  font-style: normal;
+  font-weight: 300;
+  font-display: swap;
+  src: url("6c4c5e97-aec7-4190-9f77-773a78a02c4f") format('woff2');
+  unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C0, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+/* latin */
+@font-face {
+  font-family: 'Geist';
+  font-style: normal;
+  font-weight: 300;
+  font-display: swap;
+  src: url("0e07b02a-2da2-40d0-9b3a-816ccdd03135") format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+/* cyrillic-ext */
+@font-face {
+  font-family: 'Geist';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url("62f7fd88-b1fd-4a6d-9f2d-242eb5f8b26f") format('woff2');
+  unicode-range: U+0460-052F, U+1C80-1C8A, U+20B4, U+2DE0-2DFF, U+A640-A69F, U+FE2E-FE2F;
+}
+/* cyrillic */
+@font-face {
+  font-family: 'Geist';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url("6a7ae8aa-e29c-4d1d-8bf7-4519014444a7") format('woff2');
+  unicode-range: U+0301, U+0400-045F, U+0490-0491, U+04B0-04B1, U+2116;
+}
+/* vietnamese */
+@font-face {
+  font-family: 'Geist';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url("d30fa912-f9ac-40ff-a460-cf7c9b378285") format('woff2');
+  unicode-range: U+0102-0103, U+0110-0111, U+0128-0129, U+0168-0169, U+01A0-01A1, U+01AF-01B0, U+0300-0301, U+0303-0304, U+0308-0309, U+0323, U+0329, U+1EA0-1EF9, U+20AB;
+}
+/* latin-ext */
+@font-face {
+  font-family: 'Geist';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url("6c4c5e97-aec7-4190-9f77-773a78a02c4f") format('woff2');
+  unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C0, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+/* latin */
+@font-face {
+  font-family: 'Geist';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url("0e07b02a-2da2-40d0-9b3a-816ccdd03135") format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+/* cyrillic-ext */
+@font-face {
+  font-family: 'Geist';
+  font-style: normal;
+  font-weight: 500;
+  font-display: swap;
+  src: url("62f7fd88-b1fd-4a6d-9f2d-242eb5f8b26f") format('woff2');
+  unicode-range: U+0460-052F, U+1C80-1C8A, U+20B4, U+2DE0-2DFF, U+A640-A69F, U+FE2E-FE2F;
+}
+/* cyrillic */
+@font-face {
+  font-family: 'Geist';
+  font-style: normal;
+  font-weight: 500;
+  font-display: swap;
+  src: url("6a7ae8aa-e29c-4d1d-8bf7-4519014444a7") format('woff2');
+  unicode-range: U+0301, U+0400-045F, U+0490-0491, U+04B0-04B1, U+2116;
+}
+/* vietnamese */
+@font-face {
+  font-family: 'Geist';
+  font-style: normal;
+  font-weight: 500;
+  font-display: swap;
+  src: url("d30fa912-f9ac-40ff-a460-cf7c9b378285") format('woff2');
+  unicode-range: U+0102-0103, U+0110-0111, U+0128-0129, U+0168-0169, U+01A0-01A1, U+01AF-01B0, U+0300-0301, U+0303-0304, U+0308-0309, U+0323, U+0329, U+1EA0-1EF9, U+20AB;
+}
+/* latin-ext */
+@font-face {
+  font-family: 'Geist';
+  font-style: normal;
+  font-weight: 500;
+  font-display: swap;
+  src: url("6c4c5e97-aec7-4190-9f77-773a78a02c4f") format('woff2');
+  unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C0, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+/* latin */
+@font-face {
+  font-family: 'Geist';
+  font-style: normal;
+  font-weight: 500;
+  font-display: swap;
+  src: url("0e07b02a-2da2-40d0-9b3a-816ccdd03135") format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+/* cyrillic-ext */
+@font-face {
+  font-family: 'Geist';
+  font-style: normal;
+  font-weight: 600;
+  font-display: swap;
+  src: url("62f7fd88-b1fd-4a6d-9f2d-242eb5f8b26f") format('woff2');
+  unicode-range: U+0460-052F, U+1C80-1C8A, U+20B4, U+2DE0-2DFF, U+A640-A69F, U+FE2E-FE2F;
+}
+/* cyrillic */
+@font-face {
+  font-family: 'Geist';
+  font-style: normal;
+  font-weight: 600;
+  font-display: swap;
+  src: url("6a7ae8aa-e29c-4d1d-8bf7-4519014444a7") format('woff2');
+  unicode-range: U+0301, U+0400-045F, U+0490-0491, U+04B0-04B1, U+2116;
+}
+/* vietnamese */
+@font-face {
+  font-family: 'Geist';
+  font-style: normal;
+  font-weight: 600;
+  font-display: swap;
+  src: url("d30fa912-f9ac-40ff-a460-cf7c9b378285") format('woff2');
+  unicode-range: U+0102-0103, U+0110-0111, U+0128-0129, U+0168-0169, U+01A0-01A1, U+01AF-01B0, U+0300-0301, U+0303-0304, U+0308-0309, U+0323, U+0329, U+1EA0-1EF9, U+20AB;
+}
+/* latin-ext */
+@font-face {
+  font-family: 'Geist';
+  font-style: normal;
+  font-weight: 600;
+  font-display: swap;
+  src: url("6c4c5e97-aec7-4190-9f77-773a78a02c4f") format('woff2');
+  unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C0, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+/* latin */
+@font-face {
+  font-family: 'Geist';
+  font-style: normal;
+  font-weight: 600;
+  font-display: swap;
+  src: url("0e07b02a-2da2-40d0-9b3a-816ccdd03135") format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+/* cyrillic-ext */
+@font-face {
+  font-family: 'Geist';
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+  src: url("62f7fd88-b1fd-4a6d-9f2d-242eb5f8b26f") format('woff2');
+  unicode-range: U+0460-052F, U+1C80-1C8A, U+20B4, U+2DE0-2DFF, U+A640-A69F, U+FE2E-FE2F;
+}
+/* cyrillic */
+@font-face {
+  font-family: 'Geist';
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+  src: url("6a7ae8aa-e29c-4d1d-8bf7-4519014444a7") format('woff2');
+  unicode-range: U+0301, U+0400-045F, U+0490-0491, U+04B0-04B1, U+2116;
+}
+/* vietnamese */
+@font-face {
+  font-family: 'Geist';
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+  src: url("d30fa912-f9ac-40ff-a460-cf7c9b378285") format('woff2');
+  unicode-range: U+0102-0103, U+0110-0111, U+0128-0129, U+0168-0169, U+01A0-01A1, U+01AF-01B0, U+0300-0301, U+0303-0304, U+0308-0309, U+0323, U+0329, U+1EA0-1EF9, U+20AB;
+}
+/* latin-ext */
+@font-face {
+  font-family: 'Geist';
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+  src: url("6c4c5e97-aec7-4190-9f77-773a78a02c4f") format('woff2');
+  unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C0, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+/* latin */
+@font-face {
+  font-family: 'Geist';
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+  src: url("0e07b02a-2da2-40d0-9b3a-816ccdd03135") format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+/* cyrillic-ext */
+@font-face {
+  font-family: 'Geist Mono';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url("6ff3478d-d473-4b28-b2b2-5fc451afd12a") format('woff2');
+  unicode-range: U+0460-052F, U+1C80-1C8A, U+20B4, U+2DE0-2DFF, U+A640-A69F, U+FE2E-FE2F;
+}
+/* cyrillic */
+@font-face {
+  font-family: 'Geist Mono';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url("525f705c-8638-48d4-b564-71860cd63bf7") format('woff2');
+  unicode-range: U+0301, U+0400-045F, U+0490-0491, U+04B0-04B1, U+2116;
+}
+/* symbols2 */
+@font-face {
+  font-family: 'Geist Mono';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url("832ddc2d-d114-4b23-9d9f-afc3640d0deb") format('woff2');
+  unicode-range: U+2000-2001, U+2004-2008, U+200A, U+23B8-23BD, U+2500-259F;
+}
+/* vietnamese */
+@font-face {
+  font-family: 'Geist Mono';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url("c405d012-b537-46fe-9f17-b209dc52b582") format('woff2');
+  unicode-range: U+0102-0103, U+0110-0111, U+0128-0129, U+0168-0169, U+01A0-01A1, U+01AF-01B0, U+0300-0301, U+0303-0304, U+0308-0309, U+0323, U+0329, U+1EA0-1EF9, U+20AB;
+}
+/* latin-ext */
+@font-face {
+  font-family: 'Geist Mono';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url("8c671211-2d1d-4bfc-9131-b9a9bede8703") format('woff2');
+  unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C0, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+/* latin */
+@font-face {
+  font-family: 'Geist Mono';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url("232ba797-7541-424d-95f2-fa114e9bcd07") format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+/* cyrillic-ext */
+@font-face {
+  font-family: 'Geist Mono';
+  font-style: normal;
+  font-weight: 500;
+  font-display: swap;
+  src: url("6ff3478d-d473-4b28-b2b2-5fc451afd12a") format('woff2');
+  unicode-range: U+0460-052F, U+1C80-1C8A, U+20B4, U+2DE0-2DFF, U+A640-A69F, U+FE2E-FE2F;
+}
+/* cyrillic */
+@font-face {
+  font-family: 'Geist Mono';
+  font-style: normal;
+  font-weight: 500;
+  font-display: swap;
+  src: url("525f705c-8638-48d4-b564-71860cd63bf7") format('woff2');
+  unicode-range: U+0301, U+0400-045F, U+0490-0491, U+04B0-04B1, U+2116;
+}
+/* symbols2 */
+@font-face {
+  font-family: 'Geist Mono';
+  font-style: normal;
+  font-weight: 500;
+  font-display: swap;
+  src: url("832ddc2d-d114-4b23-9d9f-afc3640d0deb") format('woff2');
+  unicode-range: U+2000-2001, U+2004-2008, U+200A, U+23B8-23BD, U+2500-259F;
+}
+/* vietnamese */
+@font-face {
+  font-family: 'Geist Mono';
+  font-style: normal;
+  font-weight: 500;
+  font-display: swap;
+  src: url("c405d012-b537-46fe-9f17-b209dc52b582") format('woff2');
+  unicode-range: U+0102-0103, U+0110-0111, U+0128-0129, U+0168-0169, U+01A0-01A1, U+01AF-01B0, U+0300-0301, U+0303-0304, U+0308-0309, U+0323, U+0329, U+1EA0-1EF9, U+20AB;
+}
+/* latin-ext */
+@font-face {
+  font-family: 'Geist Mono';
+  font-style: normal;
+  font-weight: 500;
+  font-display: swap;
+  src: url("8c671211-2d1d-4bfc-9131-b9a9bede8703") format('woff2');
+  unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C0, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+/* latin */
+@font-face {
+  font-family: 'Geist Mono';
+  font-style: normal;
+  font-weight: 500;
+  font-display: swap;
+  src: url("232ba797-7541-424d-95f2-fa114e9bcd07") format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+/* cyrillic-ext */
+@font-face {
+  font-family: 'Geist Mono';
+  font-style: normal;
+  font-weight: 600;
+  font-display: swap;
+  src: url("6ff3478d-d473-4b28-b2b2-5fc451afd12a") format('woff2');
+  unicode-range: U+0460-052F, U+1C80-1C8A, U+20B4, U+2DE0-2DFF, U+A640-A69F, U+FE2E-FE2F;
+}
+/* cyrillic */
+@font-face {
+  font-family: 'Geist Mono';
+  font-style: normal;
+  font-weight: 600;
+  font-display: swap;
+  src: url("525f705c-8638-48d4-b564-71860cd63bf7") format('woff2');
+  unicode-range: U+0301, U+0400-045F, U+0490-0491, U+04B0-04B1, U+2116;
+}
+/* symbols2 */
+@font-face {
+  font-family: 'Geist Mono';
+  font-style: normal;
+  font-weight: 600;
+  font-display: swap;
+  src: url("832ddc2d-d114-4b23-9d9f-afc3640d0deb") format('woff2');
+  unicode-range: U+2000-2001, U+2004-2008, U+200A, U+23B8-23BD, U+2500-259F;
+}
+/* vietnamese */
+@font-face {
+  font-family: 'Geist Mono';
+  font-style: normal;
+  font-weight: 600;
+  font-display: swap;
+  src: url("c405d012-b537-46fe-9f17-b209dc52b582") format('woff2');
+  unicode-range: U+0102-0103, U+0110-0111, U+0128-0129, U+0168-0169, U+01A0-01A1, U+01AF-01B0, U+0300-0301, U+0303-0304, U+0308-0309, U+0323, U+0329, U+1EA0-1EF9, U+20AB;
+}
+/* latin-ext */
+@font-face {
+  font-family: 'Geist Mono';
+  font-style: normal;
+  font-weight: 600;
+  font-display: swap;
+  src: url("8c671211-2d1d-4bfc-9131-b9a9bede8703") format('woff2');
+  unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C0, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+/* latin */
+@font-face {
+  font-family: 'Geist Mono';
+  font-style: normal;
+  font-weight: 600;
+  font-display: swap;
+  src: url("232ba797-7541-424d-95f2-fa114e9bcd07") format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+
+
+:root {
+  --font-sans: 'Geist', system-ui, -apple-system, sans-serif;
+  --font-mono: 'Geist Mono', ui-monospace, monospace;
+}
+
+.theme-stratum {
+  --bg: #f0ece2;
+  --surface: #f7f4ec;
+  --surface-2: #ebe6d8;
+  --surface-3: #ddd6c3;
+  --border: #c8c0a8;
+  --border-strong: #a8a087;
+  --text: #2a2a26;
+  --text-dim: #6a665a;
+  --text-mute: #8e8979;
+  --accent: oklch(0.50 0.08 145);  /* sage */
+  --accent-dim: oklch(0.50 0.08 145 / 0.18);
+  --pos: oklch(0.50 0.08 145);
+  --neg: oklch(0.55 0.18 30);
+  --warn: oklch(0.65 0.13 70);
+  --font-ui: var(--font-sans);
+  --font-data: var(--font-mono);
+}
+
+/* Density helpers */
+.dens-compact { --pad: 8px;  --pad-lg: 12px; --row-h: 26px; --fs-body: 11px; --fs-data: 11px; --fs-h: 13px; --gap: 6px;  }
+.dens-regular { --pad: 12px; --pad-lg: 18px; --row-h: 32px; --fs-body: 12px; --fs-data: 12px; --fs-h: 14px; --gap: 8px;  }
+.dens-comfy   { --pad: 16px; --pad-lg: 24px; --row-h: 38px; --fs-body: 13px; --fs-data: 13px; --fs-h: 15px; --gap: 12px; }
+
+/* Shared utility primitives */
+.m-app      { font-family: var(--font-ui); color: var(--text); background: var(--bg);
+              font-size: var(--fs-body, 12px); line-height: 1.4; -webkit-font-smoothing: antialiased; }
+.m-num      { font-family: var(--font-data); font-variant-numeric: tabular-nums; letter-spacing: -0.01em; }
+.m-mute     { color: var(--text-mute); }
+.m-dim      { color: var(--text-dim); }
+.m-card     { background: var(--surface); border: 1px solid var(--border); border-radius: 6px;
+              box-shadow: 0 1px 0 rgba(0,0,0,0.04), 0 2px 10px rgba(74,68,55,0.06); }
+.m-eyebrow  { font-family: var(--font-data); font-size: 10px; letter-spacing: 0.08em;
+              text-transform: uppercase; color: var(--text-mute); font-weight: 500; }
+.m-divider  { height: 1px; background: var(--border); }
+.m-vdivider { width: 1px; background: var(--border); align-self: stretch; }
+.m-pill     { display: inline-flex; align-items: center; gap: 4px; padding: 2px 7px;
+              font-family: var(--font-data); font-size: 10px; letter-spacing: 0.02em;
+              border-radius: 999px; border: 1px solid var(--border-strong); color: var(--text-dim); }
+.m-pill-accent { background: var(--accent-dim); color: var(--accent); border-color: transparent; }
+.m-pill-pos    { background: color-mix(in oklch, var(--pos) 18%, transparent); color: var(--pos); border-color: transparent; }
+.m-pill-neg    { background: color-mix(in oklch, var(--neg) 18%, transparent); color: var(--neg); border-color: transparent; }
+.m-pill-warn   { background: color-mix(in oklch, var(--warn) 18%, transparent); color: var(--warn); border-color: transparent; }
+
+/* Sidebar shared shape */
+.m-side       { background: var(--surface-2); border-right: 1px solid var(--border); }
+.m-side-item  { display: flex; align-items: center; gap: 10px; padding: 8px 14px;
+                color: var(--text-dim); font-size: var(--fs-body); cursor: default; border-left: 2px solid transparent; }
+.m-side-item.active { color: var(--text); background: var(--surface-2); border-left-color: var(--accent); }
+
+/* Topbar shared */
+.m-top { display: flex; align-items: center; gap: 16px; padding: 0 20px; height: 52px;
+         background: var(--surface); border-bottom: 1px solid var(--border); }
+
+/* Sparkline helper hook */
+.m-spark path { fill: none; stroke: var(--accent); stroke-width: 1.4; }
+</style>
+<style>
+  html, body { margin: 0; padding: 0; background: #e9e4d6; overflow: hidden; height: 100vh; }
+</style>
+
+<script src="3a77bb93-bb62-4abe-beee-9f46d4b103d3" integrity="sha384-hD6/rw4ppMLGNu3tX5cjIb+uRZ7UkRJ6BPkLpg4hAu/6onKUg4lLsHAs9EBPT82L" crossorigin="anonymous"></script>
+<script src="823334a7-7930-4990-ac11-0785e9e01ed7" integrity="sha384-u6aeetuaXnQ38mYT8rp6sbXaQe3NL9t+IBXmnYxwkUI2Hw4bsp2Wvmx4yRQF1uAm" crossorigin="anonymous"></script>
+<script src="f463f89d-e2c2-4f89-8f04-67fd84542b19" integrity="sha384-m08KidiNqLdpJqLq95G/LEi8Qvjl/xUYll3QILypMoQ65QorJ9Lvtp2RXYGBFj1y" crossorigin="anonymous"></script>
+
+<script src="26742bc6-a0fa-46ef-920e-213568313f5d"></script>
+<script type="text/babel" src="49a62864-5e1d-4a0b-a64a-34e9f4b1f8d9"></script>
+<script type="text/babel" src="702bdc4e-182b-488a-aeea-187505bc2ed2"></script>
+<script type="text/babel" src="8b153bfe-cb9f-4c5c-a55f-754dbf8d1c34"></script>
+
+<!-- Shared Stratum shell -->
+<script type="text/babel" src="90237563-d5ff-43b3-b6b8-2a622e8e064d"></script>
+
+<!-- Existing Stratum screens reused -->
+<script type="text/babel" src="942e9caf-393f-495d-8cbe-820516c60eba"></script>
+<script type="text/babel" src="6360b7a0-f5f7-4d0c-8171-5c4d540a443d"></script>
+<script type="text/babel" src="fee6c38e-e3cd-4275-8d6c-dd1c8e46df5f"></script>
+
+<!-- New Stratum tabs -->
+<script type="text/babel" src="3f1c7887-88e0-45c1-9ff9-b2c64819549e"></script>
+<script type="text/babel" src="1cd42158-52b0-4e03-a055-92ad49739e80"></script>
+<script type="text/babel" src="bb58fff3-7037-4f2f-94bf-33c03baa4c67"></script>
+<script type="text/babel" src="94e3e103-27d1-43d9-8789-03801c410e15"></script>
+<script type="text/babel" src="6de7acc9-8b6c-4adf-b46f-d6a534a6f43a"></script>
+<script type="text/babel" src="b3b77a21-2fff-4d25-aca1-58a14660b658"></script>
+<script type="text/babel" src="abe1f3de-1afc-4a11-98ee-450c5ef95cf6"></script>
+<script type="text/babel" src="2ceecf03-fa08-4dcf-a9e5-35e3c1bd0241"></script>
+<script type="text/babel" src="59627a1e-0df3-4730-852c-f94780c2818d"></script>
+
+<!-- Mitarbeiter-Ansicht (employee view, restricted) -->
+<script type="text/babel" src="98dece45-563d-4043-9605-19f9ed0171ac"></script>
+<script type="text/babel" src="3147d609-e19c-4f32-af58-0c3a6a8d5401"></script>
+<script type="text/babel" src="723871a7-88b2-4955-b23b-af91a2d4dcce"></script>
+<script type="text/babel" src="6dcf60de-40d9-4426-90b9-652e4e557586"></script>
+<script type="text/babel" src="7d35d784-f02d-4ebc-8331-cf2b7097af83"></script>
+<script type="text/babel" src="30a415ac-2b4c-491d-b587-d5d80a4a31e4"></script>
+
+
+
+</head>
+<body>
+<div id="root"></div>
+
+<script type="text/babel">
+const TWEAK_DEFAULTS = /*EDITMODE-BEGIN*/{
+  "density": "compact",
+  "sidebar": "expanded"
+}/*EDITMODE-END*/;
+
+function App() {
+  const [t, setTweak] = useTweaks(TWEAK_DEFAULTS);
+  React.useEffect(() => {
+    document.documentElement.dataset.density = t.density;
+  }, [t.density]);
+
+  return (
+    <>
+      <DesignCanvas>
+        <DCSection id="intro" title="Modulo · Stratum"
+                   subtitle="Architektur-Controlling — vollständige App in Design-Richtung E (warmes Creme · Salbei · weiche Karten)">
+          <DCPostIt top={-12} left={920} rotate={-2} width={240}>
+            Acht Hauptscreens, alle in einheitlicher Stratum-Sprache.
+            Sidebar links bleibt konstant — der aktive Tab wechselt je Screen.
+          </DCPostIt>
+        </DCSection>
+
+        <DCSection id="primary" title="Hauptnavigation"
+                   subtitle="Die sieben Sidebar-Tabs der Anwendung">
+          <DCArtboard id="uebersicht" label="01 · Übersicht (Dashboard)" width={1280} height={800}>
+            <DashboardStratum />
+          </DCArtboard>
+          <DCArtboard id="projekte" label="02 · Projekte (Liste)" width={1280} height={800}>
+            <StratumProjekte />
+          </DCArtboard>
+          <DCArtboard id="akquise" label="03 · Akquise · Opportunity-Pipeline" width={1280} height={800}>
+            <StratumAkquise />
+          </DCArtboard>
+          <DCArtboard id="zeit" label="04 · Zeiterfassung" width={1280} height={800}>
+            <StratumZeit />
+          </DCArtboard>
+          <DCArtboard id="hoai" label="05 · HOAI-Rechner · Wizard" width={1280} height={800}>
+            <HoaiWizard />
+          </DCArtboard>
+          <DCArtboard id="honorare" label="06 · Honorare & Rechnungen" width={1280} height={800}>
+            <StratumHonorare />
+          </DCArtboard>
+          <DCArtboard id="team" label="07 · Team & Auslastung" width={1280} height={800}>
+            <StratumTeam />
+          </DCArtboard>
+          <DCArtboard id="auswertungen" label="08 · Auswertungen · Soll/Ist-Heatmap" width={1280} height={800}>
+            <BudgetStratum />
+          </DCArtboard>
+        </DCSection>
+
+        <DCSection id="drilldown" title="Drill-In · weitere Screens"
+                   subtitle="Projekt-Detail · Bauüberwachung · Mahnwesen · Einstellungen">
+          <DCArtboard id="proj-detail" label="Projekt-Detail · BÜR-118 Bürohaus Stadtkrone" width={1280} height={800}>
+            <StratumProjektDetail />
+          </DCArtboard>
+          <DCArtboard id="bauueberwachung" label="Bauüberwachung · LP 8 · KIT-077 Kita Lerchenfeld" width={1280} height={800}>
+            <StratumBauueberwachung />
+          </DCArtboard>
+          <DCArtboard id="mahnwesen" label="Mahnwesen · BÜR-118 · A 5 · 38 Tage überfällig" width={1280} height={800}>
+            <StratumMahnwesen />
+          </DCArtboard>
+          <DCArtboard id="settings" label="Einstellungen · HOAI-Standards" width={1280} height={800}>
+            <StratumSettings />
+          </DCArtboard>
+        </DCSection>
+
+        <DCSection id="mitarbeiter" title="Mitarbeiter-Ansicht"
+                   subtitle="Eingeschränkte Sicht für Architekt:innen ohne Geschäftsführungs-Rolle · Sophia Nowak (Architektin, Teilzeit 32 h)">
+          <DCPostIt top={-12} left={1040} rotate={1.5} width={260}>
+            Normale Mitarbeiter sehen nur die fünf Tabs:
+            Mein Tag · Zeiterfassung · Kalender · Team · Abwesenheit.
+            Keine Honorare, keine Auswertungen, keine Rates.
+          </DCPostIt>
+          <DCArtboard id="emp-home" label="M-01 · Mein Tag (Personal Home)" width={1280} height={800}>
+            <EmpHome />
+          </DCArtboard>
+          <DCArtboard id="emp-zeit" label="M-02 · Zeiterfassung (nur eigene)" width={1280} height={800}>
+            <EmpZeit />
+          </DCArtboard>
+          <DCArtboard id="emp-kalender" label="M-03 · Kalender · Monatsansicht Okt 2026" width={1280} height={800}>
+            <EmpKalender />
+          </DCArtboard>
+          <DCArtboard id="emp-team" label="M-04 · Team · Wer ist online" width={1280} height={800}>
+            <EmpTeamPage />
+          </DCArtboard>
+          <DCArtboard id="emp-abwesenheit" label="M-05 · Abwesenheit · Urlaub & Krankheit" width={1280} height={800}>
+            <EmpAbwesenheit />
+          </DCArtboard>
+        </DCSection>
+      </DesignCanvas>
+
+      <TweaksPanel title="Modulo · Tweaks">
+        <TweakSection label="Dichte" />
+        <TweakRadio label="Information" value={t.density}
+                    options={['compact', 'regular', 'comfy']}
+                    onChange={(v) => setTweak('density', v)} />
+        <TweakSection label="Sidebar" />
+        <TweakRadio label="Layout" value={t.sidebar}
+                    options={['collapsed', 'expanded']}
+                    onChange={(v) => setTweak('sidebar', v)} />
+      </TweaksPanel>
+    </>
+  );
+}
+
+ReactDOM.createRoot(document.getElementById('root')).render(<App />);
+</script>
+
+
+</body></html>

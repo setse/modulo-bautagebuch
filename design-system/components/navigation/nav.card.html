@@ -1,0 +1,59 @@
+<!-- @dsCard group="Components" viewport="700x300" name="Navigation" subtitle="Sidebar — full-height app nav shell" -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<link rel="stylesheet" href="../../styles.css">
+<script src="https://unpkg.com/react@18.3.1/umd/react.development.js" integrity="sha384-hD6/rw4ppMLGNu3tX5cjIb+uRZ7UkRJ6BPkLpg4hAu/6onKUg4lLsHAs9EBPT82L" crossorigin="anonymous"></script>
+<script src="https://unpkg.com/react-dom@18.3.1/umd/react-dom.development.js" integrity="sha384-u6aeetuaXnQ38mYT8rp6sbXaQe3NL9t+IBXmnYxwkUI2Hw4bsp2Wvmx4yRQF1uAm" crossorigin="anonymous"></script>
+<script src="../../_ds_bundle.js"></script>
+<style>html,body{margin:0;padding:0;height:100%;}body{background:var(--bg);display:flex;gap:0;}</style>
+</head>
+<body class="theme-stratum dens-comfy">
+<script type="text/babel">
+const { Sidebar } = window.ModuloStratumDesignSystem_879962;
+
+const items = [
+  {label:'Übersicht', icon:'dashboard'},
+  {label:'Projekte', icon:'project'},
+  {label:'Akquise', icon:'folder'},
+  {label:'Zeiterfassung', icon:'clock'},
+  {label:'HOAI-Rechner', icon:'calc'},
+  {label:'Honorare', icon:'euro'},
+  {label:'Team', icon:'team'},
+  {label:'Auswertungen', icon:'reports'},
+];
+
+function Demo() {
+  const [active, setActive] = React.useState('Übersicht');
+  return (
+    <div style={{display:'flex',width:'100%',height:300}}>
+      <div style={{width:230,flexShrink:0}}>
+        <Sidebar
+          items={items}
+          active={active}
+          logoSub="Hofer · Renner"
+          recentProjects={[
+            {id:'BÜR-118',name:'Bürohaus Stadtkrone'},
+            {id:'WHB-204',name:'Wohnhaus Bergmann'},
+          ]}
+          user={{name:'Maria Hofer',role:'Partnerin',color:'#d97c4a'}}
+        />
+      </div>
+      <div style={{flex:1,padding:'24px 28px',display:'flex',flexDirection:'column',gap:8}}>
+        <div style={{fontSize:11,color:'var(--text-mute)',fontFamily:'var(--font-data)',marginBottom:8}}>Klicken zum Wechseln:</div>
+        {items.map(({label}) => (
+          <div key={label} onClick={() => setActive(label)}
+            style={{fontSize:12,color:active===label?'var(--accent)':'var(--text-dim)',cursor:'pointer',fontWeight:active===label?600:400}}>
+            {label}
+          </div>
+        ))}
+      </div>
+    </div>
+  );
+}
+ReactDOM.createRoot(document.getElementById('root')).render(<Demo/>);
+</script>
+<div id="root"></div>
+</body>
+</html>

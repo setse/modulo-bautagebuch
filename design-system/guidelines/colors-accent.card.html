@@ -1,0 +1,28 @@
+<!-- @dsCard group="Colors" viewport="700x160" name="Brand Accent" subtitle="Sage green — primary interactive color" -->
+<!DOCTYPE html>
+<html lang="en">
+<head><meta charset="utf-8"><link rel="stylesheet" href="../styles.css">
+<style>body{margin:0;padding:16px;background:#f0ece2;font-family:'Geist',system-ui,sans-serif;display:flex;gap:12px;align-items:stretch;}</style>
+</head>
+<body class="theme-stratum">
+  <div style="flex:2;background:var(--accent);border-radius:8px;padding:16px 20px;display:flex;flex-direction:column;justify-content:space-between;">
+    <div style="font-family:'Geist Mono',monospace;font-size:10px;letter-spacing:0.08em;text-transform:uppercase;color:rgba(255,255,255,0.7);">Accent / Positive</div>
+    <div>
+      <div style="color:#fff;font-size:13px;font-weight:600;">oklch(0.50 0.08 145)</div>
+      <div style="font-family:'Geist Mono',monospace;font-size:10px;color:rgba(255,255,255,0.65);margin-top:2px;">Sage green · --accent / --pos</div>
+    </div>
+  </div>
+  <div style="flex:1;background:var(--accent-dim);border-radius:8px;padding:16px 20px;display:flex;flex-direction:column;justify-content:space-between;border:1px solid var(--border);">
+    <div style="font-family:'Geist Mono',monospace;font-size:10px;letter-spacing:0.08em;text-transform:uppercase;color:var(--text-mute);">Accent Dim</div>
+    <div style="font-family:'Geist Mono',monospace;font-size:10px;color:var(--accent);">--accent-dim · 18% alpha</div>
+  </div>
+  <div style="flex:1;background:color-mix(in oklch,var(--neg) 18%,transparent);border-radius:8px;padding:16px 20px;display:flex;flex-direction:column;justify-content:space-between;">
+    <div style="font-family:'Geist Mono',monospace;font-size:10px;letter-spacing:0.08em;text-transform:uppercase;color:var(--neg);">Negative</div>
+    <div style="font-family:'Geist Mono',monospace;font-size:10px;color:var(--neg);">oklch(0.55 0.18 30)</div>
+  </div>
+  <div style="flex:1;background:color-mix(in oklch,var(--warn) 18%,transparent);border-radius:8px;padding:16px 20px;display:flex;flex-direction:column;justify-content:space-between;">
+    <div style="font-family:'Geist Mono',monospace;font-size:10px;letter-spacing:0.08em;text-transform:uppercase;color:var(--warn);">Warning</div>
+    <div style="font-family:'Geist Mono',monospace;font-size:10px;color:var(--warn);">oklch(0.65 0.13 70)</div>
+  </div>
+</body>
+</html>

@@ -1,0 +1,198 @@
+﻿"Vorgang";"Gewerk";"Firma";"Bereich";"Start";"Dauer";"Einheit";"Ende";"Status";"Fortschritt";"Blockiert";"Notizen"
+"Baustelle einrichten · Bereich 1 · Gruppenraum";"Baustelleneinrichtung";"Bauwerk Logistik Demo GmbH";"Bereich 1 · Gruppenraum";"2026-09-14";"2";"Arbeitstage";"2026-09-15";"complete";"100";"nein";"Fiktiver Vorgang zum Testen. Mengen, Personal und Dauern sind Demo-Annahmen, keine Kalkulation.
+Bauabschnitt 1 · Ansprechpartner: Demo-Bauleitung."
+"Bestand selektiv rückbauen · Bereich 1 · Gruppenraum";"Rückbau";"Rückbau Nord Demo GmbH";"Bereich 1 · Gruppenraum";"2026-09-16";"3";"Arbeitstage";"2026-09-18";"complete";"100";"nein";"Fiktiver Vorgang zum Testen. Mengen, Personal und Dauern sind Demo-Annahmen, keine Kalkulation.
+Bauabschnitt 1 · Ansprechpartner: Demo-Bauleitung."
+"Öffnungen und Rohbau herstellen · Bereich 1 · Gruppenraum";"Rohbau";"Massivbau Demo GmbH";"Bereich 1 · Gruppenraum";"2026-09-19";"4";"Arbeitstage";"2026-09-23";"complete";"100";"nein";"Fiktiver Vorgang zum Testen. Mengen, Personal und Dauern sind Demo-Annahmen, keine Kalkulation.
+Bauabschnitt 1 · Ansprechpartner: Demo-Bauleitung."
+"Fenster und Anschlüsse montieren · Bereich 1 · Gruppenraum";"Fensterbau";"Müller Fenster Demo GmbH";"Bereich 1 · Gruppenraum";"2026-09-24";"5";"Arbeitstage";"2026-09-29";"complete";"100";"nein";"Fiktiver Vorgang zum Testen. Mengen, Personal und Dauern sind Demo-Annahmen, keine Kalkulation.
+Bauabschnitt 1 · Ansprechpartner: Demo-Bauleitung."
+"Rohinstallation Elektro ausführen · Bereich 1 · Gruppenraum";"Elektro";"Elektro Lichtblick Demo GmbH";"Bereich 1 · Gruppenraum";"2026-09-30";"2";"Arbeitstage";"2026-10-01";"complete";"100";"nein";"Fiktiver Vorgang zum Testen. Mengen, Personal und Dauern sind Demo-Annahmen, keine Kalkulation.
+Bauabschnitt 1 · Ansprechpartner: Demo-Bauleitung."
+"Heizungsverteilung montieren · Bereich 1 · Gruppenraum";"Heizung";"Wärmeweg Demo GmbH";"Bereich 1 · Gruppenraum";"2026-10-02";"3";"Arbeitstage";"2026-10-05";"complete";"100";"nein";"Fiktiver Vorgang zum Testen. Mengen, Personal und Dauern sind Demo-Annahmen, keine Kalkulation.
+Bauabschnitt 1 · Ansprechpartner: Demo-Bauleitung."
+"Sanitärleitungen installieren · Bereich 1 · Gruppenraum";"Sanitär";"Wasserwerk Demo GmbH";"Bereich 1 · Gruppenraum";"2026-10-06";"4";"Arbeitstage";"2026-10-09";"active";"66";"nein";"Fiktiver Vorgang zum Testen. Mengen, Personal und Dauern sind Demo-Annahmen, keine Kalkulation.
+Bauabschnitt 1 · Ansprechpartner: Demo-Bauleitung."
+"Wände und Decken schließen · Bereich 1 · Gruppenraum";"Trockenbau";"Raumwerk Demo GmbH";"Bereich 1 · Gruppenraum";"2026-10-10";"5";"Arbeitstage";"2026-10-15";"planned";"0";"ja";"Fiktiver Vorgang zum Testen. Mengen, Personal und Dauern sind Demo-Annahmen, keine Kalkulation.
+Bauabschnitt 1 · Ansprechpartner: Demo-Bauleitung.
+DEMO-Hindernis: Materialfreigabe steht aus. Zuständig: Test-Bauleitung. Nächste Abstimmung: 2026-10-10."
+"Estrich einbringen · Bereich 1 · Gruppenraum";"Estrich";"Estrich Mitte Demo GmbH";"Bereich 1 · Gruppenraum";"2026-10-16";"2";"Arbeitstage";"2026-10-17";"planned";"0";"nein";"Fiktiver Vorgang zum Testen. Mengen, Personal und Dauern sind Demo-Annahmen, keine Kalkulation.
+Bauabschnitt 1 · Ansprechpartner: Demo-Bauleitung."
+"Bodenbeläge verlegen · Bereich 1 · Gruppenraum";"Bodenbeläge";"Bodenwerk Demo GmbH";"Bereich 1 · Gruppenraum";"2026-10-26";"3";"Arbeitstage";"2026-10-28";"planned";"0";"nein";"Fiktiver Vorgang zum Testen. Mengen, Personal und Dauern sind Demo-Annahmen, keine Kalkulation.
+Bauabschnitt 1 · Ansprechpartner: Demo-Bauleitung."
+"Oberflächen beschichten · Bereich 1 · Gruppenraum";"Malerarbeiten";"Farbwerk Demo GmbH";"Bereich 1 · Gruppenraum";"2026-10-29";"4";"Arbeitstage";"2026-11-02";"planned";"0";"nein";"Fiktiver Vorgang zum Testen. Mengen, Personal und Dauern sind Demo-Annahmen, keine Kalkulation.
+Bauabschnitt 1 · Ansprechpartner: Demo-Bauleitung."
+"Bauabschnitt endreinigen · Bereich 1 · Gruppenraum";"Baureinigung";"Klarwerk Demo GmbH";"Bereich 1 · Gruppenraum";"2026-11-03";"5";"Arbeitstage";"2026-11-07";"planned";"0";"nein";"Fiktiver Vorgang zum Testen. Mengen, Personal und Dauern sind Demo-Annahmen, keine Kalkulation.
+Bauabschnitt 1 · Ansprechpartner: Demo-Bauleitung."
+"Baustelle einrichten · Bereich 2 · Flur";"Baustelleneinrichtung";"Bauwerk Logistik Demo GmbH";"Bereich 2 · Flur";"2026-09-16";"3";"Arbeitstage";"2026-09-18";"complete";"100";"nein";"Fiktiver Vorgang zum Testen. Mengen, Personal und Dauern sind Demo-Annahmen, keine Kalkulation.
+Bauabschnitt 2 · Ansprechpartner: Demo-Bauleitung."
+"Bestand selektiv rückbauen · Bereich 2 · Flur";"Rückbau";"Rückbau Nord Demo GmbH";"Bereich 2 · Flur";"2026-09-19";"4";"Arbeitstage";"2026-09-23";"complete";"100";"nein";"Fiktiver Vorgang zum Testen. Mengen, Personal und Dauern sind Demo-Annahmen, keine Kalkulation.
+Bauabschnitt 2 · Ansprechpartner: Demo-Bauleitung."
+"Öffnungen und Rohbau herstellen · Bereich 2 · Flur";"Rohbau";"Massivbau Demo GmbH";"Bereich 2 · Flur";"2026-09-24";"5";"Arbeitstage";"2026-09-29";"complete";"100";"nein";"Fiktiver Vorgang zum Testen. Mengen, Personal und Dauern sind Demo-Annahmen, keine Kalkulation.
+Bauabschnitt 2 · Ansprechpartner: Demo-Bauleitung."
+"Fenster und Anschlüsse montieren · Bereich 2 · Flur";"Fensterbau";"Müller Fenster Demo GmbH";"Bereich 2 · Flur";"2026-09-30";"2";"Arbeitstage";"2026-10-01";"complete";"100";"nein";"Fiktiver Vorgang zum Testen. Mengen, Personal und Dauern sind Demo-Annahmen, keine Kalkulation.
+Bauabschnitt 2 · Ansprechpartner: Demo-Bauleitung."
+"Rohinstallation Elektro ausführen · Bereich 2 · Flur";"Elektro";"Elektro Lichtblick Demo GmbH";"Bereich 2 · Flur";"2026-10-02";"3";"Arbeitstage";"2026-10-05";"complete";"100";"nein";"Fiktiver Vorgang zum Testen. Mengen, Personal und Dauern sind Demo-Annahmen, keine Kalkulation.
+Bauabschnitt 2 · Ansprechpartner: Demo-Bauleitung."
+"Heizungsverteilung montieren · Bereich 2 · Flur";"Heizung";"Wärmeweg Demo GmbH";"Bereich 2 · Flur";"2026-10-06";"4";"Arbeitstage";"2026-10-09";"active";"70";"nein";"Fiktiver Vorgang zum Testen. Mengen, Personal und Dauern sind Demo-Annahmen, keine Kalkulation.
+Bauabschnitt 2 · Ansprechpartner: Demo-Bauleitung."
+"Sanitärleitungen installieren · Bereich 2 · Flur";"Sanitär";"Wasserwerk Demo GmbH";"Bereich 2 · Flur";"2026-10-10";"5";"Arbeitstage";"2026-10-15";"planned";"0";"nein";"Fiktiver Vorgang zum Testen. Mengen, Personal und Dauern sind Demo-Annahmen, keine Kalkulation.
+Bauabschnitt 2 · Ansprechpartner: Demo-Bauleitung."
+"Wände und Decken schließen · Bereich 2 · Flur";"Trockenbau";"Raumwerk Demo GmbH";"Bereich 2 · Flur";"2026-10-16";"2";"Arbeitstage";"2026-10-17";"planned";"0";"nein";"Fiktiver Vorgang zum Testen. Mengen, Personal und Dauern sind Demo-Annahmen, keine Kalkulation.
+Bauabschnitt 2 · Ansprechpartner: Demo-Bauleitung."
+"Estrich einbringen · Bereich 2 · Flur";"Estrich";"Estrich Mitte Demo GmbH";"Bereich 2 · Flur";"2026-10-20";"3";"Arbeitstage";"2026-10-22";"planned";"0";"nein";"Fiktiver Vorgang zum Testen. Mengen, Personal und Dauern sind Demo-Annahmen, keine Kalkulation.
+Bauabschnitt 2 · Ansprechpartner: Demo-Bauleitung."
+"Bodenbeläge verlegen · Bereich 2 · Flur";"Bodenbeläge";"Bodenwerk Demo GmbH";"Bereich 2 · Flur";"2026-10-30";"4";"Arbeitstage";"2026-11-03";"planned";"0";"nein";"Fiktiver Vorgang zum Testen. Mengen, Personal und Dauern sind Demo-Annahmen, keine Kalkulation.
+Bauabschnitt 2 · Ansprechpartner: Demo-Bauleitung."
+"Oberflächen beschichten · Bereich 2 · Flur";"Malerarbeiten";"Farbwerk Demo GmbH";"Bereich 2 · Flur";"2026-11-04";"5";"Arbeitstage";"2026-11-09";"planned";"0";"nein";"Fiktiver Vorgang zum Testen. Mengen, Personal und Dauern sind Demo-Annahmen, keine Kalkulation.
+Bauabschnitt 2 · Ansprechpartner: Demo-Bauleitung."
+"Bauabschnitt endreinigen · Bereich 2 · Flur";"Baureinigung";"Klarwerk Demo GmbH";"Bereich 2 · Flur";"2026-11-10";"2";"Arbeitstage";"2026-11-11";"planned";"0";"nein";"Fiktiver Vorgang zum Testen. Mengen, Personal und Dauern sind Demo-Annahmen, keine Kalkulation.
+Bauabschnitt 2 · Ansprechpartner: Demo-Bauleitung."
+"Baustelle einrichten · Bereich 3 · Sanitär";"Baustelleneinrichtung";"Bauwerk Logistik Partner Demo GmbH";"Bereich 3 · Sanitär";"2026-09-18";"4";"Arbeitstage";"2026-09-22";"complete";"100";"nein";"Fiktiver Vorgang zum Testen. Mengen, Personal und Dauern sind Demo-Annahmen, keine Kalkulation.
+Bauabschnitt 3 · Ansprechpartner: Demo-Bauleitung."
+"Bestand selektiv rückbauen · Bereich 3 · Sanitär";"Rückbau";"Rückbau Nord Demo GmbH";"Bereich 3 · Sanitär";"2026-09-23";"5";"Arbeitstage";"2026-09-28";"complete";"100";"nein";"Fiktiver Vorgang zum Testen. Mengen, Personal und Dauern sind Demo-Annahmen, keine Kalkulation.
+Bauabschnitt 3 · Ansprechpartner: Demo-Bauleitung."
+"Öffnungen und Rohbau herstellen · Bereich 3 · Sanitär";"Rohbau";"Massivbau Demo GmbH";"Bereich 3 · Sanitär";"2026-09-29";"2";"Arbeitstage";"2026-09-30";"complete";"100";"nein";"Fiktiver Vorgang zum Testen. Mengen, Personal und Dauern sind Demo-Annahmen, keine Kalkulation.
+Bauabschnitt 3 · Ansprechpartner: Demo-Bauleitung."
+"Fenster und Anschlüsse montieren · Bereich 3 · Sanitär";"Fensterbau";"Müller Fenster Demo GmbH";"Bereich 3 · Sanitär";"2026-10-01";"3";"Arbeitstage";"2026-10-03";"complete";"100";"nein";"Fiktiver Vorgang zum Testen. Mengen, Personal und Dauern sind Demo-Annahmen, keine Kalkulation.
+Bauabschnitt 3 · Ansprechpartner: Demo-Bauleitung."
+"Rohinstallation Elektro ausführen · Bereich 3 · Sanitär";"Elektro";"Elektro Lichtblick Demo GmbH";"Bereich 3 · Sanitär";"2026-10-05";"4";"Arbeitstage";"2026-10-08";"active";"74";"nein";"Fiktiver Vorgang zum Testen. Mengen, Personal und Dauern sind Demo-Annahmen, keine Kalkulation.
+Bauabschnitt 3 · Ansprechpartner: Demo-Bauleitung."
+"Heizungsverteilung montieren · Bereich 3 · Sanitär";"Heizung";"Wärmeweg Partner Demo GmbH";"Bereich 3 · Sanitär";"2026-10-09";"5";"Arbeitstage";"2026-10-14";"planned";"0";"nein";"Fiktiver Vorgang zum Testen. Mengen, Personal und Dauern sind Demo-Annahmen, keine Kalkulation.
+Bauabschnitt 3 · Ansprechpartner: Demo-Bauleitung."
+"Sanitärleitungen installieren · Bereich 3 · Sanitär";"Sanitär";"Wasserwerk Demo GmbH";"Bereich 3 · Sanitär";"2026-10-15";"2";"Arbeitstage";"2026-10-16";"planned";"0";"nein";"Fiktiver Vorgang zum Testen. Mengen, Personal und Dauern sind Demo-Annahmen, keine Kalkulation.
+Bauabschnitt 3 · Ansprechpartner: Demo-Bauleitung."
+"Wände und Decken schließen · Bereich 3 · Sanitär";"Trockenbau";"Raumwerk Demo GmbH";"Bereich 3 · Sanitär";"2026-10-17";"3";"Arbeitstage";"2026-10-21";"planned";"0";"nein";"Fiktiver Vorgang zum Testen. Mengen, Personal und Dauern sind Demo-Annahmen, keine Kalkulation.
+Bauabschnitt 3 · Ansprechpartner: Demo-Bauleitung."
+"Estrich einbringen · Bereich 3 · Sanitär";"Estrich";"Estrich Mitte Demo GmbH";"Bereich 3 · Sanitär";"2026-10-22";"4";"Arbeitstage";"2026-10-26";"planned";"0";"nein";"Fiktiver Vorgang zum Testen. Mengen, Personal und Dauern sind Demo-Annahmen, keine Kalkulation.
+Bauabschnitt 3 · Ansprechpartner: Demo-Bauleitung."
+"Bodenbeläge verlegen · Bereich 3 · Sanitär";"Bodenbeläge";"Bodenwerk Demo GmbH";"Bereich 3 · Sanitär";"2026-11-03";"5";"Arbeitstage";"2026-11-07";"planned";"0";"nein";"Fiktiver Vorgang zum Testen. Mengen, Personal und Dauern sind Demo-Annahmen, keine Kalkulation.
+Bauabschnitt 3 · Ansprechpartner: Demo-Bauleitung."
+"Oberflächen beschichten · Bereich 3 · Sanitär";"Malerarbeiten";"Farbwerk Partner Demo GmbH";"Bereich 3 · Sanitär";"2026-11-09";"2";"Arbeitstage";"2026-11-10";"planned";"0";"nein";"Fiktiver Vorgang zum Testen. Mengen, Personal und Dauern sind Demo-Annahmen, keine Kalkulation.
+Bauabschnitt 3 · Ansprechpartner: Demo-Bauleitung."
+"Bauabschnitt endreinigen · Bereich 3 · Sanitär";"Baureinigung";"Klarwerk Demo GmbH";"Bereich 3 · Sanitär";"2026-11-11";"3";"Arbeitstage";"2026-11-14";"planned";"0";"nein";"Fiktiver Vorgang zum Testen. Mengen, Personal und Dauern sind Demo-Annahmen, keine Kalkulation.
+Bauabschnitt 3 · Ansprechpartner: Demo-Bauleitung."
+"Baustelle einrichten · Bereich 4 · Personalraum";"Baustelleneinrichtung";"Bauwerk Logistik Demo GmbH";"Bereich 4 · Personalraum";"2026-09-24";"5";"Arbeitstage";"2026-09-29";"complete";"100";"nein";"Fiktiver Vorgang zum Testen. Mengen, Personal und Dauern sind Demo-Annahmen, keine Kalkulation.
+Bauabschnitt 4 · Ansprechpartner: Demo-Bauleitung."
+"Bestand selektiv rückbauen · Bereich 4 · Personalraum";"Rückbau";"Rückbau Nord Demo GmbH";"Bereich 4 · Personalraum";"2026-09-30";"2";"Arbeitstage";"2026-10-01";"complete";"100";"nein";"Fiktiver Vorgang zum Testen. Mengen, Personal und Dauern sind Demo-Annahmen, keine Kalkulation.
+Bauabschnitt 4 · Ansprechpartner: Demo-Bauleitung."
+"Öffnungen und Rohbau herstellen · Bereich 4 · Personalraum";"Rohbau";"Massivbau Demo GmbH";"Bereich 4 · Personalraum";"2026-10-02";"3";"Arbeitstage";"2026-10-05";"complete";"100";"nein";"Fiktiver Vorgang zum Testen. Mengen, Personal und Dauern sind Demo-Annahmen, keine Kalkulation.
+Bauabschnitt 4 · Ansprechpartner: Demo-Bauleitung."
+"Fenster und Anschlüsse montieren · Bereich 4 · Personalraum";"Fensterbau";"Müller Fenster Demo GmbH";"Bereich 4 · Personalraum";"2026-10-06";"4";"Arbeitstage";"2026-10-09";"active";"78";"nein";"Fiktiver Vorgang zum Testen. Mengen, Personal und Dauern sind Demo-Annahmen, keine Kalkulation.
+Bauabschnitt 4 · Ansprechpartner: Demo-Bauleitung."
+"Rohinstallation Elektro ausführen · Bereich 4 · Personalraum";"Elektro";"Elektro Lichtblick Demo GmbH";"Bereich 4 · Personalraum";"2026-10-10";"5";"Arbeitstage";"2026-10-15";"planned";"0";"nein";"Fiktiver Vorgang zum Testen. Mengen, Personal und Dauern sind Demo-Annahmen, keine Kalkulation.
+Bauabschnitt 4 · Ansprechpartner: Demo-Bauleitung."
+"Heizungsverteilung montieren · Bereich 4 · Personalraum";"Heizung";"Wärmeweg Demo GmbH";"Bereich 4 · Personalraum";"2026-10-16";"2";"Arbeitstage";"2026-10-17";"planned";"0";"ja";"Fiktiver Vorgang zum Testen. Mengen, Personal und Dauern sind Demo-Annahmen, keine Kalkulation.
+Bauabschnitt 4 · Ansprechpartner: Demo-Bauleitung.
+DEMO-Hindernis: Materialfreigabe steht aus. Zuständig: Test-Bauleitung. Nächste Abstimmung: 2026-10-10."
+"Sanitärleitungen installieren · Bereich 4 · Personalraum";"Sanitär";"Wasserwerk Demo GmbH";"Bereich 4 · Personalraum";"2026-10-20";"3";"Arbeitstage";"2026-10-22";"planned";"0";"nein";"Fiktiver Vorgang zum Testen. Mengen, Personal und Dauern sind Demo-Annahmen, keine Kalkulation.
+Bauabschnitt 4 · Ansprechpartner: Demo-Bauleitung."
+"Wände und Decken schließen · Bereich 4 · Personalraum";"Trockenbau";"Raumwerk Demo GmbH";"Bereich 4 · Personalraum";"2026-10-23";"4";"Arbeitstage";"2026-10-27";"planned";"0";"nein";"Fiktiver Vorgang zum Testen. Mengen, Personal und Dauern sind Demo-Annahmen, keine Kalkulation.
+Bauabschnitt 4 · Ansprechpartner: Demo-Bauleitung."
+"Estrich einbringen · Bereich 4 · Personalraum";"Estrich";"Estrich Mitte Demo GmbH";"Bereich 4 · Personalraum";"2026-10-28";"5";"Arbeitstage";"2026-11-02";"planned";"0";"nein";"Fiktiver Vorgang zum Testen. Mengen, Personal und Dauern sind Demo-Annahmen, keine Kalkulation.
+Bauabschnitt 4 · Ansprechpartner: Demo-Bauleitung."
+"Bodenbeläge verlegen · Bereich 4 · Personalraum";"Bodenbeläge";"Bodenwerk Demo GmbH";"Bereich 4 · Personalraum";"2026-11-10";"2";"Arbeitstage";"2026-11-11";"planned";"0";"nein";"Fiktiver Vorgang zum Testen. Mengen, Personal und Dauern sind Demo-Annahmen, keine Kalkulation.
+Bauabschnitt 4 · Ansprechpartner: Demo-Bauleitung."
+"Oberflächen beschichten · Bereich 4 · Personalraum";"Malerarbeiten";"Farbwerk Demo GmbH";"Bereich 4 · Personalraum";"2026-11-13";"3";"Arbeitstage";"2026-11-16";"planned";"0";"nein";"Fiktiver Vorgang zum Testen. Mengen, Personal und Dauern sind Demo-Annahmen, keine Kalkulation.
+Bauabschnitt 4 · Ansprechpartner: Demo-Bauleitung."
+"Bauabschnitt endreinigen · Bereich 4 · Personalraum";"Baureinigung";"Klarwerk Demo GmbH";"Bereich 4 · Personalraum";"2026-11-17";"4";"Arbeitstage";"2026-11-20";"planned";"0";"nein";"Fiktiver Vorgang zum Testen. Mengen, Personal und Dauern sind Demo-Annahmen, keine Kalkulation.
+Bauabschnitt 4 · Ansprechpartner: Demo-Bauleitung."
+"Baustelle einrichten · Bereich 5 · Gruppenraum";"Baustelleneinrichtung";"Bauwerk Logistik Demo GmbH";"Bereich 5 · Gruppenraum";"2026-09-22";"2";"Arbeitstage";"2026-09-23";"complete";"100";"nein";"Fiktiver Vorgang zum Testen. Mengen, Personal und Dauern sind Demo-Annahmen, keine Kalkulation.
+Bauabschnitt 5 · Ansprechpartner: Demo-Bauleitung."
+"Bestand selektiv rückbauen · Bereich 5 · Gruppenraum";"Rückbau";"Rückbau Nord Demo GmbH";"Bereich 5 · Gruppenraum";"2026-09-24";"3";"Arbeitstage";"2026-09-26";"complete";"100";"nein";"Fiktiver Vorgang zum Testen. Mengen, Personal und Dauern sind Demo-Annahmen, keine Kalkulation.
+Bauabschnitt 5 · Ansprechpartner: Demo-Bauleitung."
+"Öffnungen und Rohbau herstellen · Bereich 5 · Gruppenraum";"Rohbau";"Massivbau Demo GmbH";"Bereich 5 · Gruppenraum";"2026-09-28";"4";"Arbeitstage";"2026-10-01";"complete";"100";"nein";"Fiktiver Vorgang zum Testen. Mengen, Personal und Dauern sind Demo-Annahmen, keine Kalkulation.
+Bauabschnitt 5 · Ansprechpartner: Demo-Bauleitung."
+"Fenster und Anschlüsse montieren · Bereich 5 · Gruppenraum";"Fensterbau";"Müller Fenster Demo GmbH";"Bereich 5 · Gruppenraum";"2026-10-02";"5";"Arbeitstage";"2026-10-07";"complete";"100";"nein";"Fiktiver Vorgang zum Testen. Mengen, Personal und Dauern sind Demo-Annahmen, keine Kalkulation.
+Bauabschnitt 5 · Ansprechpartner: Demo-Bauleitung."
+"Rohinstallation Elektro ausführen · Bereich 5 · Gruppenraum";"Elektro";"Elektro Lichtblick Demo GmbH";"Bereich 5 · Gruppenraum";"2026-10-08";"2";"Arbeitstage";"2026-10-09";"active";"55";"nein";"Fiktiver Vorgang zum Testen. Mengen, Personal und Dauern sind Demo-Annahmen, keine Kalkulation.
+Bauabschnitt 5 · Ansprechpartner: Demo-Bauleitung."
+"Heizungsverteilung montieren · Bereich 5 · Gruppenraum";"Heizung";"Wärmeweg Demo GmbH";"Bereich 5 · Gruppenraum";"2026-10-10";"3";"Arbeitstage";"2026-10-13";"planned";"0";"nein";"Fiktiver Vorgang zum Testen. Mengen, Personal und Dauern sind Demo-Annahmen, keine Kalkulation.
+Bauabschnitt 5 · Ansprechpartner: Demo-Bauleitung."
+"Sanitärleitungen installieren · Bereich 5 · Gruppenraum";"Sanitär";"Wasserwerk Demo GmbH";"Bereich 5 · Gruppenraum";"2026-10-14";"4";"Arbeitstage";"2026-10-17";"planned";"0";"nein";"Fiktiver Vorgang zum Testen. Mengen, Personal und Dauern sind Demo-Annahmen, keine Kalkulation.
+Bauabschnitt 5 · Ansprechpartner: Demo-Bauleitung."
+"Wände und Decken schließen · Bereich 5 · Gruppenraum";"Trockenbau";"Raumwerk Demo GmbH";"Bereich 5 · Gruppenraum";"2026-10-20";"5";"Arbeitstage";"2026-10-24";"planned";"0";"nein";"Fiktiver Vorgang zum Testen. Mengen, Personal und Dauern sind Demo-Annahmen, keine Kalkulation.
+Bauabschnitt 5 · Ansprechpartner: Demo-Bauleitung."
+"Estrich einbringen · Bereich 5 · Gruppenraum";"Estrich";"Estrich Mitte Demo GmbH";"Bereich 5 · Gruppenraum";"2026-10-26";"2";"Arbeitstage";"2026-10-27";"planned";"0";"nein";"Fiktiver Vorgang zum Testen. Mengen, Personal und Dauern sind Demo-Annahmen, keine Kalkulation.
+Bauabschnitt 5 · Ansprechpartner: Demo-Bauleitung."
+"Bodenbeläge verlegen · Bereich 5 · Gruppenraum";"Bodenbeläge";"Bodenwerk Demo GmbH";"Bereich 5 · Gruppenraum";"2026-11-04";"3";"Arbeitstage";"2026-11-06";"planned";"0";"nein";"Fiktiver Vorgang zum Testen. Mengen, Personal und Dauern sind Demo-Annahmen, keine Kalkulation.
+Bauabschnitt 5 · Ansprechpartner: Demo-Bauleitung."
+"Oberflächen beschichten · Bereich 5 · Gruppenraum";"Malerarbeiten";"Farbwerk Demo GmbH";"Bereich 5 · Gruppenraum";"2026-11-07";"4";"Arbeitstage";"2026-11-11";"planned";"0";"ja";"Fiktiver Vorgang zum Testen. Mengen, Personal und Dauern sind Demo-Annahmen, keine Kalkulation.
+Bauabschnitt 5 · Ansprechpartner: Demo-Bauleitung.
+DEMO-Hindernis: Materialfreigabe steht aus. Zuständig: Test-Bauleitung. Nächste Abstimmung: 2026-10-10."
+"Bauabschnitt endreinigen · Bereich 5 · Gruppenraum";"Baureinigung";"Klarwerk Demo GmbH";"Bereich 5 · Gruppenraum";"2026-11-13";"5";"Arbeitstage";"2026-11-18";"planned";"0";"nein";"Fiktiver Vorgang zum Testen. Mengen, Personal und Dauern sind Demo-Annahmen, keine Kalkulation.
+Bauabschnitt 5 · Ansprechpartner: Demo-Bauleitung."
+"Baustelle einrichten · Bereich 6 · Flur";"Baustelleneinrichtung";"Bauwerk Logistik Demo GmbH";"Bereich 6 · Flur";"2026-09-24";"3";"Arbeitstage";"2026-09-26";"complete";"100";"nein";"Fiktiver Vorgang zum Testen. Mengen, Personal und Dauern sind Demo-Annahmen, keine Kalkulation.
+Bauabschnitt 6 · Ansprechpartner: Demo-Bauleitung."
+"Bestand selektiv rückbauen · Bereich 6 · Flur";"Rückbau";"Rückbau Nord Demo GmbH";"Bereich 6 · Flur";"2026-09-28";"4";"Arbeitstage";"2026-10-01";"complete";"100";"nein";"Fiktiver Vorgang zum Testen. Mengen, Personal und Dauern sind Demo-Annahmen, keine Kalkulation.
+Bauabschnitt 6 · Ansprechpartner: Demo-Bauleitung."
+"Öffnungen und Rohbau herstellen · Bereich 6 · Flur";"Rohbau";"Massivbau Demo GmbH";"Bereich 6 · Flur";"2026-10-02";"5";"Arbeitstage";"2026-10-07";"complete";"100";"nein";"Fiktiver Vorgang zum Testen. Mengen, Personal und Dauern sind Demo-Annahmen, keine Kalkulation.
+Bauabschnitt 6 · Ansprechpartner: Demo-Bauleitung."
+"Fenster und Anschlüsse montieren · Bereich 6 · Flur";"Fensterbau";"Müller Fenster Demo GmbH";"Bereich 6 · Flur";"2026-10-08";"2";"Arbeitstage";"2026-10-09";"active";"59";"nein";"Fiktiver Vorgang zum Testen. Mengen, Personal und Dauern sind Demo-Annahmen, keine Kalkulation.
+Bauabschnitt 6 · Ansprechpartner: Demo-Bauleitung."
+"Rohinstallation Elektro ausführen · Bereich 6 · Flur";"Elektro";"Elektro Lichtblick Demo GmbH";"Bereich 6 · Flur";"2026-10-10";"3";"Arbeitstage";"2026-10-13";"planned";"0";"nein";"Fiktiver Vorgang zum Testen. Mengen, Personal und Dauern sind Demo-Annahmen, keine Kalkulation.
+Bauabschnitt 6 · Ansprechpartner: Demo-Bauleitung."
+"Heizungsverteilung montieren · Bereich 6 · Flur";"Heizung";"Wärmeweg Demo GmbH";"Bereich 6 · Flur";"2026-10-14";"4";"Arbeitstage";"2026-10-17";"planned";"0";"nein";"Fiktiver Vorgang zum Testen. Mengen, Personal und Dauern sind Demo-Annahmen, keine Kalkulation.
+Bauabschnitt 6 · Ansprechpartner: Demo-Bauleitung."
+"Sanitärleitungen installieren · Bereich 6 · Flur";"Sanitär";"Wasserwerk Demo GmbH";"Bereich 6 · Flur";"2026-10-20";"5";"Arbeitstage";"2026-10-24";"planned";"0";"nein";"Fiktiver Vorgang zum Testen. Mengen, Personal und Dauern sind Demo-Annahmen, keine Kalkulation.
+Bauabschnitt 6 · Ansprechpartner: Demo-Bauleitung."
+"Wände und Decken schließen · Bereich 6 · Flur";"Trockenbau";"Raumwerk Demo GmbH";"Bereich 6 · Flur";"2026-10-26";"2";"Arbeitstage";"2026-10-27";"planned";"0";"nein";"Fiktiver Vorgang zum Testen. Mengen, Personal und Dauern sind Demo-Annahmen, keine Kalkulation.
+Bauabschnitt 6 · Ansprechpartner: Demo-Bauleitung."
+"Estrich einbringen · Bereich 6 · Flur";"Estrich";"Estrich Mitte Demo GmbH";"Bereich 6 · Flur";"2026-10-28";"3";"Arbeitstage";"2026-10-30";"planned";"0";"nein";"Fiktiver Vorgang zum Testen. Mengen, Personal und Dauern sind Demo-Annahmen, keine Kalkulation.
+Bauabschnitt 6 · Ansprechpartner: Demo-Bauleitung."
+"Bodenbeläge verlegen · Bereich 6 · Flur";"Bodenbeläge";"Bodenwerk Demo GmbH";"Bereich 6 · Flur";"2026-11-07";"4";"Arbeitstage";"2026-11-11";"planned";"0";"nein";"Fiktiver Vorgang zum Testen. Mengen, Personal und Dauern sind Demo-Annahmen, keine Kalkulation.
+Bauabschnitt 6 · Ansprechpartner: Demo-Bauleitung."
+"Oberflächen beschichten · Bereich 6 · Flur";"Malerarbeiten";"Farbwerk Demo GmbH";"Bereich 6 · Flur";"2026-11-13";"5";"Arbeitstage";"2026-11-18";"planned";"0";"nein";"Fiktiver Vorgang zum Testen. Mengen, Personal und Dauern sind Demo-Annahmen, keine Kalkulation.
+Bauabschnitt 6 · Ansprechpartner: Demo-Bauleitung."
+"Bauabschnitt endreinigen · Bereich 6 · Flur";"Baureinigung";"Klarwerk Demo GmbH";"Bereich 6 · Flur";"2026-11-19";"2";"Arbeitstage";"2026-11-20";"planned";"0";"nein";"Fiktiver Vorgang zum Testen. Mengen, Personal und Dauern sind Demo-Annahmen, keine Kalkulation.
+Bauabschnitt 6 · Ansprechpartner: Demo-Bauleitung."
+"Baustelle einrichten · Bereich 7 · Sanitär";"Baustelleneinrichtung";"Bauwerk Logistik Partner Demo GmbH";"Bereich 7 · Sanitär";"2026-09-26";"4";"Arbeitstage";"2026-09-30";"complete";"100";"nein";"Fiktiver Vorgang zum Testen. Mengen, Personal und Dauern sind Demo-Annahmen, keine Kalkulation.
+Bauabschnitt 7 · Ansprechpartner: Demo-Bauleitung."
+"Bestand selektiv rückbauen · Bereich 7 · Sanitär";"Rückbau";"Rückbau Nord Demo GmbH";"Bereich 7 · Sanitär";"2026-10-01";"5";"Arbeitstage";"2026-10-06";"complete";"100";"nein";"Fiktiver Vorgang zum Testen. Mengen, Personal und Dauern sind Demo-Annahmen, keine Kalkulation.
+Bauabschnitt 7 · Ansprechpartner: Demo-Bauleitung."
+"Öffnungen und Rohbau herstellen · Bereich 7 · Sanitär";"Rohbau";"Massivbau Demo GmbH";"Bereich 7 · Sanitär";"2026-10-07";"2";"Arbeitstage";"2026-10-08";"active";"63";"nein";"Fiktiver Vorgang zum Testen. Mengen, Personal und Dauern sind Demo-Annahmen, keine Kalkulation.
+Bauabschnitt 7 · Ansprechpartner: Demo-Bauleitung."
+"Fenster und Anschlüsse montieren · Bereich 7 · Sanitär";"Fensterbau";"Müller Fenster Demo GmbH";"Bereich 7 · Sanitär";"2026-10-09";"3";"Arbeitstage";"2026-10-12";"planned";"0";"ja";"Fiktiver Vorgang zum Testen. Mengen, Personal und Dauern sind Demo-Annahmen, keine Kalkulation.
+Bauabschnitt 7 · Ansprechpartner: Demo-Bauleitung.
+DEMO-Hindernis: Materialfreigabe steht aus. Zuständig: Test-Bauleitung. Nächste Abstimmung: 2026-10-10."
+"Rohinstallation Elektro ausführen · Bereich 7 · Sanitär";"Elektro";"Elektro Lichtblick Demo GmbH";"Bereich 7 · Sanitär";"2026-10-13";"4";"Arbeitstage";"2026-10-16";"planned";"0";"nein";"Fiktiver Vorgang zum Testen. Mengen, Personal und Dauern sind Demo-Annahmen, keine Kalkulation.
+Bauabschnitt 7 · Ansprechpartner: Demo-Bauleitung."
+"Heizungsverteilung montieren · Bereich 7 · Sanitär";"Heizung";"Wärmeweg Partner Demo GmbH";"Bereich 7 · Sanitär";"2026-10-17";"5";"Arbeitstage";"2026-10-23";"planned";"0";"nein";"Fiktiver Vorgang zum Testen. Mengen, Personal und Dauern sind Demo-Annahmen, keine Kalkulation.
+Bauabschnitt 7 · Ansprechpartner: Demo-Bauleitung."
+"Sanitärleitungen installieren · Bereich 7 · Sanitär";"Sanitär";"Wasserwerk Demo GmbH";"Bereich 7 · Sanitär";"2026-10-24";"2";"Arbeitstage";"2026-10-26";"planned";"0";"nein";"Fiktiver Vorgang zum Testen. Mengen, Personal und Dauern sind Demo-Annahmen, keine Kalkulation.
+Bauabschnitt 7 · Ansprechpartner: Demo-Bauleitung."
+"Wände und Decken schließen · Bereich 7 · Sanitär";"Trockenbau";"Raumwerk Demo GmbH";"Bereich 7 · Sanitär";"2026-10-27";"3";"Arbeitstage";"2026-10-29";"planned";"0";"nein";"Fiktiver Vorgang zum Testen. Mengen, Personal und Dauern sind Demo-Annahmen, keine Kalkulation.
+Bauabschnitt 7 · Ansprechpartner: Demo-Bauleitung."
+"Estrich einbringen · Bereich 7 · Sanitär";"Estrich";"Estrich Mitte Demo GmbH";"Bereich 7 · Sanitär";"2026-10-30";"4";"Arbeitstage";"2026-11-03";"planned";"0";"nein";"Fiktiver Vorgang zum Testen. Mengen, Personal und Dauern sind Demo-Annahmen, keine Kalkulation.
+Bauabschnitt 7 · Ansprechpartner: Demo-Bauleitung."
+"Bodenbeläge verlegen · Bereich 7 · Sanitär";"Bodenbeläge";"Bodenwerk Demo GmbH";"Bereich 7 · Sanitär";"2026-11-11";"5";"Arbeitstage";"2026-11-17";"planned";"0";"nein";"Fiktiver Vorgang zum Testen. Mengen, Personal und Dauern sind Demo-Annahmen, keine Kalkulation.
+Bauabschnitt 7 · Ansprechpartner: Demo-Bauleitung."
+"Oberflächen beschichten · Bereich 7 · Sanitär";"Malerarbeiten";"Farbwerk Partner Demo GmbH";"Bereich 7 · Sanitär";"2026-11-18";"2";"Arbeitstage";"2026-11-19";"planned";"0";"nein";"Fiktiver Vorgang zum Testen. Mengen, Personal und Dauern sind Demo-Annahmen, keine Kalkulation.
+Bauabschnitt 7 · Ansprechpartner: Demo-Bauleitung."
+"Bauabschnitt endreinigen · Bereich 7 · Sanitär";"Baureinigung";"Klarwerk Demo GmbH";"Bereich 7 · Sanitär";"2026-11-20";"3";"Arbeitstage";"2026-11-23";"planned";"0";"nein";"Fiktiver Vorgang zum Testen. Mengen, Personal und Dauern sind Demo-Annahmen, keine Kalkulation.
+Bauabschnitt 7 · Ansprechpartner: Demo-Bauleitung."
+"Baustelle einrichten · Bereich 8 · Personalraum";"Baustelleneinrichtung";"Bauwerk Logistik Demo GmbH";"Bereich 8 · Personalraum";"2026-10-02";"5";"Arbeitstage";"2026-10-07";"complete";"100";"nein";"Fiktiver Vorgang zum Testen. Mengen, Personal und Dauern sind Demo-Annahmen, keine Kalkulation.
+Bauabschnitt 8 · Ansprechpartner: Demo-Bauleitung."
+"Bestand selektiv rückbauen · Bereich 8 · Personalraum";"Rückbau";"Rückbau Nord Demo GmbH";"Bereich 8 · Personalraum";"2026-10-08";"2";"Arbeitstage";"2026-10-09";"active";"67";"nein";"Fiktiver Vorgang zum Testen. Mengen, Personal und Dauern sind Demo-Annahmen, keine Kalkulation.
+Bauabschnitt 8 · Ansprechpartner: Demo-Bauleitung."
+"Öffnungen und Rohbau herstellen · Bereich 8 · Personalraum";"Rohbau";"Massivbau Demo GmbH";"Bereich 8 · Personalraum";"2026-10-10";"3";"Arbeitstage";"2026-10-13";"planned";"0";"nein";"Fiktiver Vorgang zum Testen. Mengen, Personal und Dauern sind Demo-Annahmen, keine Kalkulation.
+Bauabschnitt 8 · Ansprechpartner: Demo-Bauleitung."
+"Fenster und Anschlüsse montieren · Bereich 8 · Personalraum";"Fensterbau";"Müller Fenster Demo GmbH";"Bereich 8 · Personalraum";"2026-10-14";"4";"Arbeitstage";"2026-10-17";"planned";"0";"nein";"Fiktiver Vorgang zum Testen. Mengen, Personal und Dauern sind Demo-Annahmen, keine Kalkulation.
+Bauabschnitt 8 · Ansprechpartner: Demo-Bauleitung."
+"Rohinstallation Elektro ausführen · Bereich 8 · Personalraum";"Elektro";"Elektro Lichtblick Demo GmbH";"Bereich 8 · Personalraum";"2026-10-20";"5";"Arbeitstage";"2026-10-24";"planned";"0";"nein";"Fiktiver Vorgang zum Testen. Mengen, Personal und Dauern sind Demo-Annahmen, keine Kalkulation.
+Bauabschnitt 8 · Ansprechpartner: Demo-Bauleitung."
+"Heizungsverteilung montieren · Bereich 8 · Personalraum";"Heizung";"Wärmeweg Demo GmbH";"Bereich 8 · Personalraum";"2026-10-26";"2";"Arbeitstage";"2026-10-27";"planned";"0";"nein";"Fiktiver Vorgang zum Testen. Mengen, Personal und Dauern sind Demo-Annahmen, keine Kalkulation.
+Bauabschnitt 8 · Ansprechpartner: Demo-Bauleitung."
+"Sanitärleitungen installieren · Bereich 8 · Personalraum";"Sanitär";"Wasserwerk Demo GmbH";"Bereich 8 · Personalraum";"2026-10-28";"3";"Arbeitstage";"2026-10-30";"planned";"0";"nein";"Fiktiver Vorgang zum Testen. Mengen, Personal und Dauern sind Demo-Annahmen, keine Kalkulation.
+Bauabschnitt 8 · Ansprechpartner: Demo-Bauleitung."
+"Wände und Decken schließen · Bereich 8 · Personalraum";"Trockenbau";"Raumwerk Demo GmbH";"Bereich 8 · Personalraum";"2026-10-31";"4";"Arbeitstage";"2026-11-04";"planned";"0";"nein";"Fiktiver Vorgang zum Testen. Mengen, Personal und Dauern sind Demo-Annahmen, keine Kalkulation.
+Bauabschnitt 8 · Ansprechpartner: Demo-Bauleitung."
+"Estrich einbringen · Bereich 8 · Personalraum";"Estrich";"Estrich Mitte Demo GmbH";"Bereich 8 · Personalraum";"2026-11-05";"5";"Arbeitstage";"2026-11-10";"planned";"0";"ja";"Fiktiver Vorgang zum Testen. Mengen, Personal und Dauern sind Demo-Annahmen, keine Kalkulation.
+Bauabschnitt 8 · Ansprechpartner: Demo-Bauleitung.
+DEMO-Hindernis: Materialfreigabe steht aus. Zuständig: Test-Bauleitung. Nächste Abstimmung: 2026-10-10."
+"Bodenbeläge verlegen · Bereich 8 · Personalraum";"Bodenbeläge";"Bodenwerk Demo GmbH";"Bereich 8 · Personalraum";"2026-11-18";"2";"Arbeitstage";"2026-11-19";"planned";"0";"nein";"Fiktiver Vorgang zum Testen. Mengen, Personal und Dauern sind Demo-Annahmen, keine Kalkulation.
+Bauabschnitt 8 · Ansprechpartner: Demo-Bauleitung."
+"Oberflächen beschichten · Bereich 8 · Personalraum";"Malerarbeiten";"Farbwerk Demo GmbH";"Bereich 8 · Personalraum";"2026-11-20";"3";"Arbeitstage";"2026-11-23";"planned";"0";"nein";"Fiktiver Vorgang zum Testen. Mengen, Personal und Dauern sind Demo-Annahmen, keine Kalkulation.
+Bauabschnitt 8 · Ansprechpartner: Demo-Bauleitung."
+"Bauabschnitt endreinigen · Bereich 8 · Personalraum";"Baureinigung";"Klarwerk Demo GmbH";"Bereich 8 · Personalraum";"2026-11-24";"4";"Arbeitstage";"2026-11-27";"planned";"0";"nein";"Fiktiver Vorgang zum Testen. Mengen, Personal und Dauern sind Demo-Annahmen, keine Kalkulation.
+Bauabschnitt 8 · Ansprechpartner: Demo-Bauleitung."

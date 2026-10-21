@@ -1,0 +1,9 @@
+export type Calendar = {weekdays:number[];exceptions:{date:string;label:string}[]};
+export type PlanTrade = {id:string;code:string;name:string;color:string};
+export type Company = {id:string;name:string};
+export type Task = {id:string;title:string;tradeId:string;companyId:string;area:string;start:string;duration:number;predecessors:{taskId:string;type:'FS';lag:number;unit:'work'|'calendar'}[];fixed:boolean;deadline:string;status:'planned'|'active'|'complete';blocked:boolean;progress:number;actualStart:string;actualEnd:string;notes:string};
+export type PlanSnapshot = {calendar:Calendar;trades:PlanTrade[];companies:Company[];tasks:Task[]};
+export type PlanChange = {taskId:string;title:string;oldStart:string;newStart:string;oldEnd:string;newEnd:string};
+export type Plan = PlanSnapshot & {id:string;projectId:string;updatedAt:string;baselines:{id:string;name:string;createdAt:string;snapshot:PlanSnapshot}[];revisions:{id:string;reason:string;createdAt:string;changes:PlanChange[]}[]};
+export type Proposal = {tasks:Task[];calendar:Calendar;changes:PlanChange[];warnings:{taskId:string;message:string}[]};
+export type PlannerExport = {projectId:string;taskIds:string[];from:string;to:string;paper:'A0'|'A1'|'A2'|'A3'|'A4';format:'pdf'|'csv';baselineId:string;layout:'overall'|'detail'|'list';scale:'auto'|'day'|'week'|'month'};

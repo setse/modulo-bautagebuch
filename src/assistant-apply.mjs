@@ -1,0 +1,6 @@
+export function appendUnique(current,items){let result=current;for(const text of items.map(t=>t.trim()).filter(Boolean)){if(!result.split(/\n\s*\n/).some(p=>p.trim()===text))result=[result,text].filter(Boolean).join('\n\n');}if(result.length>100000)throw new Error('Der Abschnitt wäre zu lang. Bitte weniger Angaben auswählen.');return result;}
+export function applyOrganization(entry,data,selection,id){
+ const trades=[...entry.trades];for(const index of selection.trades){const proposal=data.trades[index];if(!proposal)continue;const row={id:id(),code:'',company:proposal.company.trim(),workers:proposal.workers.trim(),work:proposal.work.trim()};if(!row.company&&!row.workers&&!row.work)continue;if(!trades.some(v=>v.company===row.company&&v.workers===row.workers&&v.work===row.work))trades.push(row);}
+ if(trades.length>500)throw new Error('Maximal 500 Gewerke pro Eintrag.');
+ return {...entry,trades,weather:selection.weather?data.weather.value:entry.weather,temperature:selection.temperature?data.temperature.value:entry.temperature,incidents:appendUnique(entry.incidents,selection.incidents.map(i=>data.incidents[i]?.text||'')),notes:appendUnique(entry.notes,selection.notes.map(i=>data.notes[i]?.text||''))};
+}

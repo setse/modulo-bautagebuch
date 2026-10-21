@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 32" fill="none">
+  
+  <rect x="0" y="4" width="10" height="10" fill="currentColor"></rect>
+  <rect x="12" y="4" width="10" height="10" stroke="currentColor" stroke-width="1.8"></rect>
+  <rect x="0" y="16" width="10" height="10" stroke="currentColor" stroke-width="1.8"></rect>
+  <rect x="12" y="16" width="10" height="10" fill="currentColor" opacity="0.4"></rect>
+  
+  <text x="30" y="22" font-family="&#39;Geist&#39;, system-ui, sans-serif" font-size="16" font-weight="600" fill="currentColor" letter-spacing="-0.3">Modulo</text>
+</svg>

@@ -1,0 +1,40 @@
+{
+  "source": "Qwen/Qwen3.5-2B",
+  "conversion": "unsloth/Qwen3.5-2B-GGUF",
+  "revision": "f6d5376be1edb4d416d56da11e5397a961aca8ae",
+  "quantization": "Q4_K_M",
+  "runtime": "b11476",
+  "runtimeCommit": "988190680d5a89fce97de3c20df2c2813731fd61",
+  "assets": [
+    {
+      "path": "models/Qwen3.5-2B-Q4_K_M.gguf",
+      "url": "https://huggingface.co/unsloth/Qwen3.5-2B-GGUF/resolve/f6d5376be1edb4d416d56da11e5397a961aca8ae/Qwen3.5-2B-Q4_K_M.gguf",
+      "size": 1280835840,
+      "sha256": "aaf42c8b7c3cab2bf3d69c355048d4a0ee9973d48f16c731c0520ee914699223"
+    },
+    {
+      "path": "downloads/llama-b11476-bin-win-cpu-x64.zip",
+      "url": "https://github.com/ggml-org/llama.cpp/releases/download/b11476/llama-b11476-bin-win-cpu-x64.zip",
+      "size": 19441535,
+      "sha256": "a23e548c6b3525c38bcfeceaff919786ae06741857043cb670279b70100e5483"
+    },
+    {
+      "path": "licenses/Apache-2.0.txt",
+      "url": "https://www.apache.org/licenses/LICENSE-2.0.txt",
+      "size": 11358,
+      "sha256": "cfc7749b96f63bd31c3c42b5c471bf756814053e847c10f3eb003417bc523d30"
+    },
+    {
+      "path": "licenses/llama.cpp-LICENSE.txt",
+      "url": "https://raw.githubusercontent.com/ggml-org/llama.cpp/988190680d5a89fce97de3c20df2c2813731fd61/LICENSE",
+      "size": 1078,
+      "sha256": "94f29bbed6a22c35b992c5c6ebf0e7c92f13b836b90f36f461c9cf2f0f1d010d"
+    },
+    {
+      "path": "licenses/OpenMP-LICENSE.txt",
+      "url": "https://raw.githubusercontent.com/llvm/llvm-project/d004aa76f5fab67fc789bbe7d2491345c218bab6/openmp/LICENSE.TXT",
+      "size": 19741,
+      "sha256": "fdad1758a9e1f9d5a81e18879b3406772115edc92c24bfa36b70c654f325e8e4"
+    }
+  ]
+}

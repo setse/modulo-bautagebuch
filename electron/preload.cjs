@@ -1,0 +1,26 @@
+const { contextBridge, ipcRenderer } = require('electron');
+contextBridge.exposeInMainWorld('diary', {
+  exportPlan: options => ipcRenderer.invoke('planner:export',options),
+  previewPlan: options => ipcRenderer.invoke('planner:preview',options),
+  load: () => ipcRenderer.invoke('diary:load'),
+  save: state => ipcRenderer.invoke('diary:save', state),
+  importMedia: kind => ipcRenderer.invoke('diary:import-media', kind),
+  addMedia: (name, bytes, kind) => ipcRenderer.invoke('diary:add-media', { name, bytes, kind }),
+  addLogo: (name, bytes) => ipcRenderer.invoke('diary:add-logo', { name, bytes, kind: 'photo', logo: true }),
+  importLogo: () => ipcRenderer.invoke('diary:import-logo'),
+  setZoom: zoom => ipcRenderer.invoke('diary:zoom', zoom),
+  transcriptionStatus: () => ipcRenderer.invoke('diary:transcription-status'),
+  cancelTranscription: id => ipcRenderer.invoke('diary:transcription-cancel',id),
+  onTranscriptionProgress: callback => { const listener = (_event,progress) => callback(progress); ipcRenderer.on('diary:transcription-progress',listener);return () => ipcRenderer.removeListener('diary:transcription-progress',listener); },
+  transcribe: id => ipcRenderer.invoke('diary:transcribe', id),
+  assistantStatus: () => ipcRenderer.invoke('diary:assistant-status'),
+  analyzeTranscript: request => ipcRenderer.invoke('diary:assistant-analyze',request),
+  cancelAssistant: id => ipcRenderer.invoke('diary:assistant-cancel',id),
+  onAssistantProgress: callback => {const listener=(_event,progress)=>callback(progress);ipcRenderer.on('diary:assistant-progress',listener);return ()=>ipcRenderer.removeListener('diary:assistant-progress',listener);},
+  exportReport: options => ipcRenderer.invoke('diary:export', options),
+  backup: () => ipcRenderer.invoke('diary:backup'),
+  restore: () => ipcRenderer.invoke('diary:restore'),
+  openDataFolder: () => ipcRenderer.invoke('diary:open-folder'),
+  readyToClose: () => ipcRenderer.send('diary:ready-close'),
+  onBeforeClose: callback => { const listener = () => callback(); ipcRenderer.on('diary:before-close', listener); return () => ipcRenderer.removeListener('diary:before-close', listener); }
+});

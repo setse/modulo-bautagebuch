@@ -1,0 +1,24 @@
+const {test}=require('node:test');
+const assert=require('node:assert/strict');
+const {randomUUID}=require('node:crypto');
+const JSZip=require('jszip');
+const {stateSchema,initialState}=require('../electron/model.cjs');
+const {sectionBounds}=require('../electron/design.mjs');
+const {clampLayout,fitPhotosOnPage}=require('../electron/layout.mjs');
+const {reportHtml,reportDocx,reportPageTemplates}=require('../electron/report.cjs');
+test('section styles, photo assignments, margins and footer images survive validation and both exports',async()=>{
+ const state=initialState(),project=state.projects[0],data=Buffer.from('iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAIAAACQd1PeAAAADElEQVR4nGPIW9YNAAMlAaAdBx/IAAAAAElFTkSuQmCC','base64');
+ const photo={id:randomUUID(),name:'Gewerkfoto',kind:'photo',extension:'png',size:data.length,caption:'Beim Gewerk',transcript:'',transcription:'pending',section:'trades',pixelWidth:1000,pixelHeight:600,layout:{page:0,x:0,y:0,width:190}};
+ Object.assign(project.document,{footerImage:{...photo,id:randomUUID()},headerAlignment:'center',footerImageAlignment:'left',fontFamily:'Georgia',fontSize:12,margins:{top:30,bottom:30,left:30,right:25},table:{...project.document.table,variant:'striped',headerColor:'#224466',alternateColor:'#ddeeff'},sections:{notes:{backgroundColor:'#aabbcc'}}});
+ const entry={id:randomUUID(),projectId:project.id,date:'2026-10-07',endDate:'',title:'Gestaltung',startTime:'',endTime:'',weather:'Regen',temperature:'',status:'complete',trades:[{id:randomUUID(),code:'120',company:'Test',workers:'2',work:'Montage'}],incidents:'Vor Ort',notes:'Notiz',attachments:[photo],sectionStyles:{trades:{borderStyle:'dashed',borderColor:'#123456',backgroundColor:'#ddeeff',fontFamily:'Verdana',fontSize:14}},updatedAt:new Date().toISOString()};
+ state.entries.push(entry);const parsed=stateSchema.parse(state);assert.equal(parsed.entries[0].attachments[0].section,'trades');assert.equal(parsed.projects[0].document.footerImage.id,project.document.footerImage.id);
+ const bounds=sectionBounds(project.document,entry,'trades');assert.equal(bounds.width,149);
+ const layout=clampLayout(photo,photo.layout,bounds);assert.ok(layout.width<=149 && layout.y+layout.width*.6+15<=bounds.height);
+ const fitted=fitPhotosOnPage([photo,photo],bounds);assert.equal(fitted.length,2);assert.ok(fitted.every(p=>p.x+p.width<=bounds.width));
+ const image=async()=>({data,width:1000,height:600,type:'png',mime:'image/png'});
+ const html=await reportHtml(project,[entry],image);assert.ok(html.includes('margin:30mm 25mm 30mm 30mm'));assert.ok(html.includes("font-family:'Verdana'"));assert.ok(html.includes('dashed #123456'));assert.ok(html.includes('Gewerke &amp; Arbeiten · Fotoseite 1'));assert.ok(!html.includes('Fotodokumentation · Fotoseite'));assert.ok(html.includes('tbody tr:nth-child(even)'));
+ const templates=await reportPageTemplates(project,[entry],image);assert.ok(templates.headerTemplate.includes('text-align:center'));assert.ok(templates.footerTemplate.includes('data:image/png'));assert.ok(templates.footerTemplate.includes('text-align:left'));
+ const zip=await JSZip.loadAsync(await reportDocx(project,[entry],image)),xml=await zip.file('word/document.xml').async('string'),footer=await zip.file('word/footer1.xml').async('string');
+ assert.ok(xml.includes('w:val="dashed"'));assert.ok(xml.toLowerCase().includes('w:fill="ddeeff"'));assert.ok(xml.includes('w:ascii="Verdana"'));assert.ok(xml.includes('w:left="1701"'));assert.ok(xml.includes('Gewerke &amp; Arbeiten · Fotoseite 1'));assert.ok(footer.includes('w:drawing'));
+ assert.throws(()=>stateSchema.parse({...state,projects:[{...project,document:{...project.document,sections:{notes:{backgroundColor:'red;display:none'}}}}]}));
+});

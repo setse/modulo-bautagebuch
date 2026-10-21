@@ -1,0 +1,91 @@
+/* Modulo Stratum — Shared Utility Primitives
+   Class-based shortcuts used across every screen. */
+
+/* ── App root ────────────────────────────────────────────────────────────── */
+.m-app {
+  font-family: var(--font-ui);
+  color: var(--text);
+  background: var(--bg);
+  font-size: var(--fs-body, 12px);
+  line-height: var(--lh-body, 1.4);
+  -webkit-font-smoothing: antialiased;
+}
+
+/* ── Typography helpers ──────────────────────────────────────────────────── */
+.m-num {
+  font-family: var(--font-data);
+  font-variant-numeric: tabular-nums;
+  letter-spacing: -0.01em;
+}
+.m-eyebrow {
+  font-family: var(--font-data);
+  font-size: 10px;
+  letter-spacing: var(--ls-wider, 0.08em);
+  text-transform: uppercase;
+  color: var(--text-mute);
+  font-weight: 500;
+}
+.m-mute  { color: var(--text-mute); }
+.m-dim   { color: var(--text-dim); }
+
+/* ── Card ────────────────────────────────────────────────────────────────── */
+.m-card {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-md, 6px);
+  box-shadow: var(--shadow-card);
+}
+
+/* ── Dividers ────────────────────────────────────────────────────────────── */
+.m-divider  { height: 1px; background: var(--border); }
+.m-vdivider { width: 1px; background: var(--border); align-self: stretch; }
+
+/* ── Pills / tags ────────────────────────────────────────────────────────── */
+.m-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  padding: 2px 7px;
+  font-family: var(--font-data);
+  font-size: 10px;
+  letter-spacing: 0.02em;
+  border-radius: var(--radius-pill, 999px);
+  border: 1px solid var(--border-strong);
+  color: var(--text-dim);
+}
+.m-pill-accent { background: var(--accent-dim);                                    color: var(--accent); border-color: transparent; }
+.m-pill-pos    { background: color-mix(in oklch, var(--pos)  18%, transparent);    color: var(--pos);    border-color: transparent; }
+.m-pill-neg    { background: color-mix(in oklch, var(--neg)  18%, transparent);    color: var(--neg);    border-color: transparent; }
+.m-pill-warn   { background: color-mix(in oklch, var(--warn) 18%, transparent);    color: var(--warn);   border-color: transparent; }
+
+/* ── Sidebar ─────────────────────────────────────────────────────────────── */
+.m-side { background: var(--surface-2); border-right: 1px solid var(--border); }
+.m-side-item {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 8px 14px;
+  color: var(--text-dim);
+  font-size: var(--fs-body);
+  cursor: default;
+  border-left: 2px solid transparent;
+}
+.m-side-item.active {
+  background: var(--surface-2);
+  border-left-color: var(--accent);
+  color: var(--text);
+}
+
+/* ── Topbar ──────────────────────────────────────────────────────────────── */
+.m-top {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  padding: 0 20px;
+  height: var(--topbar-h, 52px);
+  background: var(--surface);
+  border-bottom: 1px solid var(--border);
+}
+
+/* ── Sparkline hook ──────────────────────────────────────────────────────── */
+.m-spark path { fill: none; stroke: var(--accent); stroke-width: 1.4; }

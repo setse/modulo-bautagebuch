@@ -1,0 +1,25 @@
+const { _electron: electron, expect } = require('@playwright/test');
+const path = require('node:path');
+const fs = require('node:fs/promises');
+const assert = require('node:assert/strict');
+const root = path.resolve(__dirname,'..');
+let app;
+(async () => {
+  app = await electron.launch({ executablePath:path.join(root,'release','win-unpacked','Modulo Bautagebuch.exe'),args:[],env:{ ...process.env,MODULO_TEST_DATA:path.join(root,'.qa','packaged-'+Date.now()) } });
+  const w = await app.firstWindow();
+  await expect(w.getByRole('heading',{ name:'Bautagebuch',exact:true })).toBeVisible();
+  const fonts=await w.evaluate(async()=>{await document.fonts.ready;return [...document.fonts].filter(font=>font.status==='loaded').map(font=>font.family.replace(/["']/g,''));});
+  assert.ok(fonts.includes('Geist') && fonts.includes('Geist Mono'),'Both Stratum fonts must load from the packaged app');
+  assert.equal(await w.locator('.sidebar').evaluate(el=>getComputedStyle(el).backgroundColor),'rgb(235, 230, 216)');
+  await w.getByRole('button',{name:'Projekt auswählen'}).click();await expect(w.getByRole('listbox',{name:'Projekte'}).getByRole('option')).toHaveCount(1);await w.keyboard.press('Escape');
+  await w.getByRole('button',{ name:'Ersten Eintrag erstellen' }).click();
+  await w.getByLabel('Besondere Vorkommnisse',{ exact:true }).fill('Test der gepackten Windows-Anwendung.');
+  await w.waitForTimeout(1000);
+  await expect(w.getByText('Alle Änderungen gespeichert')).toBeVisible();
+  const state = (await w.evaluate(() => window.diary.load())).state;
+  const target=path.join(root,'.qa','packaged-report.pdf');
+  await app.evaluate(({ dialog },filePath)=>{ dialog.showSaveDialog=async()=>({ canceled:false,filePath }); },target);
+  await w.evaluate(options=>window.diary.exportReport(options),{ projectId:state.projects[0].id,entryIds:state.entries.map(e=>e.id),format:'pdf' });
+  assert.ok((await fs.stat(target)).size>1000);
+  console.log('Packaged Windows app loads local Stratum fonts, opens the styled project menu, saves entries and exports PDF.');
+})().catch(error=>{ console.error(error);process.exitCode=1; }).finally(async()=>{ if(app) await app.close(); });

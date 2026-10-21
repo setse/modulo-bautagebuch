@@ -1,0 +1,37 @@
+<!-- @dsCard group="Colors" viewport="700x100" name="Borders" subtitle="Border and divider tokens" -->
+<!DOCTYPE html>
+<html lang="en">
+<head><meta charset="utf-8"><link rel="stylesheet" href="../styles.css">
+<style>body{margin:0;padding:20px 24px;background:var(--bg);font-family:'Geist',system-ui,sans-serif;display:flex;gap:24px;align-items:center;}</style>
+</head>
+<body class="theme-stratum">
+  <div style="flex:1;display:flex;align-items:center;gap:16px;">
+    <div style="width:48px;height:48px;border-radius:8px;border:1px solid var(--border);background:var(--surface);"></div>
+    <div>
+      <div style="font-size:12px;font-weight:500;color:var(--text);">--border</div>
+      <div style="font-family:'Geist Mono',monospace;font-size:10px;color:var(--text-mute);">#c8c0a8 · default</div>
+    </div>
+  </div>
+  <div style="flex:1;display:flex;align-items:center;gap:16px;">
+    <div style="width:48px;height:48px;border-radius:8px;border:2px solid var(--border-strong);background:var(--surface);"></div>
+    <div>
+      <div style="font-size:12px;font-weight:500;color:var(--text);">--border-strong</div>
+      <div style="font-family:'Geist Mono',monospace;font-size:10px;color:var(--text-mute);">#a8a087 · inputs, emphasis</div>
+    </div>
+  </div>
+  <div style="flex:1;display:flex;align-items:center;gap:16px;">
+    <div style="width:48px;height:48px;border-radius:8px;border:2px solid var(--accent);background:var(--accent-dim);"></div>
+    <div>
+      <div style="font-size:12px;font-weight:500;color:var(--text);">Accent border</div>
+      <div style="font-family:'Geist Mono',monospace;font-size:10px;color:var(--text-mute);">selected / active states</div>
+    </div>
+  </div>
+  <div style="flex:1;display:flex;align-items:center;gap:16px;">
+    <div style="width:48px;height:2px;background:var(--border);border-radius:1px;margin:23px 0;"></div>
+    <div>
+      <div style="font-size:12px;font-weight:500;color:var(--text);">.m-divider</div>
+      <div style="font-family:'Geist Mono',monospace;font-size:10px;color:var(--text-mute);">1px horizontal rule</div>
+    </div>
+  </div>
+</body>
+</html>

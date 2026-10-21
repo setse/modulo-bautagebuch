@@ -1,0 +1,125 @@
+{
+  "name": "modulo-bautagebuch",
+  "productName": "Modulo Bautagebuch",
+  "version": "0.8.1",
+  "private": true,
+  "type": "module",
+  "description": "Lokales Bautagebuch und Bauzeitenplaner mit Offline-Spracherkennung",
+  "author": "Modulo",
+  "main": "electron/main.cjs",
+  "scripts": {
+    "dev": "concurrently -k \"vite --host 127.0.0.1\" \"wait-on http://127.0.0.1:5173 && electron . --dev\"",
+    "build": "tsc --noEmit && vite build",
+    "start": "npm run build && electron .",
+    "test": "node --test tests/*.test.cjs",
+    "test:desktop": "npm run build && node tests/desktop.cjs",
+    "test:pdf": "npm run build && node tests/pdf-export.cjs",
+    "test:features": "npm run build && node tests/features.cjs",
+    "package:win": "npm run build && npm run build:transcription && npm run build:assistant && powershell -NoProfile -ExecutionPolicy Bypass -File scripts/package-windows.ps1",
+    "test:formatting": "npm run build && node tests/formatting.cjs",
+    "test:minimal": "npm run build && node tests/minimal-ui.cjs",
+    "build:transcription": "powershell -NoProfile -ExecutionPolicy Bypass -File scripts/build-transcription.ps1",
+    "test:transcription": "npm run build && node tests/transcription.cjs",
+    "build:assistant": "powershell -NoProfile -ExecutionPolicy Bypass -File scripts/build-assistant.ps1",
+    "test:assistant": "npm run build && node tests/assistant.cjs",
+    "test:planner": "npm run build && node tests/planner.cjs",
+    "demo": "node scripts/generate-demo.cjs",
+    "test:demo": "node tests/demo.cjs",
+    "test:planner-export": "npm run build && node tests/planner-export.cjs"
+  },
+  "dependencies": {
+    "docx": "9.9.0",
+    "jszip": "3.10.1",
+    "lucide-react": "^0.468.0",
+    "react": "19.3.0",
+    "react-dom": "19.3.0",
+    "zod": "^4.0.0"
+  },
+  "devDependencies": {
+    "@playwright/test": "^1.58.0",
+    "@types/react": "^19.0.0",
+    "@types/react-dom": "^19.0.0",
+    "@vitejs/plugin-react": "^6.0.0",
+    "concurrently": "^9.0.0",
+    "electron": "44.6.0",
+    "electron-builder": "26.15.3",
+    "pngjs": "^7.0.0",
+    "typescript": "^5.9.0",
+    "vite": "8.3.3",
+    "wait-on": "^9.0.0"
+  },
+  "overrides": {
+    "shell-quote": "^1.11.0",
+    "@electron/get": "^5.1.0"
+  },
+  "build": {
+    "appId": "de.modulo.bautagebuch",
+    "directories": {
+      "output": "release"
+    },
+    "files": [
+      "dist/**/*",
+      "electron/**/*",
+      "assets/**/*",
+      "package.json",
+      "transcription/assets.json",
+      "transcription/NOTICE.md",
+      "assistant/assets.json",
+      "assistant/NOTICE.md"
+    ],
+    "win": {
+      "target": [
+        "portable"
+      ],
+      "icon": "assets/icon.ico",
+      "signExecutable": false
+    },
+    "portable": {
+      "artifactName": "Modulo-Bautagebuch-${version}-Windows.exe",
+      "customNsisBinary": {
+        "url": "https://github.com/SoundSafari/NSISBI-ElectronBuilder/releases/download/1.0.0/nsisbi-electronbuilder-3.10.3.7z",
+        "checksum": "374cfc092fd1bd1898472df627549ecc165b0d6ba88e82deba085673aec95336",
+        "version": "3.10.3-modulo-bi"
+      }
+    },
+    "compression": "normal",
+    "extraResources": [
+      {
+        "from": ".build/transcription/models",
+        "to": "transcription/models"
+      },
+      {
+        "from": ".build/transcription/runtime",
+        "to": "transcription/runtime"
+      },
+      {
+        "from": ".build/transcription/ffmpeg",
+        "to": "transcription/ffmpeg"
+      },
+      {
+        "from": "transcription/NOTICE.md",
+        "to": "transcription/NOTICE.md"
+      },
+      {
+        "from": ".build/transcription/licenses",
+        "to": "transcription/licenses"
+      },
+      {
+        "from": ".build/assistant/models",
+        "to": "assistant/models"
+      },
+      {
+        "from": ".build/assistant/runtime",
+        "to": "assistant/runtime"
+      },
+      {
+        "from": ".build/assistant/licenses",
+        "to": "assistant/licenses"
+      },
+      {
+        "from": "assistant/NOTICE.md",
+        "to": "assistant/NOTICE.md"
+      }
+    ]
+  }
+}

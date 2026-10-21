@@ -1,0 +1,74 @@
+<!-- @dsCard group="Components" viewport="700x280" name="Data Viz" subtitle="Donut, SollIstBar, Sparkline, MonthBars, KpiCard" -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<link rel="stylesheet" href="../../styles.css">
+<script src="https://unpkg.com/react@18.3.1/umd/react.development.js" integrity="sha384-hD6/rw4ppMLGNu3tX5cjIb+uRZ7UkRJ6BPkLpg4hAu/6onKUg4lLsHAs9EBPT82L" crossorigin="anonymous"></script>
+<script src="https://unpkg.com/react-dom@18.3.1/umd/react-dom.development.js" integrity="sha384-u6aeetuaXnQ38mYT8rp6sbXaQe3NL9t+IBXmnYxwkUI2Hw4bsp2Wvmx4yRQF1uAm" crossorigin="anonymous"></script>
+<script src="../../_ds_bundle.js"></script>
+<style>html,body{margin:0;padding:0;}body{background:var(--bg);padding:20px 24px;}
+.lbl{font-family:var(--font-data);font-size:9px;text-transform:uppercase;letter-spacing:0.08em;color:var(--text-mute);margin-bottom:8px;}
+.row{display:flex;gap:16px;align-items:center;flex-wrap:wrap;margin-bottom:18px;}
+</style>
+</head>
+<body class="theme-stratum dens-comfy">
+<script type="text/babel">
+const { Donut, SollIstBar, Sparkline, MonthBars, KpiCard } = window.ModuloStratumDesignSystem_879962;
+
+const monthData = [
+  {m:'Jan',ist:1180,plan:1240},{m:'Feb',ist:1090,plan:1240},{m:'Mär',ist:1240,plan:1240},
+  {m:'Apr',ist:1280,plan:1240},{m:'Mai',ist:1340,plan:1240},{m:'Jun',ist:1200,plan:1240},
+  {m:'Jul',ist:980,plan:1100},{m:'Aug',ist:920,plan:1100},{m:'Sep',ist:1310,plan:1240},
+  {m:'Okt',ist:1190,plan:1240},{m:'Nov',ist:0,plan:1240,future:true},{m:'Dez',ist:0,plan:1100,future:true},
+];
+
+function Demo() {
+  return (
+    <div>
+      <div className="lbl">Donut</div>
+      <div className="row">
+        <Donut pct={0.78} size={72} stroke={9}><div style={{fontFamily:'var(--font-data)',fontSize:14,fontWeight:600,textAlign:'center'}}>78%</div></Donut>
+        <Donut pct={0.52} size={56} stroke={7} color="var(--neg)"><div style={{fontFamily:'var(--font-data)',fontSize:12,fontWeight:600}}>52%</div></Donut>
+        <Donut pct={0.96} size={44} stroke={5} color="var(--pos)"/>
+      </div>
+
+      <div className="lbl">SollIstBar — green=on budget · red=over</div>
+      <div className="row">
+        <div style={{display:'flex',flexDirection:'column',gap:8}}>
+          <div style={{display:'flex',alignItems:'center',gap:10}}>
+            <SollIstBar ist={920} soll={1200} w={140}/>
+            <span style={{fontFamily:'var(--font-data)',fontSize:10,color:'var(--text-mute)'}}>920/1200 — unter Soll</span>
+          </div>
+          <div style={{display:'flex',alignItems:'center',gap:10}}>
+            <SollIstBar ist={1100} soll={1200} w={140}/>
+            <span style={{fontFamily:'var(--font-data)',fontSize:10,color:'var(--text-mute)'}}>1100/1200 — im Soll</span>
+          </div>
+          <div style={{display:'flex',alignItems:'center',gap:10}}>
+            <SollIstBar ist={1560} soll={1200} w={140}/>
+            <span style={{fontFamily:'var(--font-data)',fontSize:10,color:'var(--text-mute)'}}>1560/1200 — überschritten</span>
+          </div>
+        </div>
+        <div style={{marginLeft:16}}>
+          <div className="lbl">Sparkline</div>
+          <Sparkline data={[920,1090,1180,1240,1340,1200,980,920,1310,1190]} w={120} h={32} stroke="var(--accent)"/>
+        </div>
+      </div>
+
+      <div className="lbl">KpiCard</div>
+      <div className="row">
+        <KpiCard eyebrow="Honorar-Umsatz · YTD" value="1,84 Mio. €" sub="Jahresplan 2,35 Mio." delta="↑ 12,4 %" deltaUp={true} style={{width:180}}/>
+        <KpiCard eyebrow="Deckungsbeitrag" value="34,2 %" sub="Ziel 32 %" delta="+2,0 Pp" deltaUp={true} style={{width:160}}/>
+        <KpiCard eyebrow="Offene Forderungen" value="312k €" sub="DSO 38 Tage" delta="48k > 30T" deltaUp={false} style={{width:160}}/>
+      </div>
+
+      <div className="lbl">MonthBars</div>
+      <MonthBars data={monthData} w={420} h={80}/>
+    </div>
+  );
+}
+ReactDOM.createRoot(document.getElementById('root')).render(<Demo/>);
+</script>
+<div id="root"></div>
+</body>
+</html>

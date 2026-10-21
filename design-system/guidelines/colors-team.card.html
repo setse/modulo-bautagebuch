@@ -1,0 +1,33 @@
+<!-- @dsCard group="Colors" viewport="700x110" name="Team Palette" subtitle="Consistent avatar colors per team member role" -->
+<!DOCTYPE html>
+<html lang="en">
+<head><meta charset="utf-8"><link rel="stylesheet" href="../styles.css">
+<style>body{margin:0;padding:18px 24px;background:var(--bg);font-family:'Geist',system-ui,sans-serif;display:flex;gap:12px;align-items:center;}</style>
+</head>
+<body class="theme-stratum">
+  <script>
+    const members = [
+      {init:'MH',color:'#d97c4a',name:'M. Hofer',role:'Partnerin'},
+      {init:'AR',color:'#7a9e6e',name:'A. Renner',role:'Partner'},
+      {init:'LV',color:'#6c7bb8',name:'L. Vogel',role:'Architekt'},
+      {init:'SN',color:'#b89065',name:'S. Nowak',role:'Architektin'},
+      {init:'JK',color:'#9a7eb5',name:'J. Klar',role:'Bauzeichner'},
+      {init:'EC',color:'#5fa3a8',name:'E. Çelik',role:'BIM'},
+      {init:'TB',color:'#a8a8a8',name:'T. Burr',role:'Praktikant'},
+    ];
+    document.addEventListener('DOMContentLoaded', () => {
+      const body = document.body;
+      members.forEach(m => {
+        const el = document.createElement('div');
+        el.style.cssText = 'display:flex;flex-direction:column;align-items:center;gap:6px;flex:1;';
+        el.innerHTML = `
+          <div style="width:36px;height:36px;border-radius:18px;background:${m.color};color:#fff;display:flex;align-items:center;justify-content:center;font-size:11px;font-weight:600;">${m.init}</div>
+          <div style="font-size:10px;font-weight:500;color:var(--text);text-align:center;">${m.name}</div>
+          <div style="font-family:'Geist Mono',monospace;font-size:9px;color:var(--text-mute);">${m.color}</div>
+        `;
+        body.appendChild(el);
+      });
+    });
+  </script>
+</body>
+</html>

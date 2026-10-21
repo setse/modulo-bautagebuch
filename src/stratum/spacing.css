@@ -1,0 +1,58 @@
+/* Modulo Stratum — Spacing & Layout Tokens */
+
+:root {
+  /* Base scale (4px grid) */
+  --space-1:  4px;
+  --space-2:  8px;
+  --space-3: 12px;
+  --space-4: 16px;
+  --space-5: 20px;
+  --space-6: 24px;
+  --space-7: 28px;
+  --space-8: 32px;
+
+  /* Layout */
+  --sidebar-w:  230px;
+  --topbar-h:    52px;
+  --canvas-w:  1280px;
+  --canvas-h:   800px;
+
+  /* Radius */
+  --radius-sm:  4px;
+  --radius-md:  6px;
+  --radius-lg:  8px;
+  --radius-xl: 12px;
+  --radius-pill: 999px;
+}
+
+/* ── Density system ──────────────────────────────────────────────────────── */
+/* Apply one class to the root container. Compact for dense data tables;
+   comfy for forms and wizards; regular is the default chrome density. */
+
+.dens-compact {
+  --pad:     8px;
+  --pad-lg: 12px;
+  --row-h:  26px;
+  --fs-body: 11px;
+  --fs-data: 11px;
+  --fs-h:   13px;
+  --gap:     6px;
+}
+.dens-regular {
+  --pad:    12px;
+  --pad-lg: 18px;
+  --row-h:  32px;
+  --fs-body: 12px;
+  --fs-data: 12px;
+  --fs-h:   14px;
+  --gap:     8px;
+}
+.dens-comfy {
+  --pad:    16px;
+  --pad-lg: 24px;
+  --row-h:  38px;
+  --fs-body: 13px;
+  --fs-data: 13px;
+  --fs-h:   15px;
+  --gap:    12px;
+}

@@ -1,0 +1,30 @@
+<!-- @dsCard group="Spacing" viewport="700x130" name="Density System" subtitle="compact / regular / comfy — applied via class on container" -->
+<!DOCTYPE html>
+<html lang="en">
+<head><meta charset="utf-8"><link rel="stylesheet" href="../styles.css">
+<style>body{margin:0;padding:16px 20px;background:var(--bg);display:flex;gap:12px;font-family:'Geist',system-ui,sans-serif;}
+.panel{flex:1;background:var(--surface);border:1px solid var(--border);border-radius:8px;overflow:hidden;}
+.header{font-family:'Geist Mono',monospace;font-size:9px;text-transform:uppercase;letter-spacing:0.08em;color:var(--text-mute);background:var(--surface-2);border-bottom:1px solid var(--border);}
+.row{border-bottom:1px solid var(--border);color:var(--text-dim);display:flex;align-items:center;gap:8px;}
+.row:last-child{border-bottom:none;}
+.dot{width:6px;height:6px;border-radius:3px;background:var(--accent);flex-shrink:0;}
+</style>
+</head>
+<body class="theme-stratum">
+  <div class="panel dens-compact">
+    <div class="header" style="padding:var(--pad) var(--pad-lg);">.dens-compact</div>
+    <div class="row" style="padding:var(--pad) var(--pad-lg);font-size:var(--fs-body);"><div class="dot"></div>BÜR-118 · pad 8px · row 26px</div>
+    <div class="row" style="padding:var(--pad) var(--pad-lg);font-size:var(--fs-body);"><div class="dot" style="background:var(--surface-3);"></div>WHB-204 · fs-body 11px</div>
+  </div>
+  <div class="panel dens-regular">
+    <div class="header" style="padding:var(--pad) var(--pad-lg);">.dens-regular</div>
+    <div class="row" style="padding:var(--pad) var(--pad-lg);font-size:var(--fs-body);"><div class="dot"></div>BÜR-118 · pad 12px · row 32px</div>
+    <div class="row" style="padding:var(--pad) var(--pad-lg);font-size:var(--fs-body);"><div class="dot" style="background:var(--surface-3);"></div>WHB-204 · fs-body 12px</div>
+  </div>
+  <div class="panel dens-comfy">
+    <div class="header" style="padding:var(--pad) var(--pad-lg);">.dens-comfy</div>
+    <div class="row" style="padding:var(--pad) var(--pad-lg);font-size:var(--fs-body);"><div class="dot"></div>BÜR-118 · pad 16px · row 38px</div>
+    <div class="row" style="padding:var(--pad) var(--pad-lg);font-size:var(--fs-body);"><div class="dot" style="background:var(--surface-3);"></div>WHB-204 · fs-body 13px</div>
+  </div>
+</body>
+</html>

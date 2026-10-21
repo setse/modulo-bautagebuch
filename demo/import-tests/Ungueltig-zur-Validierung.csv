@@ -1,0 +1,5 @@
+Vorgang;Gewerk;Start;Dauer;Einheit;Fortschritt
+Ungueltiges Datum;Elektro;30.02.2026;2;Arbeitstage;0
+Negative Dauer;Elektro;2026-10-08;-2;Arbeitstage;0
+Falsche Einheit;Malerarbeiten;2026-10-08;3;Kalendertage;0
+Fortschritt ungueltig;Malerarbeiten;2026-10-08;3;Arbeitstage;140

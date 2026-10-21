@@ -1,0 +1,25 @@
+/* Modulo Stratum — Shadow & Elevation Tokens
+   Warm-tinted shadows that complement the cream palette. */
+
+:root {
+  /* Card — the primary surface elevation */
+  --shadow-card:
+    0 1px 0   rgba(0, 0, 0, 0.04),
+    0 2px 10px rgba(74, 68, 55, 0.06);
+
+  /* Raised — dropdown, popover, floated panel */
+  --shadow-raised:
+    0 2px 4px  rgba(0, 0, 0, 0.04),
+    0 6px 20px rgba(74, 68, 55, 0.10);
+
+  /* Overlay — modal, dialog */
+  --shadow-overlay:
+    0 4px 8px  rgba(0, 0, 0, 0.06),
+    0 16px 48px rgba(74, 68, 55, 0.14);
+
+  /* Active sidebar item */
+  --shadow-item: 0 1px 3px rgba(0, 0, 0, 0.06);
+
+  /* Focus ring — accent-tinted */
+  --focus-ring: 0 0 0 2px var(--accent-dim, oklch(0.50 0.08 145 / 0.28));
+}

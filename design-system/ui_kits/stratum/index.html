@@ -1,0 +1,844 @@
+<!-- @startingPoint section="UI Kits" subtitle="Modulo Stratum — full Architektur-Controlling app prototype" viewport="1280x800" -->
+<!-- @dsCard group="Stratum" viewport="1280x800" name="App — Full Prototype" subtitle="Dashboard · Projekte · Zeiterfassung · HOAI · Auswertungen" -->
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Modulo Stratum · Architektur-Controlling</title>
+<link rel="stylesheet" href="../../styles.css">
+<script src="https://unpkg.com/react@18.3.1/umd/react.development.js" integrity="sha384-hD6/rw4ppMLGNu3tX5cjIb+uRZ7UkRJ6BPkLpg4hAu/6onKUg4lLsHAs9EBPT82L" crossorigin="anonymous"></script>
+<script src="https://unpkg.com/react-dom@18.3.1/umd/react-dom.development.js" integrity="sha384-u6aeetuaXnQ38mYT8rp6sbXaQe3NL9t+IBXmnYxwkUI2Hw4bsp2Wvmx4yRQF1uAm" crossorigin="anonymous"></script>
+<script src="https://unpkg.com/@babel/standalone@7.29.0/babel.min.js" integrity="sha384-m08KidiNqLdpJqLq95G/LEi8Qvjl/xUYll3QILypMoQ65QorJ9Lvtp2RXYGBFj1y" crossorigin="anonymous"></script>
+<style>
+  html, body { margin: 0; padding: 0; background: #e9e4d6; height: 100vh; overflow: hidden; }
+  * { box-sizing: border-box; }
+  input { font-family: inherit; }
+  ::-webkit-scrollbar { width: 6px; height: 6px; }
+  ::-webkit-scrollbar-track { background: transparent; }
+  ::-webkit-scrollbar-thumb { background: var(--border); border-radius: 3px; }
+</style>
+</head>
+<body>
+<div id="root"></div>
+<script type="text/babel">
+
+/* ── Data ───────────────────────────────────────────────────────────────── */
+const Data = (() => {
+  const projects = [
+    { id:'WHB-204', name:'Wohnhaus Bergmann',          city:'München',   client:'Familie Bergmann',      lead:'M. Hofer',  zone:'III', costs:1_850_000, fee:218_400,   billed:156_900, hours:1_240, planned:1_980, phase:5, status:'aktiv',     umbau:false, progress:[100,100,100,100,68,0,0,0,0], deadline:'12.09.2026', type:'Neubau · Einfamilienhaus' },
+    { id:'BÜR-118', name:'Bürohaus Stadtkrone',        city:'Stuttgart', client:'Süd Invest GmbH',       lead:'A. Renner', zone:'IV',  costs:12_400_000,fee:1_412_300, billed:982_400, hours:4_810, planned:6_200, phase:6, status:'aktiv',     umbau:false, progress:[100,100,100,100,100,72,0,0,0],deadline:'04.03.2027', type:'Neubau · Verwaltung' },
+    { id:'KIT-077', name:'Kita Lerchenfeld',           city:'Augsburg',  client:'Stadt Augsburg',        lead:'L. Vogel',  zone:'III', costs:3_200_000, fee:401_200,   billed:401_200, hours:2_140, planned:2_100, phase:8, status:'aktiv',     umbau:false, progress:[100,100,100,100,100,100,100,32,0],deadline:'20.11.2025', type:'Neubau · Öffentlich' },
+    { id:'SAN-302', name:'Sanierung Maxvorstadt',      city:'München',   client:'Eigentümergemeinschaft',lead:'M. Hofer',  zone:'IV',  costs:2_700_000, fee:412_800,   billed:218_500, hours:1_680, planned:2_400, phase:4, status:'aktiv',     umbau:true,  progress:[100,100,100,54,0,0,0,0,0],   deadline:'30.06.2027', type:'Umbau · 33% Zuschlag' },
+    { id:'GEW-441', name:'Gewerbehof Riem',            city:'München',   client:'Riem Immobilien KG',    lead:'A. Renner', zone:'III', costs:8_900_000, fee:904_600,   billed:904_600, hours:5_240, planned:5_100, phase:9, status:'abschluss', umbau:false, progress:[100,100,100,100,100,100,100,100,84],deadline:'15.02.2026',type:'Neubau · Gewerbe' },
+    { id:'EFH-512', name:'Doppelhaus Grünwald',        city:'Grünwald',  client:'Schaller / Wiesner',    lead:'L. Vogel',  zone:'III', costs:1_240_000, fee:156_700,   billed:28_400,  hours:320,   planned:1_400, phase:2, status:'aktiv',     umbau:false, progress:[100,46,0,0,0,0,0,0,0],       deadline:'08.10.2027', type:'Neubau · Wohnen' },
+    { id:'SCH-088', name:'Schulerweiterung Pasing',    city:'München',   client:'LBB Bayern',            lead:'M. Hofer',  zone:'IV',  costs:6_400_000, fee:824_300,   billed:0,       hours:0,     planned:4_800, phase:1, status:'akquise',   umbau:false, progress:[12,0,0,0,0,0,0,0,0],         deadline:'—',          type:'Neubau · Öffentlich' },
+  ];
+
+  const team = [
+    { id:'mh', name:'Maria Hofer',   role:'Partnerin · Projektleitung', rate:125, color:'#d97c4a' },
+    { id:'ar', name:'Andreas Renner',role:'Partner · Projektleitung',   rate:125, color:'#7a9e6e' },
+    { id:'lv', name:'Lukas Vogel',   role:'Architekt',                  rate:95,  color:'#6c7bb8' },
+    { id:'sn', name:'Sophia Nowak',  role:'Architektin',                rate:95,  color:'#b89065' },
+    { id:'jk', name:'Jonas Klar',    role:'Bauzeichner',                rate:72,  color:'#9a7eb5' },
+    { id:'ec', name:'Elif Çelik',    role:'Architektin · BIM',          rate:95,  color:'#5fa3a8' },
+  ];
+
+  const monatsstunden = [
+    {m:'Jan',ist:1180,plan:1240},{m:'Feb',ist:1090,plan:1240},{m:'Mär',ist:1240,plan:1240},
+    {m:'Apr',ist:1280,plan:1240},{m:'Mai',ist:1340,plan:1240},{m:'Jun',ist:1200,plan:1240},
+    {m:'Jul',ist:980,plan:1100},{m:'Aug',ist:920,plan:1100},{m:'Sep',ist:1310,plan:1240},
+    {m:'Okt',ist:1190,plan:1240},{m:'Nov',ist:0,plan:1240,future:true},{m:'Dez',ist:0,plan:1100,future:true},
+  ];
+
+  const heute = [
+    {time:'08:15–10:30',project:'BÜR-118',phase:'LP6',task:'Ausschreibung Fassade · Vorbereitung Pakete',h:2.25},
+    {time:'10:45–12:00',project:'WHB-204',phase:'LP5',task:'Detail Holzfenster · Knoten W-04',h:1.25},
+    {time:'13:00–15:30',project:'SAN-302',phase:'LP4',task:'Bauantrag · Stellungnahme Denkmalschutz',h:2.50},
+    {time:'15:30–17:45',project:'BÜR-118',phase:'LP6',task:'LV Trockenbau · Position 3.40–3.78',h:2.25},
+  ];
+
+  const leistungsphasen = [
+    {nr:1,name:'Grundlagenermittlung',anteil:2},{nr:2,name:'Vorplanung',anteil:7},
+    {nr:3,name:'Entwurfsplanung',anteil:15},{nr:4,name:'Genehmigungsplanung',anteil:3},
+    {nr:5,name:'Ausführungsplanung',anteil:25},{nr:6,name:'Vorbereitung der Vergabe',anteil:10},
+    {nr:7,name:'Mitwirkung bei der Vergabe',anteil:4},{nr:8,name:'Objektüberwachung — Bauleitung',anteil:32},
+    {nr:9,name:'Objektbetreuung',anteil:2},
+  ];
+
+  const fmtEur = (n, frac=0) => new Intl.NumberFormat('de-DE',{style:'currency',currency:'EUR',minimumFractionDigits:frac,maximumFractionDigits:frac}).format(n);
+  const fmtNum = (n, frac=0) => new Intl.NumberFormat('de-DE',{minimumFractionDigits:frac,maximumFractionDigits:frac}).format(n);
+
+  return { projects, team, monatsstunden, heute, leistungsphasen, fmtEur, fmtNum };
+})();
+
+/* ── Icons ──────────────────────────────────────────────────────────────── */
+const PATHS = {
+  dashboard:'M3 3h7v7H3zM14 3h7v4h-7zM14 11h7v10h-7zM3 14h7v7H3z',
+  project:'M3 6h18M3 12h18M3 18h12',clock:'M12 7v5l3 2M12 21a9 9 0 1 0 0-18 9 9 0 0 0 0 18z',
+  euro:'M18 6a8 8 0 1 0 0 12M3 10h10M3 14h10',team:'M8 11a3 3 0 1 0 0-6 3 3 0 0 0 0 6zM2 20c.5-3 3-5 6-5s5.5 2 6 5M17 11a3 3 0 1 0 0-6M22 20c-.3-2-1.6-3.6-3.4-4.4',
+  reports:'M4 19V5M4 19h16M8 15v-5M12 15V8M16 15v-7',search:'M11 18a7 7 0 1 0 0-14 7 7 0 0 0 0 14zM21 21l-5-5',
+  folder:'M3 7a2 2 0 0 1 2-2h4l2 2h8a2 2 0 0 1 2 2v9a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z',
+  alert:'M12 9v4M12 17h.01M10.3 3.86 1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z',
+  download:'M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4M7 10l5 5 5-5M12 15V3',
+  plus:'M12 5v14M5 12h14',play:'M6 4l14 8-14 8V4z',chevdown:'M6 9l6 6 6-6',
+  check:'M5 12l5 5L20 7',arrowright:'M5 12h14M13 5l7 7-7 7',
+  calc:'M5 3h14v18H5zM8 7h8M8 11h2M12 11h2M16 11h-.01M8 15h2M12 15h2M16 19h6',
+  layers:'M12 2 2 8l10 6 10-6zM2 14l10 6 10-6M2 11l10 6 10-6',
+  drawing:'M3 3h18v18H3zM3 9h18M9 3v18',filter:'M3 4h18l-7 9v7l-4-2v-5z',
+  grid:'M3 3h7v7H3zM14 3h7v7h-7zM14 14h7v7h-7zM3 14h7v7H3z',
+  list:'M3 6h18M3 12h18M3 18h18',timer:'M12 7v5l3 2M12 21a9 9 0 1 0 0-18 9 9 0 0 0 0 18zM9 1h6',
+};
+
+function Icon({name,size=14,stroke=1.6}) {
+  const d = PATHS[name] || 'M0 0h0';
+  return <svg width={size} height={size} viewBox="0 0 24 24" fill="none" stroke="currentColor"
+    strokeWidth={stroke} strokeLinecap="round" strokeLinejoin="round" style={{flexShrink:0}}>
+    <path d={d}/>
+  </svg>;
+}
+
+function ModuloMark({size=16,color='currentColor'}) {
+  return <svg width={size} height={size} viewBox="0 0 24 24" fill="none">
+    <rect x="2" y="2" width="9" height="9" fill={color}/>
+    <rect x="13" y="2" width="9" height="9" stroke={color} strokeWidth="2"/>
+    <rect x="2" y="13" width="9" height="9" stroke={color} strokeWidth="2"/>
+    <rect x="13" y="13" width="9" height="9" fill={color} opacity="0.4"/>
+  </svg>;
+}
+
+/* ── Shell ──────────────────────────────────────────────────────────────── */
+const NAV_ITEMS = [
+  ['Übersicht','dashboard'],['Projekte','project'],['Akquise','folder'],
+  ['Zeiterfassung','clock'],['HOAI-Rechner','calc'],['Honorare','euro'],
+  ['Team','team'],['Auswertungen','reports'],
+];
+
+function Sidebar({active,onNav}) {
+  return (
+    <div style={{width:230,flexShrink:0,background:'var(--surface-2)',borderRight:'1px solid var(--border)',
+      padding:20,display:'flex',flexDirection:'column',gap:4,overflow:'hidden'}}>
+      <div style={{display:'flex',alignItems:'center',gap:10,marginBottom:20,padding:'0 4px'}}>
+        <div style={{width:32,height:32,borderRadius:8,background:'var(--accent)',display:'flex',alignItems:'center',justifyContent:'center',flexShrink:0}}>
+          <ModuloMark size={16} color="var(--surface)"/>
+        </div>
+        <div>
+          <div style={{fontSize:14,fontWeight:600,color:'var(--text)'}}>Modulo</div>
+          <div style={{fontSize:10,color:'var(--text-mute)'}}>Hofer · Renner</div>
+        </div>
+      </div>
+
+      <div style={{fontFamily:'var(--font-data)',fontSize:10,letterSpacing:'0.08em',textTransform:'uppercase',color:'var(--text-mute)',fontWeight:500,padding:'8px 10px 4px'}}>
+        Arbeitsbereich
+      </div>
+
+      {NAV_ITEMS.map(([label,icon]) => {
+        const isActive = label === active;
+        return <div key={label} onClick={() => onNav(label)} style={{display:'flex',alignItems:'center',gap:10,padding:'9px 10px',
+          background:isActive?'var(--surface)':'transparent',borderRadius:6,
+          fontSize:13,color:isActive?'var(--text)':'var(--text-dim)',
+          fontWeight:isActive?600:400,cursor:'pointer',
+          boxShadow:isActive?'0 1px 3px rgba(0,0,0,0.06)':'none'}}>
+          <Icon name={icon} size={14}/>
+          <span>{label}</span>
+          {isActive&&<span style={{marginLeft:'auto',width:4,height:4,borderRadius:2,background:'var(--accent)'}}/>}
+        </div>;
+      })}
+
+      <div style={{fontFamily:'var(--font-data)',fontSize:10,letterSpacing:'0.08em',textTransform:'uppercase',color:'var(--text-mute)',fontWeight:500,padding:'20px 10px 4px'}}>
+        Letzte Projekte
+      </div>
+      {[['BÜR-118','Bürohaus Stadtkrone'],['WHB-204','Wohnhaus Bergmann'],['SAN-302','Sanierung Maxvorstadt']].map(([id,name])=>(
+        <div key={id} style={{display:'flex',alignItems:'baseline',gap:8,padding:'6px 10px',borderRadius:6,fontSize:12}}>
+          <span style={{fontFamily:'var(--font-data)',fontSize:10,color:'var(--text-mute)',flexShrink:0}}>{id}</span>
+          <span style={{color:'var(--text-dim)',overflow:'hidden',textOverflow:'ellipsis',whiteSpace:'nowrap'}}>{name}</span>
+        </div>
+      ))}
+
+      <div style={{marginTop:'auto',display:'flex',alignItems:'center',gap:10,padding:10,background:'var(--surface)',borderRadius:8}}>
+        <div style={{width:30,height:30,borderRadius:15,background:'#d97c4a',color:'#fff',display:'flex',alignItems:'center',justifyContent:'center',fontSize:11,fontWeight:600,flexShrink:0}}>MH</div>
+        <div style={{flex:1,minWidth:0}}>
+          <div style={{fontSize:12,fontWeight:500,color:'var(--text)'}}>Maria Hofer</div>
+          <div style={{fontSize:10,color:'var(--text-mute)'}}>Partnerin</div>
+        </div>
+        <Icon name="chevdown" size={12}/>
+      </div>
+    </div>
+  );
+}
+
+/* ── Shared atoms ───────────────────────────────────────────────────────── */
+function Card({children,padding=18,header,headerAction,style}) {
+  return <div style={{background:'var(--surface)',border:'1px solid var(--border)',borderRadius:6,
+    boxShadow:'0 1px 0 rgba(0,0,0,0.04),0 2px 10px rgba(74,68,55,0.06)',padding:header?0:padding,...style}}>
+    {header&&<div style={{padding:'14px 18px 10px',display:'flex',alignItems:'baseline',gap:10,borderBottom:'1px solid var(--border)'}}>
+      <div style={{fontSize:14,fontWeight:600}}>{header.title}</div>
+      {header.subtitle&&<div style={{fontSize:11,color:'var(--text-mute)'}}>{header.subtitle}</div>}
+      <div style={{flex:1}}/>{headerAction}
+    </div>}
+    <div style={{padding:header?padding:0}}>{children}</div>
+  </div>;
+}
+
+function Eyebrow({children,style}) {
+  return <div style={{fontFamily:'var(--font-data)',fontSize:10,letterSpacing:'0.08em',textTransform:'uppercase',color:'var(--text-mute)',fontWeight:500,...style}}>{children}</div>;
+}
+
+function Pill({children,tone='default',style}) {
+  const tones = {
+    default:{bg:'transparent',fg:'var(--text-dim)',border:'1px solid var(--border-strong)'},
+    pos:{bg:'color-mix(in oklch,var(--pos) 18%,transparent)',fg:'var(--pos)',border:'none'},
+    neg:{bg:'color-mix(in oklch,var(--neg) 18%,transparent)',fg:'var(--neg)',border:'none'},
+    warn:{bg:'color-mix(in oklch,var(--warn) 18%,transparent)',fg:'var(--warn)',border:'none'},
+    accent:{bg:'var(--accent-dim)',fg:'var(--accent)',border:'none'},
+  };
+  const t=tones[tone]||tones.default;
+  return <span style={{display:'inline-flex',alignItems:'center',gap:4,padding:'2px 8px',borderRadius:999,
+    fontFamily:'var(--font-data)',fontSize:10,background:t.bg,color:t.fg,border:t.border,...style}}>{children}</span>;
+}
+
+function Btn({children,variant='primary',icon,size='md',onClick,style}) {
+  const sizes={sm:{p:'5px 10px',fs:11,ir:11},md:{p:'8px 16px',fs:12,ir:12},lg:{p:'10px 20px',fs:13,ir:14}};
+  const variants={primary:{bg:'var(--accent)',fg:'var(--surface)',border:'none'},secondary:{bg:'var(--surface)',fg:'var(--text)',border:'1px solid var(--border)'},ghost:{bg:'transparent',fg:'var(--text-dim)',border:'none'}};
+  const s=sizes[size]||sizes.md; const v=variants[variant]||variants.primary;
+  return <div onClick={onClick} style={{display:'inline-flex',alignItems:'center',gap:6,padding:s.p,fontSize:s.fs,fontWeight:500,
+    borderRadius:8,cursor:'pointer',background:v.bg,color:v.fg,border:v.border,...style}}>
+    {icon&&<Icon name={icon} size={s.ir}/>}{children}
+  </div>;
+}
+
+function SollIstBar({ist,soll,w=100,h=5}) {
+  const pct=soll>0?Math.min(1.5,ist/soll):0;
+  const color=pct>1.05?'var(--neg)':pct<0.85?'var(--accent)':'var(--pos)';
+  return <div style={{position:'relative',width:w,height:h,background:'var(--surface-3)',borderRadius:1}}>
+    <div style={{position:'absolute',left:0,top:0,height:h,width:Math.min(pct,1)*w,background:color,borderRadius:1}}/>
+    {pct>1&&<div style={{position:'absolute',left:Math.min(pct,1)*w,top:0,height:h,width:Math.min(pct-1,0.5)*w,background:'var(--neg)',opacity:0.5,borderRadius:1}}/>}
+  </div>;
+}
+
+function Donut({pct,size=72,stroke=9,color='var(--accent)',children}) {
+  const r=(size-stroke)/2, c=2*Math.PI*r;
+  return <div style={{position:'relative',width:size,height:size}}>
+    <svg width={size} height={size}>
+      <circle cx={size/2} cy={size/2} r={r} stroke="var(--surface-3)" strokeWidth={stroke} fill="none"/>
+      <circle cx={size/2} cy={size/2} r={r} stroke={color} strokeWidth={stroke} fill="none"
+        strokeDasharray={c} strokeDashoffset={c*(1-Math.max(0,Math.min(1,pct)))}
+        transform={`rotate(-90 ${size/2} ${size/2})`}/>
+    </svg>
+    <div style={{position:'absolute',inset:0,display:'flex',alignItems:'center',justifyContent:'center'}}>{children}</div>
+  </div>;
+}
+
+function MonthBars({data,w=400,h=64}) {
+  const max=Math.max(...data.map(d=>Math.max(d.ist||0,d.plan||0)));
+  const bw=w/data.length;
+  return <svg width={w} height={h} viewBox={`0 0 ${w} ${h}`} style={{display:'block'}}>
+    {data.map((d,i)=>{
+      const x=i*bw+2, istH=max>0?(d.ist/max)*(h-14):0, planH=max>0?(d.plan/max)*(h-14):0;
+      return <g key={i}>
+        <line x1={x} x2={x+bw-4} y1={h-10-planH} y2={h-10-planH} stroke="var(--text-mute)" strokeDasharray="2 2" strokeWidth="1"/>
+        <rect x={x+2} y={h-10-istH} width={bw-8} height={istH} fill={d.future?'var(--surface-3)':'var(--accent)'} opacity={d.future?0.4:0.85}/>
+        <text x={x+bw/2-2} y={h-1} fontSize="8" fill="var(--text-mute)" textAnchor="middle" fontFamily="var(--font-data)">{d.m}</text>
+      </g>;
+    })}
+  </svg>;
+}
+
+/* ── Screen: Dashboard ──────────────────────────────────────────────────── */
+function Dashboard() {
+  const d = Data;
+  const risks = [
+    {proj:'SAN-302',label:'Stunden 70 % über Plan in LP4 — Bauantrag verzögert',sev:'hoch'},
+    {proj:'BÜR-118',label:'Honorarabschlag 4 seit 38 Tagen offen (€ 184.500)',sev:'mittel'},
+    {proj:'EFH-512',label:'Vertrag noch nicht unterzeichnet — LP2 läuft',sev:'mittel'},
+  ];
+  return (
+    <div style={{padding:'24px 28px',display:'flex',flexDirection:'column',gap:16,overflow:'hidden',flex:1}}>
+      <div style={{display:'flex',alignItems:'baseline',gap:16}}>
+        <div>
+          <div style={{fontSize:24,fontWeight:600,letterSpacing:-0.5}}>Guten Morgen, Maria</div>
+          <div style={{fontSize:12,color:'var(--text-mute)',marginTop:2}}>Geschäftsjahr 2026 · KW 26 · Donnerstag, 25.06.2026</div>
+        </div>
+        <div style={{flex:1}}/>
+        <div style={{display:'flex',alignItems:'center',gap:8,padding:'6px 12px',background:'var(--surface)',border:'1px solid var(--border)',borderRadius:8,fontSize:12,color:'var(--text-mute)',width:240}}>
+          <Icon name="search" size={12}/><span style={{flex:1}}>Projekte, Rechnungen…</span>
+          <span style={{fontFamily:'var(--font-data)',fontSize:10}}>⌘K</span>
+        </div>
+        <Btn icon="plus">Zeit erfassen</Btn>
+      </div>
+
+      <div style={{display:'grid',gridTemplateColumns:'1.4fr 1fr',gap:16,flex:1,overflow:'hidden'}}>
+        <div style={{display:'flex',flexDirection:'column',gap:16,overflow:'hidden'}}>
+          <Card padding={22}>
+            <div style={{display:'flex',alignItems:'flex-start',gap:16}}>
+              <Donut pct={0.784} size={88} stroke={10}>
+                <div style={{textAlign:'center'}}>
+                  <div style={{fontFamily:'var(--font-data)',fontSize:18,fontWeight:600,lineHeight:1}}>78%</div>
+                </div>
+              </Donut>
+              <div style={{flex:1}}>
+                <Eyebrow>Honorar-Umsatz · 2026</Eyebrow>
+                <div style={{display:'flex',alignItems:'baseline',gap:10,marginTop:4}}>
+                  <div style={{fontFamily:'var(--font-data)',fontSize:30,fontWeight:600,letterSpacing:-0.8}}>1,84 Mio. €</div>
+                  <Pill tone="pos">↑ 12,4 % vs. VJ</Pill>
+                </div>
+                <div style={{fontSize:12,color:'var(--text-mute)',marginTop:4}}>Jahresplan {d.fmtEur(2_350_000)} · Forecast {d.fmtEur(2_280_000)} (97 %)</div>
+                <div style={{marginTop:14}}><MonthBars data={d.monatsstunden} w={400} h={64}/></div>
+              </div>
+            </div>
+          </Card>
+
+          <div style={{display:'grid',gridTemplateColumns:'1fr 1fr 1fr',gap:12}}>
+            {[
+              {e:'Deckungsbeitrag',v:'34,2 %',s:'Ziel 32 %',d:'↑ +2,0 Pp',up:true},
+              {e:'Auslastung',v:'86 %',s:'268 / 312 h',d:'+4 Pp',up:true},
+              {e:'Offene Forderungen',v:'312k €',s:'DSO 38 Tage',d:'48k > 30T',up:false},
+            ].map((k,i)=>(
+              <Card key={i} padding={14}>
+                <Eyebrow>{k.e}</Eyebrow>
+                <div style={{fontFamily:'var(--font-data)',fontSize:22,fontWeight:600,letterSpacing:-0.4,marginTop:4}}>{k.v}</div>
+                <div style={{display:'flex',justifyContent:'space-between',marginTop:6}}>
+                  <span style={{fontSize:11,color:'var(--text-mute)'}}>{k.s}</span>
+                  <Pill tone={k.up?'pos':'warn'} style={{fontSize:9}}>{k.d}</Pill>
+                </div>
+              </Card>
+            ))}
+          </div>
+
+          <Card padding={0} style={{flex:1,overflow:'hidden',display:'flex',flexDirection:'column'}}>
+            <div style={{padding:'14px 18px 10px',display:'flex',alignItems:'baseline',gap:10,borderBottom:'1px solid var(--border)'}}>
+              <div style={{fontSize:14,fontWeight:600}}>Aktive Projekte</div>
+              <div style={{fontSize:11,color:'var(--text-mute)'}}>{d.projects.length}</div>
+              <div style={{flex:1}}/>
+              <Pill>Alle</Pill><Pill style={{marginLeft:4}}>Risiko</Pill>
+            </div>
+            <div style={{flex:1,overflow:'hidden'}}>
+              {d.projects.slice(0,5).map(p=>{
+                const pct=p.progress.reduce((s,v)=>s+v,0)/900;
+                return <div key={p.id} style={{display:'grid',gridTemplateColumns:'36px 1fr 110px 110px 70px',gap:12,padding:'10px 18px',borderBottom:'1px solid var(--border)',alignItems:'center'}}>
+                  <div style={{width:32,height:32,borderRadius:6,background:'var(--surface-2)',display:'flex',alignItems:'center',justifyContent:'center'}}>
+                    <Icon name={p.umbau?'layers':'drawing'} size={15}/>
+                  </div>
+                  <div>
+                    <div style={{fontSize:13,fontWeight:500}}>{p.name}</div>
+                    <div style={{fontSize:11,color:'var(--text-mute)',marginTop:1}}>{p.id} · {p.client}</div>
+                  </div>
+                  <div>
+                    <Eyebrow style={{fontSize:9}}>LP {p.phase}/9</Eyebrow>
+                    <div style={{display:'flex',gap:2,marginTop:4}}>
+                      {p.progress.map((v,i)=><div key={i} style={{width:7,height:7,borderRadius:1,background:v===100?'var(--accent)':v>0?'color-mix(in oklch,var(--accent) 50%,var(--surface-2))':'var(--surface-2)'}}/>)}
+                    </div>
+                  </div>
+                  <div>
+                    <SollIstBar ist={p.hours} soll={p.planned*Math.max(0.05,pct)} w={100}/>
+                    <div style={{fontFamily:'var(--font-data)',fontSize:10,color:'var(--text-mute)',marginTop:3}}>{p.hours}/{Math.round(p.planned*pct)} h</div>
+                  </div>
+                  <div style={{fontFamily:'var(--font-data)',fontSize:13,textAlign:'right',fontWeight:500}}>{d.fmtEur(p.fee/1000)}k</div>
+                </div>;
+              })}
+            </div>
+          </Card>
+        </div>
+
+        <div style={{display:'flex',flexDirection:'column',gap:16,overflow:'hidden'}}>
+          <Card padding={18}>
+            <div style={{display:'flex',alignItems:'baseline',justifyContent:'space-between'}}>
+              <div style={{fontSize:14,fontWeight:600}}>Mein Tag</div>
+              <div style={{fontFamily:'var(--font-data)',fontSize:11,color:'var(--text-mute)'}}>Do · 25.06.</div>
+            </div>
+            <div style={{display:'flex',alignItems:'baseline',gap:8,marginTop:6}}>
+              <div style={{fontFamily:'var(--font-data)',fontSize:28,fontWeight:600,letterSpacing:-0.6}}>8,25</div>
+              <div style={{fontSize:13,color:'var(--text-mute)'}}>/ 8,0 h erfasst</div>
+            </div>
+            <div style={{marginTop:8,height:5,background:'var(--surface-2)',borderRadius:3}}>
+              <div style={{width:'100%',height:'100%',background:'var(--accent)',borderRadius:3}}/>
+            </div>
+            <div style={{marginTop:10,display:'flex',flexDirection:'column',gap:0}}>
+              {d.heute.map((h,i)=>(
+                <div key={i} style={{display:'grid',gridTemplateColumns:'74px 1fr 36px',alignItems:'center',gap:8,padding:'8px 0',borderTop:i?'1px solid var(--border)':'none'}}>
+                  <div style={{fontFamily:'var(--font-data)',fontSize:10,color:'var(--text-mute)'}}>{h.time}</div>
+                  <div style={{display:'flex',alignItems:'baseline',gap:8}}>
+                    <span style={{fontFamily:'var(--font-data)',fontSize:12,fontWeight:600,color:'var(--accent)'}}>{h.project}</span>
+                    <span style={{fontFamily:'var(--font-data)',fontSize:11,color:'var(--text-mute)'}}>{h.phase}</span>
+                  </div>
+                  <div style={{fontFamily:'var(--font-data)',fontSize:12,textAlign:'right'}}>{h.h.toFixed(2)}</div>
+                </div>
+              ))}
+            </div>
+            <div style={{marginTop:10,paddingTop:10,borderTop:'1px solid var(--border)',display:'flex',gap:8}}>
+              <Btn icon="play" style={{flex:1,justifyContent:'center'}}>Timer starten</Btn>
+              <Btn variant="secondary" icon="plus" size="sm">Manuell</Btn>
+            </div>
+          </Card>
+
+          <Card padding={18}>
+            <div style={{display:'flex',alignItems:'baseline',justifyContent:'space-between',marginBottom:8}}>
+              <div style={{fontSize:14,fontWeight:600}}>Aufmerksamkeit</div>
+              <Pill tone="warn">{risks.length} offen</Pill>
+            </div>
+            {risks.map((r,i)=>(
+              <div key={i} style={{display:'flex',gap:10,padding:'10px 0',borderTop:i?'1px solid var(--border)':'none'}}>
+                <div style={{width:4,alignSelf:'stretch',borderRadius:2,background:r.sev==='hoch'?'var(--neg)':'var(--warn)'}}/>
+                <div>
+                  <div style={{display:'flex',gap:6,alignItems:'baseline',marginBottom:2}}>
+                    <span style={{fontFamily:'var(--font-data)',fontSize:10,fontWeight:600}}>{r.proj}</span>
+                    <span style={{fontFamily:'var(--font-data)',fontSize:9,color:r.sev==='hoch'?'var(--neg)':'var(--warn)',textTransform:'uppercase',letterSpacing:'0.06em'}}>{r.sev}</span>
+                  </div>
+                  <div style={{fontSize:12,lineHeight:1.4}}>{r.label}</div>
+                </div>
+              </div>
+            ))}
+          </Card>
+
+          <Card padding={18} style={{flex:1}}>
+            <div style={{fontSize:14,fontWeight:600,marginBottom:10}}>Honorar-Status</div>
+            <div style={{display:'flex',flexDirection:'column',gap:10}}>
+              {[
+                ['Abgerechnet & gezahlt',2_491_900,'var(--pos)',0.55],
+                ['Offen ≤ 30 Tage',264_600,'var(--accent)',0.06],
+                ['Überfällig > 30 Tage',48_200,'var(--neg)',0.01],
+                ['Noch nicht abgerufen',1_810_400,'var(--text-mute)',0.38],
+              ].map(([k,v,c,p])=>(
+                <div key={k} style={{display:'grid',gridTemplateColumns:'1fr 80px',gap:10,alignItems:'center'}}>
+                  <div>
+                    <div style={{fontSize:11}}>{k}</div>
+                    <div style={{marginTop:4,height:4,background:'var(--surface-2)',borderRadius:2}}>
+                      <div style={{width:(p*100)+'%',height:'100%',background:c,borderRadius:2}}/>
+                    </div>
+                  </div>
+                  <span style={{fontFamily:'var(--font-data)',fontSize:12,textAlign:'right',color:c,fontWeight:500}}>{Data.fmtEur(v/1000)}k</span>
+                </div>
+              ))}
+            </div>
+          </Card>
+        </div>
+      </div>
+    </div>
+  );
+}
+
+/* ── Screen: Projekte ───────────────────────────────────────────────────── */
+function Projekte() {
+  const d = Data;
+  const statusColors = {aktiv:'var(--pos)',abschluss:'var(--accent)',akquise:'var(--text-mute)',risiko:'var(--neg)'};
+  return (
+    <div style={{padding:'24px 28px',display:'flex',flexDirection:'column',gap:16,overflow:'hidden',flex:1}}>
+      <div style={{display:'flex',alignItems:'baseline',gap:14}}>
+        <div>
+          <div style={{fontSize:24,fontWeight:600,letterSpacing:-0.5}}>Projekte</div>
+          <div style={{fontSize:12,color:'var(--text-mute)',marginTop:2}}>12 aktiv · 3 in Akquise · 2 mit Risiko</div>
+        </div>
+        <div style={{flex:1}}/>
+        <Btn variant="secondary" icon="download" size="sm">Export</Btn>
+        <Btn icon="plus">Neues Projekt</Btn>
+      </div>
+
+      <div style={{display:'grid',gridTemplateColumns:'repeat(4,1fr)',gap:14}}>
+        {[
+          {e:'Aktive Projekte',v:'12',s:'+ 2 vs. Q2',t:'pos'},
+          {e:'Honorarvolumen offen',v:'4,33 Mio. €',s:'aus 7 laufenden',t:'accent'},
+          {e:'Stunden offen LP1–9',v:'14.820 h',s:'~ 64 Pers.-Wochen',t:'default'},
+          {e:'Risiko-Projekte',v:'2',s:'SAN-302 · BÜR-118',t:'warn'},
+        ].map((k,i)=>(
+          <Card key={i} padding={16}>
+            <Eyebrow>{k.e}</Eyebrow>
+            <div style={{fontFamily:'var(--font-data)',fontSize:24,fontWeight:600,letterSpacing:-0.5,marginTop:4}}>{k.v}</div>
+            <div style={{marginTop:6}}><Pill tone={k.t}>{k.s}</Pill></div>
+          </Card>
+        ))}
+      </div>
+
+      <div style={{display:'flex',alignItems:'center',gap:8,flexWrap:'wrap'}}>
+        <div style={{display:'flex',gap:4,background:'var(--surface)',padding:4,borderRadius:8,border:'1px solid var(--border)'}}>
+          {['Alle','Aktiv','Akquise','Abschluss'].map((s,i)=>(
+            <div key={s} style={{padding:'6px 12px',borderRadius:5,fontSize:12,background:i===1?'var(--accent)':'transparent',color:i===1?'var(--surface)':'var(--text-dim)',fontWeight:i===1?600:400,cursor:'pointer'}}>{s}</div>
+          ))}
+        </div>
+        {[['Projektleitung','Alle'],['Zone','Alle']].map(([k,v],i)=>(
+          <div key={i} style={{display:'flex',alignItems:'center',gap:6,padding:'6px 12px',background:'var(--surface)',border:'1px solid var(--border)',borderRadius:8,fontSize:12}}>
+            <span style={{color:'var(--text-mute)'}}>{k}:</span><span style={{fontWeight:500}}>{v}</span>
+            <Icon name="chevdown" size={11}/>
+          </div>
+        ))}
+      </div>
+
+      <Card padding={0} style={{flex:1,overflow:'hidden',display:'flex',flexDirection:'column'}}>
+        <div style={{display:'grid',gridTemplateColumns:'40px 1.8fr 1fr 1fr 1fr 1fr 80px',gap:12,padding:'10px 18px',borderBottom:'1px solid var(--border)',background:'var(--surface-2)'}}>
+          {['','Projekt','Honorar','Phasenfortschritt','Stunden Ist/Soll','Deadline','Status'].map((h,i)=>(
+            <div key={i} style={{fontFamily:'var(--font-data)',fontSize:9,textTransform:'uppercase',letterSpacing:'0.08em',color:'var(--text-mute)'}}>{h}</div>
+          ))}
+        </div>
+        <div style={{flex:1,overflowY:'auto'}}>
+          {d.projects.map(p=>{
+            const pct=p.progress.reduce((s,v)=>s+v,0)/900;
+            const statusTone = p.status==='aktiv'?'pos':p.status==='abschluss'?'accent':p.status==='akquise'?'default':'warn';
+            return <div key={p.id} style={{display:'grid',gridTemplateColumns:'40px 1.8fr 1fr 1fr 1fr 1fr 80px',gap:12,padding:'12px 18px',borderBottom:'1px solid var(--border)',alignItems:'center'}}>
+              <div style={{width:32,height:32,borderRadius:6,background:'var(--surface-2)',display:'flex',alignItems:'center',justifyContent:'center'}}>
+                <Icon name={p.umbau?'layers':'drawing'} size={15}/>
+              </div>
+              <div>
+                <div style={{fontSize:13,fontWeight:500}}>{p.name}</div>
+                <div style={{fontSize:11,color:'var(--text-mute)',marginTop:1}}>{p.id} · {p.client}</div>
+              </div>
+              <div style={{fontFamily:'var(--font-data)',fontSize:13,fontWeight:600}}>{d.fmtEur(p.fee/1000)}k</div>
+              <div>
+                <div style={{display:'flex',gap:2,marginBottom:4}}>
+                  {p.progress.map((v,i)=><div key={i} style={{width:8,height:8,borderRadius:2,background:v===100?'var(--accent)':v>0?'color-mix(in oklch,var(--accent) 50%,var(--surface-2))':'var(--surface-2)'}}/>)}
+                </div>
+                <div style={{fontFamily:'var(--font-data)',fontSize:10,color:'var(--text-mute)'}}>LP {p.phase}/9 · {Math.round(pct*100)}%</div>
+              </div>
+              <div>
+                <SollIstBar ist={p.hours} soll={p.planned*Math.max(0.05,pct)} w={90}/>
+                <div style={{fontFamily:'var(--font-data)',fontSize:10,color:'var(--text-mute)',marginTop:3}}>{p.hours}/{Math.round(p.planned*pct)} h</div>
+              </div>
+              <div style={{fontFamily:'var(--font-data)',fontSize:12,color:'var(--text-dim)'}}>{p.deadline}</div>
+              <Pill tone={statusTone}>{p.status}</Pill>
+            </div>;
+          })}
+        </div>
+      </Card>
+    </div>
+  );
+}
+
+/* ── Screen: Zeiterfassung ──────────────────────────────────────────────── */
+function Zeiterfassung() {
+  const d = Data;
+  const [timerRunning, setTimerRunning] = React.useState(false);
+  return (
+    <div style={{padding:'24px 28px',display:'flex',flexDirection:'column',gap:16,overflow:'hidden',flex:1}}>
+      <div style={{display:'flex',alignItems:'baseline',gap:14}}>
+        <div>
+          <div style={{fontSize:24,fontWeight:600,letterSpacing:-0.5}}>Zeiterfassung</div>
+          <div style={{fontSize:12,color:'var(--text-mute)',marginTop:2}}>KW 26 · 25.06.2026</div>
+        </div>
+        <div style={{flex:1}}/>
+        <Btn icon="plus">Eintrag hinzufügen</Btn>
+      </div>
+
+      <div style={{display:'grid',gridTemplateColumns:'1fr 340px',gap:16,flex:1,overflow:'hidden'}}>
+        <div style={{display:'flex',flexDirection:'column',gap:14,overflow:'hidden'}}>
+          <Card padding={20}>
+            <div style={{display:'flex',alignItems:'center',gap:16}}>
+              <div>
+                <Eyebrow>Heute · 25.06.2026</Eyebrow>
+                <div style={{display:'flex',alignItems:'baseline',gap:10,marginTop:6}}>
+                  <div style={{fontFamily:'var(--font-data)',fontSize:36,fontWeight:600,letterSpacing:-1}}>8,25</div>
+                  <div style={{fontSize:14,color:'var(--text-mute)'}}>/ 8,0 h Soll</div>
+                  <Pill tone="pos">✓ Erfüllt</Pill>
+                </div>
+              </div>
+              <div style={{flex:1}}/>
+              <div>
+                <div style={{display:'flex',gap:8,alignItems:'center'}}>
+                  <div onClick={()=>setTimerRunning(!timerRunning)} style={{display:'flex',alignItems:'center',gap:8,padding:'10px 20px',background:timerRunning?'var(--neg)':'var(--accent)',color:'var(--surface)',borderRadius:8,fontSize:13,fontWeight:600,cursor:'pointer'}}>
+                    <Icon name={timerRunning?'timer':'play'} size={14}/>{timerRunning?'00:42:17 · Stopp':'Timer starten'}
+                  </div>
+                  <Btn variant="secondary" size="sm" icon="plus">Manuell</Btn>
+                </div>
+                {timerRunning&&<div style={{fontSize:11,color:'var(--text-mute)',marginTop:6,textAlign:'center'}}>BÜR-118 · LP6 · Ausschreibung…</div>}
+              </div>
+            </div>
+            <div style={{marginTop:14,height:6,background:'var(--surface-2)',borderRadius:3}}>
+              <div style={{width:'103%',maxWidth:'100%',height:'100%',background:'var(--accent)',borderRadius:3}}/>
+            </div>
+          </Card>
+
+          <Card padding={0} header={{title:'Heutige Einträge',subtitle:'Mi, 25.06.2026'}} style={{flex:1,overflow:'hidden',display:'flex',flexDirection:'column'}}>
+            <div style={{flex:1,overflowY:'auto',padding:'0 18px'}}>
+              {d.heute.map((h,i)=>(
+                <div key={i} style={{display:'grid',gridTemplateColumns:'80px 80px 1fr 50px',gap:12,padding:'14px 0',borderBottom:i<d.heute.length-1?'1px solid var(--border)':'none',alignItems:'center'}}>
+                  <div style={{fontFamily:'var(--font-data)',fontSize:10,color:'var(--text-mute)'}}>{h.time}</div>
+                  <div>
+                    <div style={{fontFamily:'var(--font-data)',fontSize:12,fontWeight:600,color:'var(--accent)'}}>{h.project}</div>
+                    <div style={{fontFamily:'var(--font-data)',fontSize:10,color:'var(--text-mute)'}}>{h.phase}</div>
+                  </div>
+                  <div style={{fontSize:12,color:'var(--text-dim)'}}>{h.task}</div>
+                  <div style={{fontFamily:'var(--font-data)',fontSize:13,fontWeight:600,textAlign:'right'}}>{h.h.toFixed(2)} h</div>
+                </div>
+              ))}
+            </div>
+          </Card>
+        </div>
+
+        <div style={{display:'flex',flexDirection:'column',gap:14,overflow:'hidden'}}>
+          <Card padding={18}>
+            <Eyebrow style={{marginBottom:12}}>Wochenstunden · KW 26</Eyebrow>
+            <div style={{display:'flex',flexDirection:'column',gap:8}}>
+              {[{d:'Mo',h:8.5,plan:8},{d:'Di',h:7.75,plan:8},{d:'Mi',h:8.25,plan:8},{d:'Do',h:0,plan:8,future:true},{d:'Fr',h:0,plan:8,future:true}].map((day,i)=>(
+                <div key={i} style={{display:'grid',gridTemplateColumns:'28px 1fr 40px',gap:10,alignItems:'center'}}>
+                  <div style={{fontFamily:'var(--font-data)',fontSize:11,color:'var(--text-mute)',fontWeight:day.future?400:500}}>{day.d}</div>
+                  <div style={{height:8,background:'var(--surface-2)',borderRadius:2,position:'relative'}}>
+                    {!day.future&&<div style={{position:'absolute',left:0,top:0,height:'100%',width:(day.h/10*100)+'%',background:day.h>=day.plan?'var(--pos)':'var(--accent)',borderRadius:2}}/>}
+                    {day.future&&<div style={{position:'absolute',left:0,top:0,height:'100%',width:'100%',background:'var(--surface-3)',borderRadius:2,opacity:0.5}}/>}
+                  </div>
+                  <div style={{fontFamily:'var(--font-data)',fontSize:11,textAlign:'right',color:day.future?'var(--text-mute)':day.h>=day.plan?'var(--pos)':'var(--text)'}}>{day.future?'—':day.h.toFixed(2)}</div>
+                </div>
+              ))}
+            </div>
+            <div style={{marginTop:14,paddingTop:12,borderTop:'1px solid var(--border)',display:'flex',justifyContent:'space-between',alignItems:'baseline'}}>
+              <span style={{fontSize:12,color:'var(--text-mute)'}}>Woche gesamt</span>
+              <span style={{fontFamily:'var(--font-data)',fontSize:16,fontWeight:600}}>24,50 h</span>
+            </div>
+          </Card>
+
+          <Card padding={18} style={{flex:1}}>
+            <Eyebrow style={{marginBottom:12}}>Verteilung nach Projekt</Eyebrow>
+            <div style={{display:'flex',flexDirection:'column',gap:10}}>
+              {[['BÜR-118','Bürohaus Stadtkrone',4.5,10],[' WHB-204','Wohnhaus Bergmann',1.25,5],['SAN-302','Sanierung Maxvorstadt',2.5,6]].map(([id,name,h,pct],i)=>(
+                <div key={i}>
+                  <div style={{display:'flex',justifyContent:'space-between',marginBottom:4}}>
+                    <div>
+                      <span style={{fontFamily:'var(--font-data)',fontSize:11,fontWeight:600,color:'var(--accent)'}}>{id.trim()}</span>
+                      <span style={{fontSize:11,color:'var(--text-mute)',marginLeft:6}}>{name}</span>
+                    </div>
+                    <span style={{fontFamily:'var(--font-data)',fontSize:11,fontWeight:500}}>{h.toFixed(2)} h</span>
+                  </div>
+                  <div style={{height:5,background:'var(--surface-2)',borderRadius:2}}>
+                    <div style={{width:(h/10*100)+'%',height:'100%',background:'var(--accent)',borderRadius:2,opacity:0.7+i*0.1}}/>
+                  </div>
+                </div>
+              ))}
+            </div>
+          </Card>
+        </div>
+      </div>
+    </div>
+  );
+}
+
+/* ── Screen: HOAI-Rechner ───────────────────────────────────────────────── */
+function HoaiRechner() {
+  const d = Data;
+  const steps = ['Projekt-Typ','Anrechenbare Kosten','Honorarzone','Leistungsphasen','Zuschläge & NK','Honorar bestätigen'];
+  const activeStep = 3;
+  const phasen = [1,2,3,4,5,6,7,8];
+  return (
+    <div style={{display:'flex',flexDirection:'column',overflow:'hidden',flex:1}}>
+      <div style={{display:'flex',alignItems:'baseline',padding:'20px 28px 16px',gap:14,borderBottom:'1px solid var(--border)',background:'var(--surface)'}}>
+        <Icon name="arrowright" size={14} stroke={1.4}/>
+        <div style={{fontSize:13,color:'var(--text-mute)'}}>HOAI-Rechner</div>
+        <Icon name="arrowright" size={10} stroke={1.4}/>
+        <div style={{fontSize:22,fontWeight:600,letterSpacing:-0.4}}>Neues Honorarangebot</div>
+        <div style={{flex:1}}/>
+        <div style={{display:'flex',alignItems:'center',gap:6,padding:'4px 12px',background:'var(--surface-2)',borderRadius:6,border:'1px solid var(--border)'}}>
+          <Eyebrow>Entwurf</Eyebrow>
+          <span style={{fontFamily:'var(--font-data)',fontSize:10,color:'var(--text-mute)',marginLeft:8}}>zuletzt 09:38</span>
+        </div>
+      </div>
+
+      <div style={{flex:1,display:'grid',gridTemplateColumns:'260px 1fr 320px',padding:'20px 28px',gap:18,overflow:'hidden'}}>
+        <Card padding={16} style={{display:'flex',flexDirection:'column',gap:2}}>
+          <Eyebrow style={{marginBottom:10}}>Schritte</Eyebrow>
+          {steps.map((title,i)=>{
+            const done=i<activeStep, active=i===activeStep;
+            return <div key={i} style={{display:'grid',gridTemplateColumns:'28px 1fr',gap:10,padding:'10px 6px',background:active?'var(--surface-2)':'transparent',borderRadius:8,position:'relative',marginBottom:2}}>
+              <div style={{width:24,height:24,borderRadius:12,background:done?'var(--accent)':active?'var(--text)':'var(--surface-2)',color:done||active?'var(--surface)':'var(--text-mute)',display:'flex',alignItems:'center',justifyContent:'center',fontFamily:'var(--font-data)',fontSize:11,fontWeight:600,flexShrink:0}}>
+                {done?<Icon name="check" size={12}/>:i+1}
+              </div>
+              <div>
+                <div style={{fontSize:12,fontWeight:active?600:500,color:done||active?'var(--text)':'var(--text-dim)'}}>{title}</div>
+              </div>
+              {i<steps.length-1&&<div style={{position:'absolute',left:17,top:36,bottom:-2,width:1,background:done?'var(--accent)':'var(--border)'}}/>}
+            </div>;
+          })}
+        </Card>
+
+        <Card padding={26} style={{overflow:'hidden',display:'flex',flexDirection:'column'}}>
+          <Eyebrow>Schritt 4 von 6</Eyebrow>
+          <div style={{fontSize:22,fontWeight:600,letterSpacing:-0.5,marginTop:4}}>Welche Leistungsphasen?</div>
+          <div style={{fontSize:13,color:'var(--text-mute)',marginTop:6,maxWidth:500}}>Wählen Sie alle Leistungsphasen aus, die im Honorarangebot enthalten sind.</div>
+
+          <div style={{marginTop:18,display:'grid',gridTemplateColumns:'repeat(3,1fr)',gap:10,flex:1}}>
+            {d.leistungsphasen.map(lp=>{
+              const sel=phasen.includes(lp.nr);
+              return <div key={lp.nr} style={{padding:14,border:`1.5px solid ${sel?'var(--accent)':'var(--border)'}`,borderRadius:8,background:sel?'color-mix(in oklch,var(--accent) 5%,var(--surface))':'var(--surface)',cursor:'pointer',position:'relative'}}>
+                <div style={{display:'flex',alignItems:'center',justifyContent:'space-between'}}>
+                  <Eyebrow style={{color:sel?'var(--accent)':'var(--text-mute)'}}>LP {lp.nr}</Eyebrow>
+                  <div style={{width:18,height:18,borderRadius:4,background:sel?'var(--accent)':'transparent',border:`1.5px solid ${sel?'var(--accent)':'var(--border-strong)'}`,display:'flex',alignItems:'center',justifyContent:'center',color:'var(--surface)'}}>
+                    {sel&&<Icon name="check" size={11} stroke={2.6}/>}
+                  </div>
+                </div>
+                <div style={{fontSize:12,fontWeight:500,marginTop:8,lineHeight:1.3}}>{lp.name}</div>
+                <div style={{fontFamily:'var(--font-data)',fontSize:18,marginTop:8,fontWeight:500,color:sel?'var(--accent)':'var(--text-mute)'}}>{lp.anteil} <span style={{fontSize:11}}>%</span></div>
+              </div>;
+            })}
+          </div>
+
+          <div style={{marginTop:16,display:'flex',alignItems:'center',gap:12,paddingTop:16,borderTop:'1px solid var(--border)'}}>
+            <Btn variant="secondary">← Zurück</Btn>
+            <div style={{flex:1}}>
+              <Eyebrow>Σ ausgewählt</Eyebrow>
+              <div style={{fontFamily:'var(--font-data)',fontSize:16,fontWeight:600,marginTop:2}}>98% <span style={{color:'var(--text-mute)',fontWeight:400,fontSize:13}}>· 8 von 9 Phasen</span></div>
+            </div>
+            <Btn>Weiter →</Btn>
+          </div>
+        </Card>
+
+        <Card padding={22} style={{display:'flex',flexDirection:'column',overflow:'hidden'}}>
+          <Eyebrow>Honorar · live</Eyebrow>
+          <div style={{fontFamily:'var(--font-data)',fontSize:32,fontWeight:600,letterSpacing:-1,marginTop:6,color:'var(--accent)'}}>€ 218.400</div>
+          <div style={{fontSize:12,color:'var(--text-mute)',marginTop:2}}>Grundleistungen netto · 98 % Vollhonorar</div>
+
+          <div style={{marginTop:20,display:'flex',flexDirection:'column',gap:10}}>
+            {[
+              ['Gebäudeplanung gem. §34','',true],
+              ['Anrechenbare Kosten','1.850.000 €',false],
+              ['Honorarzone III · Mittelsatz','222.858 €',false],
+              ['Leistungsphasen 1–8','98 %',false],
+              ['Nebenkosten 6,0 %','13.104 €',false,'mute'],
+            ].map(([k,v,head,dim],i)=>(
+              <div key={i} style={{display:'flex',justifyContent:'space-between',padding:head?'8px 0 4px':'0',borderBottom:head?'1px solid var(--border)':'none'}}>
+                <div style={{fontSize:12,fontWeight:head?600:400,color:head?'var(--text)':dim?'var(--text-mute)':'var(--text-dim)'}}>{k}</div>
+                <div style={{fontFamily:'var(--font-data)',fontSize:12,fontWeight:500,color:dim?'var(--text-mute)':'var(--text)'}}>{v}</div>
+              </div>
+            ))}
+          </div>
+
+          <div style={{marginTop:18,padding:14,background:'var(--surface-2)',borderRadius:8}}>
+            <Eyebrow>Endbetrag inkl. USt 19 %</Eyebrow>
+            <div style={{fontFamily:'var(--font-data)',fontSize:22,fontWeight:600,marginTop:4}}>€ 275.533</div>
+          </div>
+
+          <div style={{marginTop:'auto',paddingTop:14,borderTop:'1px solid var(--border)',fontSize:11,color:'var(--text-dim)',display:'flex',alignItems:'center',gap:6}}>
+            <Icon name="alert" size={11}/>Honorarvereinbarung gem. § 7 erforderlich
+          </div>
+        </Card>
+      </div>
+    </div>
+  );
+}
+
+/* ── Screen: Auswertungen / Heatmap ─────────────────────────────────────── */
+function Auswertungen() {
+  const d = Data;
+  const colorFor = (r) => {
+    if (r==null) return 'var(--surface-2)';
+    if (r<0.85) return 'color-mix(in oklch,var(--accent) 60%,var(--surface))';
+    if (r<1.0)  return 'var(--pos)';
+    if (r<1.05) return 'color-mix(in oklch,var(--pos) 60%,var(--surface))';
+    if (r<1.15) return 'var(--warn)';
+    return 'var(--neg)';
+  };
+  const matrix = d.projects.map(p=>d.leistungsphasen.map(lp=>{
+    const prog=p.progress[lp.nr-1];
+    if(prog===0) return null;
+    let r = 0.7+Math.random()*0.7;
+    if(p.id==='SAN-302'&&lp.nr===4) r=1.7;
+    if(p.id==='BÜR-118'&&lp.nr===6) r=1.18;
+    return r;
+  }));
+  return (
+    <div style={{padding:'24px 28px',display:'flex',flexDirection:'column',gap:16,overflow:'hidden',flex:1}}>
+      <div style={{display:'flex',alignItems:'baseline',gap:16}}>
+        <div>
+          <Eyebrow>Auswertungen</Eyebrow>
+          <div style={{fontSize:24,fontWeight:600,letterSpacing:-0.5,marginTop:2}}>Soll/Ist-Heatmap</div>
+          <div style={{fontSize:12,color:'var(--text-mute)',marginTop:2}}>Stundenverbrauch je Projekt und Leistungsphase · Ist ÷ Soll</div>
+        </div>
+        <div style={{flex:1}}/>
+        <div style={{display:'flex',gap:4}}>
+          {['2024','2025','2026','YTD'].map((y,i)=>(
+            <Pill key={y} tone={i===3?'accent':'default'} style={{padding:'6px 12px',fontSize:11,cursor:'pointer'}}>{y}</Pill>
+          ))}
+        </div>
+      </div>
+
+      <div style={{display:'grid',gridTemplateColumns:'repeat(4,1fr)',gap:12}}>
+        {[
+          {e:'Stunden Σ Ist',v:'15.430 h',s:'Soll: 14.620 h · +5,5 %',warn:false},
+          {e:'Mehraufwand',v:'+ 810 h',s:'~ 68.040 € intern',warn:true},
+          {e:'Phasen mit Überschreitung',v:'6 / 47',s:'aktive LP-Zellen',warn:true},
+          {e:'Phasen unter Soll',v:'23 / 47',s:'Effizienzgewinn',warn:false},
+        ].map((k,i)=>(
+          <Card key={i} padding={14}>
+            <Eyebrow>{k.e}</Eyebrow>
+            <div style={{fontFamily:'var(--font-data)',fontSize:22,fontWeight:600,marginTop:4,letterSpacing:-0.4,color:k.warn?'var(--neg)':'var(--text)'}}>{k.v}</div>
+            <div style={{fontSize:11,color:'var(--text-mute)',marginTop:4}}>{k.s}</div>
+          </Card>
+        ))}
+      </div>
+
+      <Card padding={22} style={{flex:1,display:'flex',flexDirection:'column',overflow:'hidden'}}>
+        <div style={{display:'flex',alignItems:'baseline',justifyContent:'space-between',marginBottom:14}}>
+          <div>
+            <div style={{fontSize:16,fontWeight:600}}>Portfolio · Stunden Soll/Ist je Phase</div>
+            <div style={{fontSize:12,color:'var(--text-mute)',marginTop:2}}>Klicken Sie eine Zelle für Details</div>
+          </div>
+          <div style={{display:'flex',alignItems:'center',gap:10,fontSize:10}}>
+            {[['< 85%','color-mix(in oklch,var(--accent) 60%,var(--surface))'],['85–100%','var(--pos)'],['100–105%','color-mix(in oklch,var(--pos) 60%,var(--surface))'],['105–115%','var(--warn)'],['> 115%','var(--neg)']].map(([l,c])=>(
+              <div key={l} style={{display:'flex',alignItems:'center',gap:4}}>
+                <div style={{width:12,height:12,background:c,borderRadius:2}}/>
+                <span style={{color:'var(--text-mute)'}}>{l}</span>
+              </div>
+            ))}
+          </div>
+        </div>
+
+        <div style={{display:'grid',gridTemplateColumns:'170px 65px repeat(9,1fr) 90px',gap:3,alignItems:'center',fontSize:11,flex:1,overflowY:'auto'}}>
+          <div/><div className="m-eyebrow" style={{textAlign:'right',fontSize:9}}>Honorar</div>
+          {d.leistungsphasen.map(lp=>(
+            <div key={lp.nr} style={{textAlign:'center'}}>
+              <div style={{fontFamily:'var(--font-data)',fontSize:12,fontWeight:600}}>LP{lp.nr}</div>
+              <div style={{fontSize:9,color:'var(--text-mute)',fontFamily:'var(--font-data)'}}>{lp.anteil}%</div>
+            </div>
+          ))}
+          <div className="m-eyebrow" style={{textAlign:'right',fontSize:9}}>Σ Δ</div>
+
+          {d.projects.map((p,pi)=>{
+            const row=matrix[pi];
+            const delta=row.reduce((s,r,i)=>r!=null?s+(r-1)*p.planned*d.leistungsphasen[i].anteil/100:s,0);
+            return <React.Fragment key={p.id}>
+              <div style={{paddingRight:8}}>
+                <div style={{fontSize:12,fontWeight:500}}>{p.name}</div>
+                <div style={{fontSize:10,color:'var(--text-mute)',marginTop:1}}>{p.id} · LP{p.phase}</div>
+              </div>
+              <div style={{fontFamily:'var(--font-data)',textAlign:'right',fontSize:11}}>{d.fmtEur(p.fee/1000)}k</div>
+              {row.map((r,ci)=>(
+                <div key={ci} style={{aspectRatio:'1',maxHeight:40,background:colorFor(r),borderRadius:3,display:'flex',alignItems:'center',justifyContent:'center',cursor:'pointer'}}>
+                  {r!=null&&<span style={{fontFamily:'var(--font-data)',fontSize:9,fontWeight:600,color:r>0.9&&r<1.15?'#fff':'var(--text)'}}>{Math.round(r*100)}</span>}
+                </div>
+              ))}
+              <div style={{fontFamily:'var(--font-data)',textAlign:'right',fontSize:11,fontWeight:600,color:delta>0?'var(--neg)':'var(--pos)'}}>
+                {delta>0?'+':''}{Math.round(delta)} h
+              </div>
+            </React.Fragment>;
+          })}
+        </div>
+
+        <div style={{marginTop:12,paddingTop:12,borderTop:'1px solid var(--border)',display:'flex',alignItems:'center',gap:12,fontSize:11,color:'var(--text-dim)'}}>
+          <Icon name="alert" size={12}/>
+          <span><b>SAN-302 LP4</b> liegt bei 170 % — Bauantrag verzögert sich, Umbauzuschlag prüfen.</span>
+          <span style={{marginLeft:'auto',color:'var(--accent)',cursor:'pointer'}}>Heatmap exportieren ↗</span>
+        </div>
+      </Card>
+    </div>
+  );
+}
+
+/* ── App root ───────────────────────────────────────────────────────────── */
+const SCREENS = {
+  'Übersicht': Dashboard,
+  'Projekte': Projekte,
+  'Zeiterfassung': Zeiterfassung,
+  'HOAI-Rechner': HoaiRechner,
+  'Auswertungen': Auswertungen,
+};
+
+function App() {
+  const [active, setActive] = React.useState('Übersicht');
+  const Screen = SCREENS[active] || Dashboard;
+  return (
+    <div className="m-app theme-stratum dens-comfy" style={{width:'100vw',height:'100vh',display:'flex',overflow:'hidden'}}>
+      <Sidebar active={active} onNav={setActive}/>
+      <div style={{flex:1,overflow:'hidden',display:'flex',flexDirection:'column'}}>
+        <Screen/>
+      </div>
+    </div>
+  );
+}
+
+ReactDOM.createRoot(document.getElementById('root')).render(<App/>);
+</script>
+</body>
+</html>

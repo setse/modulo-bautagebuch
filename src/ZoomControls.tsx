@@ -1,0 +1,8 @@
+import { useEffect } from 'react';
+import { Minus, Plus } from 'lucide-react';
+const levels=[75,90,100,110,125,150,175,200];
+export default function ZoomControls({value,onChange}:{value:number;onChange:(zoom:number)=>void}) {
+  function adjust(direction:number) { const current=Math.round(value*100);const next=direction>0?levels.find(n=>n>current):levels.slice().reverse().find(n=>n<current);if(next)onChange(next/100); }
+  useEffect(()=>{const handler=(e:KeyboardEvent)=>{if(!e.ctrlKey && !e.metaKey)return;if(['+','=','-','0'].includes(e.key)){e.preventDefault();if(e.key==='0')onChange(1);else adjust(e.key==='-'?-1:1);}};const wheel=(e:WheelEvent)=>{if(e.ctrlKey){e.preventDefault();adjust(e.deltaY<0?1:-1);}};window.addEventListener('keydown',handler);window.addEventListener('wheel',wheel,{passive:false});return()=>{window.removeEventListener('keydown',handler);window.removeEventListener('wheel',wheel);};},[value,onChange]);
+  return <div className="zoom-controls" aria-label="Ansicht skalieren"><button className="icon-button" title="Ansicht verkleinern (Strg−)" aria-label="Ansicht verkleinern" disabled={value<=0.75} onClick={()=>adjust(-1)}><Minus size={14}/></button><select aria-label="Ansichtszoom" value={Math.round(value*100)} onChange={e=>onChange(Number(e.target.value)/100)}>{levels.map(level=><option key={level} value={level}>{level}%</option>)}</select><button className="icon-button" title="Ansicht vergrößern (Strg+)" aria-label="Ansicht vergrößern" disabled={value>=2} onClick={()=>adjust(1)}><Plus size={14}/></button><button className="zoom-reset" title="Originalgröße (Strg+0)" onClick={()=>onChange(1)}>100%</button></div>;
+}

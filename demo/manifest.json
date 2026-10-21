@@ -1,0 +1,139 @@
+{
+  "anchor": "2026-10-08",
+  "seed": "modulo-demo-v1",
+  "projects": 4,
+  "activities": 1005,
+  "trades": 67,
+  "companies": 81,
+  "diaryEntries": 100,
+  "photos": 318,
+  "audio": 25,
+  "baselines": 6,
+  "presets": 3,
+  "mediaFiles": 349,
+  "perProject": [
+    {
+      "id": "14c89620-ff2f-4a9c-95d5-03ef318e7a88",
+      "number": "DEMO-2601",
+      "name": "DEMO · Campus West – Sanierung in 12 Bauabschnitten",
+      "activities": 309,
+      "entries": 60,
+      "conflicts": 5
+    },
+    {
+      "id": "7aea5626-33c5-40ad-80b6-0905396344b7",
+      "number": "DEMO-2602",
+      "name": "DEMO · Kita Sonnenhof – Umbau im laufenden Betrieb",
+      "activities": 96,
+      "entries": 24,
+      "conflicts": 0
+    },
+    {
+      "id": "c9c29b7a-ae27-490d-b79c-67d2ba12775d",
+      "number": "DEMO-2603",
+      "name": "DEMO · Quartier Süd – Lasttest mit 600 Vorgängen",
+      "activities": 600,
+      "entries": 15,
+      "conflicts": 2
+    },
+    {
+      "id": "36887965-2672-46b8-ac40-586b6d9bda9b",
+      "number": "DEMO-2604",
+      "name": "DEMO · Leeres Startprojekt",
+      "activities": 0,
+      "entries": 1,
+      "conflicts": 0
+    }
+  ],
+  "audioFormats": "MP3, WAV, M4A, OGG, WEBM, FLAC; langer MP3-Testclip",
+  "syntheticMedia": true,
+  "scenarioDetails": [
+    {
+      "key": "friday",
+      "projectId": "14c89620-ff2f-4a9c-95d5-03ef318e7a88",
+      "taskId": "cd653233-9422-469e-8b6f-ad821c73c493",
+      "title": "TEST · Übergabe am Freitag",
+      "start": "2026-10-09",
+      "end": "2026-10-09",
+      "warnings": []
+    },
+    {
+      "key": "monday",
+      "projectId": "14c89620-ff2f-4a9c-95d5-03ef318e7a88",
+      "taskId": "d419a1ea-83ca-4629-b664-5bad34ef8ebe",
+      "title": "TEST · Ende–Anfang: nächster Arbeitstag",
+      "start": "2026-10-12",
+      "end": "2026-10-12",
+      "warnings": []
+    },
+    {
+      "key": "wait",
+      "projectId": "14c89620-ff2f-4a9c-95d5-03ef318e7a88",
+      "taskId": "f6177056-496b-4fff-85dc-445e1e047fb7",
+      "title": "TEST · Trocknung: 7 Kalendertage",
+      "start": "2026-10-20",
+      "end": "2026-10-21",
+      "warnings": []
+    },
+    {
+      "key": "fixed",
+      "projectId": "14c89620-ff2f-4a9c-95d5-03ef318e7a88",
+      "taskId": "680a537e-ca9c-4b79-863e-a9c7f0661f3f",
+      "title": "TEST · Fixtermin trotz späterem Vorgänger",
+      "start": "2026-10-12",
+      "end": "2026-10-12",
+      "warnings": [
+        "Fixierter Start widerspricht Vorgängern. Frühestens 2026-10-22."
+      ]
+    },
+    {
+      "key": "unscheduled",
+      "projectId": "14c89620-ff2f-4a9c-95d5-03ef318e7a88",
+      "taskId": "65df5d1e-a5a8-424a-aef4-56ccf127917f",
+      "title": "TEST · Entscheidung / Freigabe noch offen",
+      "start": "",
+      "end": "",
+      "warnings": []
+    },
+    {
+      "key": "unplanned-successor",
+      "projectId": "14c89620-ff2f-4a9c-95d5-03ef318e7a88",
+      "taskId": "c70bdb82-36f0-4ec7-8cea-4cc29d40c50b",
+      "title": "TEST · Nachfolger ohne terminierte Freigabe",
+      "start": "",
+      "end": "",
+      "warnings": [
+        "Ein Vorgänger ist noch nicht terminiert."
+      ]
+    },
+    {
+      "key": "deadline",
+      "projectId": "14c89620-ff2f-4a9c-95d5-03ef318e7a88",
+      "taskId": "0575b725-4cd8-4221-84de-5d56bfb37abc",
+      "title": "TEST · Zieltermin wird überschritten",
+      "start": "2026-10-05",
+      "end": "2026-10-14",
+      "warnings": [
+        "Ende liegt 5 Kalendertage nach dem Zieltermin."
+      ]
+    },
+    {
+      "key": "parallel",
+      "projectId": "14c89620-ff2f-4a9c-95d5-03ef318e7a88",
+      "taskId": "8ed21051-ab90-41a4-9d33-33a872a282df",
+      "title": "TEST · Paralleler Einsatz derselben Firma",
+      "start": "2026-10-09",
+      "end": "2026-10-13",
+      "warnings": []
+    },
+    {
+      "key": "escaping",
+      "projectId": "14c89620-ff2f-4a9c-95d5-03ef318e7a88",
+      "taskId": "07f2a486-bd15-487b-b241-e870f5aa5bc1",
+      "title": "TEST · Abstimmung \"Nord\" & Prüfung <Schnitt A>",
+      "start": "2026-10-12",
+      "end": "2026-10-13",
+      "warnings": []
+    }
+  ]
+}
